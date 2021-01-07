@@ -1,7 +1,7 @@
 var store = [{
-        "title": "Welcome to Jekyll!",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
+        "title": "sunE is now a Solar Impulse Efficient Solution",
+        "excerpt":"sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse...","categories": ["jekyll","update"],
         "tags": [],
-        "url": "https://sunetrike.bitbucket.io/jekyll/update/welcome-to-jekyll/",
+        "url": "https://sunetrike.bitbucket.io/jekyll/update/sune-is-now-a-solar-impulse-label/",
         "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
       }]
