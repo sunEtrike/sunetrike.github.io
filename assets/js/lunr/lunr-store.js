@@ -4,4 +4,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.bitbucket.io/jekyll/update/sune-is-now-a-solar-impulse-label/",
         "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
+      },{
+        "title": "Supercapacitors for LSEVs",
+        "excerpt":"Supercapacitors increase battery efficiency by protecting the battery and other system components from excessive stress, and they enable onboard energy capture to reduce the energy cost for vehicle operation. Combining supercapacitors, batteries and onboard energy harvesting improves overall system operation efficiency and allows the vehicle to travel further on a...","categories": ["supercapacitors"],
+        "tags": [],
+        "url": "https://sunetrike.bitbucket.io/supercapacitors/supercapacitors-for-lsevs/",
+        "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
       }]
