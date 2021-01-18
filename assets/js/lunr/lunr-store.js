@@ -40,4 +40,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.bitbucket.io/supercapacitors/supercapacitors-for-lsevs/",
         "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
+      },{
+        "title": "My First Lung Fractal",
+        "excerpt":"Since I first moved to the Philippines, the air pollution has been one of the hardest features to come to grips with. I seem to have especially sensitive lungs as I come down with lung infections 2 to 3 times a year and it lingers for several weeks meanwhile nobody...","categories": ["fractals","lungs","dr-geo"],
+        "tags": [],
+        "url": "https://sunetrike.bitbucket.io/fractals/lungs/dr-geo/first-lung-fractal/",
+        "teaser": "https://sunetrike.bitbucket.io/assets/images/fractals/lung-fractal-1.png"
       }]
