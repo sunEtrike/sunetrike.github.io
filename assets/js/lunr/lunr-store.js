@@ -33,13 +33,13 @@ var store = [{
         "excerpt":"sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse...","categories": ["jekyll","update"],
         "tags": [],
         "url": "https://sunetrike.bitbucket.io/jekyll/update/sune-is-now-a-solar-impulse-label/",
-        "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.bitbucket.io/assets/images/SIF_LABEL.png"
       },{
         "title": "Supercapacitors for LSEVs",
         "excerpt":"Supercapacitors increase battery efficiency by protecting the battery and other system components from excessive stress, and they enable onboard energy capture to reduce the energy cost for vehicle operation. Combining supercapacitors, batteries and onboard energy harvesting improves overall system operation efficiency and allows the vehicle to travel further on a...","categories": ["supercapacitors"],
         "tags": [],
         "url": "https://sunetrike.bitbucket.io/supercapacitors/supercapacitors-for-lsevs/",
-        "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.bitbucket.io/assets/images/supercapacitors/lightning.png"
       },{
         "title": "My First Lung Fractal",
         "excerpt":"Since I first moved to the Philippines, the air pollution has been one of the hardest features to come to grips with. I seem to have especially sensitive lungs as I come down with lung infections 2 to 3 times a year and it lingers for several weeks meanwhile nobody...","categories": ["fractals","lungs","dr-geo"],
