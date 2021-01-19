@@ -1,1 +1,1 @@
-Sitemap: https://sunetrike.bitbucket.io/sitemap.xml
+Sitemap: https://sunetrike.github.io/sitemap.xml
