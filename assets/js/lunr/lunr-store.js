@@ -30,9 +30,9 @@ var store = [{
         "teaser": "https://sunetrike.bitbucket.io/assets/images/sunev.JPG"
       },{
         "title": "sunE is now a Solar Impulse Efficient Solution",
-        "excerpt":"sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse...","categories": ["jekyll","update"],
+        "excerpt":"sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse...","categories": ["solar-impulse"],
         "tags": [],
-        "url": "https://sunetrike.bitbucket.io/jekyll/update/sune-is-now-a-solar-impulse-label/",
+        "url": "https://sunetrike.bitbucket.io/solar-impulse/sune-is-now-a-solar-impulse-label/",
         "teaser": "https://sunetrike.bitbucket.io/assets/images/SIF_LABEL.png"
       },{
         "title": "Supercapacitors for LSEVs",
