@@ -29,6 +29,24 @@ var store = [{
         "url": "https://sunetrike.github.io/team/phil-gray",
         "teaser": "https://sunetrike.github.io/assets/images/sunev.JPG"
       },{
+        "title": "Absorbent Roadway – Concept outline",
+        "excerpt":"Thank you to the R&amp;D team of LafargeHolcim for making this draft concept paper available to us for our submission to the 2018 Smart Infrastructure Challenge The absorbent roadway seeks to absorb and disperse localized flooding caused by storm surges. Continuous accumulation of plastic is resulting in two adverse consequences:...","categories": ["smart-infrastructure-challenge","pwd"],
+        "tags": [],
+        "url": "https://sunetrike.github.io/smart-infrastructure-challenge/pwd/absorbent-roadway-concept/",
+        "teaser": "https://sunetrike.github.io/assets/images/smart-infrastructure-challenge/sponge-city-info.jpeg"
+      },{
+        "title": "Bringing Vitamins and Solar Lamps to Bansud, Philippines!",
+        "excerpt":"As a joint project between two Rotary districts: 3820 Calabarzon &amp; 3830 Makati. Around 20 Rotarians visited the Mangyan tribe in the Bansud Region of Mindoro. The project is called Community Lighting and Iba Pa (CLAP) and it included donations of medical supplies, clothing, solar-lanterns, school-supplies. Allan Gray from sunEtrike...","categories": ["solar-coin","rotary"],
+        "tags": [],
+        "url": "https://sunetrike.github.io/solar-coin/rotary/vitamins-and-solar-to-bansud/",
+        "teaser": "https://sunetrike.github.io/assets/images/rotary/CLAP-1-768x576.jpeg"
+      },{
+        "title": "Employment of Persons with Disabilities (PWDs) in the Philippines – Study",
+        "excerpt":"As part of our submissions for the 2018 Smart Infrastructure Challenge, our team has chosen to include mobility access for PWDs into the scope of our portfolio of projects. In addition to the disability access of newly emerging vehicles within the PUV modernization program, we are also proposing a low-cost...","categories": ["smart-infrastructure-challenge"],
+        "tags": [],
+        "url": "https://sunetrike.github.io/smart-infrastructure-challenge/employment-of-pwds/",
+        "teaser": "https://sunetrike.github.io/assets/images/smart-infrastructure-challenge/pwd.jpeg"
+      },{
         "title": "sunE is now a Solar Impulse Efficient Solution",
         "excerpt":"sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse...","categories": ["solar-impulse"],
         "tags": [],
