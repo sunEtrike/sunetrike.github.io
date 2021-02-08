@@ -30,9 +30,9 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
       },{
         "title": "Absorbent Roadway – Concept outline",
-        "excerpt":"Thank you to the R&amp;D team of LafargeHolcim for making this draft concept paper available to us for our submission to the 2018 Smart Infrastructure Challenge The absorbent roadway seeks to absorb and disperse localized flooding caused by storm surges. Continuous accumulation of plastic is resulting in two adverse consequences:...","categories": ["smart-infrastructure-challenge","pwd"],
+        "excerpt":"Thank you to the R&amp;D team of LafargeHolcim for making this draft concept paper available to us for our submission to the 2018 Smart Infrastructure Challenge The absorbent roadway seeks to absorb and disperse localized flooding caused by storm surges. Continuous accumulation of plastic is resulting in two adverse consequences:...","categories": ["smart-infrastructure-challenge"],
         "tags": [],
-        "url": "https://sunetrike.com/smart-infrastructure-challenge/pwd/absorbent-roadway-concept/",
+        "url": "https://sunetrike.com/smart-infrastructure-challenge/absorbent-roadway-concept/",
         "teaser": "https://sunetrike.com/assets/images/smart-infrastructure-challenge/sponge-city-info.jpeg"
       },{
         "title": "Bringing Vitamins and Solar Lamps to Bansud, Philippines!",
