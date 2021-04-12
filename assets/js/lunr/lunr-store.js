@@ -64,4 +64,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/fractals/lungs/dr-geo/first-lung-fractal/",
         "teaser": "https://sunetrike.com/assets/images/fractals/lung-fractal-1.png"
+      },{
+        "title": "My Pedal Powered Journey - A tribute to Bertrand Piccard",
+        "excerpt":"In a salute to the 1000 solution milestone of the Solar Impulse Foundation, This story is a bit of an hommage to the immensely inspiring 2010 TED talk by Captain Bertrand Piccard titled ‘My Solar-Powered Adventure’. This entrepreneurship adventure of ours has one with many highs and lows. His presentation...","categories": ["solar-impulse"],
+        "tags": [],
+        "url": "https://sunetrike.com/solar-impulse/my-pedal-powered-journey/",
+        "teaser": "https://sunetrike.com/assets/images/pedal-power/three_buttes.jpg"
       }]
