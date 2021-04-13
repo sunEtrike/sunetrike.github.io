@@ -66,14 +66,14 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/fractals/lung-fractal-1.png"
       },{
         "title": "My Pedal Powered Adventure - An hommage to Piccard's Epic Voyage",
-        "excerpt":"In a salute to the _______, This story is a bit of an hommage to the immensely inspiring 2010 TED talk by Captain Bertrand Piccard titled ‘My Solar-Powered Adventure’. This entrepreneurship adventure of ours has had many highs and lows. His speech has pulled me out of the depths of...","categories": ["solar-impulse"],
+        "excerpt":"In a salute to the 1000 solution milestone of the Solar Impulse Foundation, This story is a bit of an hommage to the immensely inspiring 2010 TED talk by Captain Bertrand Piccard titled ‘My Solar-Powered Adventure’. This entrepreneurship adventure of ours has had many highs and lows. His speech has...","categories": ["solar-impulse"],
         "tags": [],
         "url": "https://sunetrike.com/solar-impulse/my-pedal-powered-journey/",
         "teaser": "https://sunetrike.com/assets/images/pedal-power/three_buttes.jpg"
       },{
-        "title": "The 7 most interesting Labelled Solutions of Solar Impulse within SE Asia.",
-        "excerpt":"EcoWorth - July 2020 - Singapore https://solarimpulse.com/efficient-solutions/carbon-fibre-aerogel-cfa   OKCheck - August 2020 - Singapore https://solarimpulse.com/efficient-solutions/okcheck-app#   MIMO Motor - September 2020 - Singapore https://solarimpulse.com/efficient-solutions/mimo-c1   Hive Optimal - Feb 2021 https://solarimpulse.com/efficient-solutions/hive-optimal   Electro-contaminant removal system - March 2021 https://solarimpulse.com/efficient-solutions/electro-contaminant-removal-ecr-system   sunE - Feb 2019 https://solarimpulse.com/efficient-solutions/sune  ","categories": ["solar-impulse"],
+        "title": "SE Asia's Labelled Solutions for water cleanup.",
+        "excerpt":"Here we are, one thousand solutions closer to a cleaner planet. With the #beyond1000solutions campaign, Solar Impulse is gearing up to bring the forward the next wave of Cleantech into the world. To get the ball rolling for the next phase, I’ve put together a short list of some of...","categories": ["solar-impulse"],
         "tags": [],
-        "url": "https://sunetrike.com/solar-impulse/se-asias-7-most-interesing-labelled-solutions/",
-        "teaser": "https://sunetrike.com/assets/images/pedal-power/three_buttes.jpg"
+        "url": "https://sunetrike.com/solar-impulse/se-asias-water-cleanup-solutions/",
+        "teaser": "https://sunetrike.com/assets/images/water-cleanup/hero.jpeg"
       }]
