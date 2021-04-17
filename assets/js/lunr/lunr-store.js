@@ -1,6 +1,6 @@
 var store = [{
         "title": "Al Gray",
-        "excerpt":"Allan is a geologist and electrical geophysicist who moved to the Philippines with a simple idea: this is the best country in the world for developing solar electric transportation systems.  ","categories": [],
+        "excerpt":"Allan is a geologist and electrical geophysicist who moved to the Philippines with a simple idea: this is the best country in the world for developing solar electric transportation systems. You can find him about an hour south of Manila between the dinosaur footprint and the lake that exploded in...","categories": [],
         "tags": [],
         "url": "https://sunetrike.com/team/al-gray",
         "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
