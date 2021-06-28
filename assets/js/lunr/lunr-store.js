@@ -76,4 +76,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/solar-impulse/se-asias-water-cleanup-solutions/",
         "teaser": "https://sunetrike.com/assets/images/water-cleanup/hero.jpeg"
+      },{
+        "title": "Presentation for Mapua's Social Sciences and Education week - Past, Present and Future of Environmentalism",
+        "excerpt":"As part the week in Social Sciences and Education at Mapua University, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines. Please click here to access: Past, Present and Future for Environmentalism I attempted to share what...","categories": ["environmentalism"],
+        "tags": [],
+        "url": "https://sunetrike.com/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
+        "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
       }]
