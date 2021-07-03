@@ -47,11 +47,23 @@ var store = [{
         "url": "https://sunetrike.com/smart-infrastructure-challenge/employment-of-pwds/",
         "teaser": "https://sunetrike.com/assets/images/smart-infrastructure-challenge/pwd.jpeg"
       },{
+        "title": "Tales from Trying to Improve Transportation in the Philippines - Presentation for CUNY's Administration of Global Institutions class",
+        "excerpt":"As a follow-on to our participation in the 2018 Smart Infrastructure Challenge, I got the very cool opportunity to share some of my experiences with Professor Binda’s class on Administration of Global Institutions at the City University of New York (CUNY). They were reviewing the ASEAN zone and so I...","categories": ["presentations","tranportation"],
+        "tags": [],
+        "url": "https://sunetrike.com/presentations/tranportation/cuny-global-institutions-presentation-tales-of-trying-to-improve-transportation-in-the-philippines/",
+        "teaser": "https://sunetrike.com/assets/images/banners/transport-tales-banner.png"
+      },{
         "title": "sunE is now a Solar Impulse Efficient Solution",
         "excerpt":"sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse...","categories": ["solar-impulse"],
         "tags": [],
         "url": "https://sunetrike.com/solar-impulse/sune-is-now-a-solar-impulse-label/",
         "teaser": "https://sunetrike.com/assets/images/SIF_LABEL.png"
+      },{
+        "title": "The role of technology in bringing us to a Carbon-neutral Future - Presentation for CUNY's Administration of Global Institutions class",
+        "excerpt":"As the new school year came along, I got the chance to come in for another of Professor Binda’s classes on Administration of Global Institutions at the City University of New York (CUNY). Once again they were discussing the ASEAN zone but our exciting news this time was getting accepted...","categories": ["presentations","carbon-neutral"],
+        "tags": [],
+        "url": "https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/",
+        "teaser": "https://sunetrike.com/assets/images/banners/wright-brothers.jpeg"
       },{
         "title": "Supercapacitors for LSEVs",
         "excerpt":"Supercapacitors increase battery efficiency by protecting the battery and other system components from excessive stress, and they enable onboard energy capture to reduce the energy cost for vehicle operation. Combining supercapacitors, batteries and onboard energy harvesting improves overall system operation efficiency and allows the vehicle to travel further on a...","categories": ["supercapacitors"],
@@ -77,9 +89,9 @@ var store = [{
         "url": "https://sunetrike.com/solar-impulse/se-asias-water-cleanup-solutions/",
         "teaser": "https://sunetrike.com/assets/images/water-cleanup/hero.jpeg"
       },{
-        "title": "Presentation for Mapua's Social Sciences and Education week - Past, Present and Future of Environmentalism",
-        "excerpt":"As part the week in Social Sciences and Education at Mapua University, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines. Please click here to access: Past, Present and Future for Environmentalism I attempted to share what...","categories": ["environmentalism"],
+        "title": "Past, Present and Future of Environmentalism - Presentation for Mapua's Social Sciences and Education week",
+        "excerpt":"As part the week in Social Sciences and Education at Mapua University, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines. Please click here to access: Past, Present and Future for Environmentalism I attempted to share what...","categories": ["presentations","environmentalism"],
         "tags": [],
-        "url": "https://sunetrike.com/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
+        "url": "https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
         "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
       }]
