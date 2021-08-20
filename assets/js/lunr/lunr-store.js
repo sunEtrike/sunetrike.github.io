@@ -94,16 +94,4 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
         "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
-      },{
-        "title": "A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example",
-        "excerpt":"What are you getting out of completing this tutorial/exercise? This article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp; embedded systems....","categories": ["open-source","embedded","teensy"],
-        "tags": [],
-        "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
-        "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
-      },{
-        "title": "In flight, I attain a higher consciousness.  Fear disappears - Translation of Bertrand Piccard's interview on La Croix",
-        "excerpt":"Last month, Capt Piccard sat down with the Malotrus and her podcast Place des Religions for an interview. I decided to do a translation into English. I opted to do this for a few reasons: Just for fun and French practice To reflect more on where Solar Impulse might be...","categories": ["solar-impulse"],
-        "tags": [],
-        "url": "https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/",
-        "teaser": "https://sunetrike.com/assets/images/fractals/lung-fractal-1.png"
       }]
