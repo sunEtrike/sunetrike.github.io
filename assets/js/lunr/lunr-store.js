@@ -94,4 +94,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
         "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
+      },{
+        "title": "sunE declares intention to achieve Net-Zero across its supply chain by 2025.",
+        "excerpt":"We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here      Interested in hearing more from us?  Check out our newsletter   ","categories": ["announcements"],
+        "tags": [],
+        "url": "https://sunetrike.com/announcements/declaration-to-achieve-net-zero/",
+        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
       }]
