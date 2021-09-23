@@ -100,4 +100,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/announcements/declaration-to-achieve-net-zero/",
         "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+      },{
+        "title": "In flight, I attain a higher consciousness.  Fear disappears - Translation of Bertrand Piccard's interview on La Croix",
+        "excerpt":"Last month, Capt Piccard sat down with the Malo Tresca and the podcast Place des Religions for a discussion about exploration, consciousness and how the Solar Impulse Network of 1000 Solutions can contribute to the great existential challenge of the 21st century. I decided to do a translation into English....","categories": ["solar-impulse"],
+        "tags": [],
+        "url": "https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/",
+        "teaser": "https://sunetrike.com/assets/images/solar-impulse-sun.jpeg"
       }]
