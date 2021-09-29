@@ -3,31 +3,31 @@ var store = [{
         "excerpt":"Allan is a geologist and electrical geophysicist who moved to the Philippines with a simple idea: this is the best country in the world for developing solar electric transportation systems. You can find him about an hour south of Manila between the dinosaur footprint and the lake that exploded in...","categories": [],
         "tags": [],
         "url": "https://sunetrike.com/team/al-gray",
-        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
         "title": "Clayton Gray",
         "excerpt":"Clayton is a serial &amp; social technopreneur and change agent, with over four decades of experience spanning agribusiness, construction, wireless internet delivery, financial services, and renewable energy industries. Currently, Clayton serves as the co-founder and CEO of Alset Integrated Energy Hong Kong Limited. Alset is the international arm of sunE,...","categories": [],
         "tags": [],
         "url": "https://sunetrike.com/team/clayton-gray",
-        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
         "title": "Kwadwo Ansah Antwi",
         "excerpt":"Dr. Kwadwo Konadu Ansah-Antwi is currently CEO and co-Founder of Hessner Technologies Limited and Dyna Insights both of which are Hong based companies. He earned his Bachelor of Materials Science and Engineering at the University of Ghana, in 2009, and his PhD in Electrical and Computer Engineering from the National...","categories": [],
         "tags": [],
         "url": "https://sunetrike.com/team/kwadwo-ansah-antwi",
-        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
         "title": "Lois Gray",
         "excerpt":"Ms. Gray (BSA, MBA) is a Certified Management Consultant with over three decades of experience providing business advisory services to firms and organizations across a range of sectors. She brings a broad outlook and a diverse skill set to her work. This eclectic background was acquired through her work in...","categories": [],
         "tags": [],
         "url": "https://sunetrike.com/team/lois-gray",
-        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
         "title": "Phil Gray",
         "excerpt":"Co-founder &amp; General Manager of sunE in Batangas operation over the past 4 years in Santo Tomas Batangas. In that business Phil was responsible for the marketing human resources and cash management of the service. The shuttle operations ran 18 hours a day every day for 3 and half years...","categories": [],
         "tags": [],
         "url": "https://sunetrike.com/team/phil-gray",
-        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
         "title": "Absorbent Roadway – Concept outline",
         "excerpt":"Thank you to the R&amp;D team of LafargeHolcim for making this draft concept paper available to us for our submission to the 2018 Smart Infrastructure Challenge The absorbent roadway seeks to absorb and disperse localized flooding caused by storm surges. Continuous accumulation of plastic is resulting in two adverse consequences:...","categories": ["smart-infrastructure-challenge"],
@@ -99,11 +99,11 @@ var store = [{
         "excerpt":"We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here      Interested in hearing more from us?  Check out our newsletter   ","categories": ["announcements"],
         "tags": [],
         "url": "https://sunetrike.com/announcements/declaration-to-achieve-net-zero/",
-        "teaser": "https://sunetrike.com/assets/images/sunev.JPG"
+        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
         "title": "In flight, I attain a higher consciousness.  Fear disappears - Translation of Bertrand Piccard's interview on La Croix",
         "excerpt":"In April, Capt Piccard sat down with the Malo Tresca and the podcast Place des Religions for a discussion about exploration, consciousness and how the Solar Impulse Network of 1000 Solutions can contribute to the great existential challenge of the 21st century. I decided to do a translation into English....","categories": ["solar-impulse"],
         "tags": [],
         "url": "https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/",
-        "teaser": "https://sunetrike.com/assets/images/solar-impulse-sun.jpeg"
+        "teaser": "https://sunetrike.com/assets/images/solar-impulse-sun-thumb.jpeg"
       }]
