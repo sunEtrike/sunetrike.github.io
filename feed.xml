@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-09-29T20:34:47+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix</title><link href="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/" rel="alternate" type="text/html" title="In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix" /><published>2021-09-23T01:08:07+08:00</published><updated>2021-09-23T01:08:07+08:00</updated><id>https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness</id><content type="html" xml:base="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/">&lt;p&gt;In April, Capt Piccard sat down with the Malo Tresca and the podcast &lt;em&gt;Place des Religions&lt;/em&gt; for a discussion about exploration, consciousness and how the &lt;a href=&quot;https://solarimpulse.com/efficient-solutions&quot;&gt;Solar Impulse Network of 1000 Solutions&lt;/a&gt; can contribute to the great existential challenge of the 21st century.  I decided to do a translation into English.  I opted to do this for a few reasons:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-10-15T10:58:31+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix</title><link href="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/" rel="alternate" type="text/html" title="In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix" /><published>2021-09-23T01:08:07+08:00</published><updated>2021-09-23T01:08:07+08:00</updated><id>https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness</id><content type="html" xml:base="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/">&lt;p&gt;In April, Capt Piccard sat down with the Malo Tresca and the podcast &lt;em&gt;Place des Religions&lt;/em&gt; for a discussion about exploration, consciousness and how the &lt;a href=&quot;https://solarimpulse.com/efficient-solutions&quot;&gt;Solar Impulse Network of 1000 Solutions&lt;/a&gt; can contribute to the great existential challenge of the 21st century.  I decided to do a translation into English.  I opted to do this for a few reasons:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Just for fun and French practice&lt;/li&gt;
   &lt;li&gt;To reflect more on where Solar Impulse might be heading with its newest initiative and tagline &lt;a href=&quot;https://solarimpulse.com/beyond-1000-solutions&quot;&gt;Ecology as driving force for economy&lt;/a&gt;&lt;/li&gt;
@@ -601,7 +601,945 @@ The other half requires economic adjustments, as well as adjustment to attitudes
 
 &lt;div class=&quot;newsletter_wrapper&quot;&gt;
   &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="announcements" /><summary type="html">We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture. Please see our declaration to achieve net-zero here</summary></entry><entry><title type="html">Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week</title><link href="https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/" rel="alternate" type="text/html" title="Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week" /><published>2021-06-26T01:08:07+08:00</published><updated>2021-06-26T01:08:07+08:00</updated><id>https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future</id><content type="html" xml:base="https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/">&lt;p&gt;As part the week in Social Sciences and Education at &lt;a href=&quot;ssse.mapua.edu.ph&quot;&gt;Mapua University&lt;/a&gt;, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="announcements" /><summary type="html">We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture. Please see our declaration to achieve net-zero here</summary></entry><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-07-11T01:08:07+08:00</published><updated>2021-07-11T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;what-are-you-getting-out-of-completing-this-tutorialexercise&quot;&gt;What are you getting out of completing this tutorial/exercise?&lt;/h2&gt;
+
+&lt;p&gt;This article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp;amp; embedded systems.&lt;/p&gt;
+
+&lt;p&gt;You can browse the &lt;a href=&quot;&quot;&gt;github repo&lt;/a&gt; to have a look.  It is a &lt;a href=&quot;https://github.com/ruby/rake&quot;&gt;Rake&lt;/a&gt; based build using &lt;a href=&quot;&quot;&gt;Unity&lt;/a&gt; as the testing framework.  After getting the toolchain set-up, we’ll refactor the teensy starter blinky code into its own module and add an abstraction layer to the interface.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-bother-with-automated-testing-for-embedded-systems&quot;&gt;Why bother with automated testing for embedded systems?&lt;/h2&gt;
+
+&lt;p&gt;I’m a big fan of automated testing.  As somebody who is always juggling a lot of balls in the air.  It gives me a lot of comfort to revisit an area of my codebase that I haven’t seen in 6-8 months and allow the tests to remind me how it works.&lt;/p&gt;
+
+&lt;h3 id=&quot;solid-flexible-and-testable-designs&quot;&gt;SOLID, Flexible, and Testable Designs&lt;/h3&gt;
+
+&lt;p&gt;The term ‘spaghetti code’ gets thrown around a lot in the software world.  Codebases that have long, complicated functions, nested ifs, etc can become a nightmare to tweak &amp;amp; maintain over time.  As a codebase progresses and matures, these types of interwoven dependencies can significantly slow down progress and new releases.&lt;/p&gt;
+
+&lt;p&gt;One of the main benefits of TDD is the way it forces you to think about your design and structures.  Grenning identifies the SOLID framework, originally attributed to “Uncle” Bob Martin in &lt;a href=&quot;https://onlinelibrary.wiley.com/doi/abs/10.1002/pfi.21408&quot;&gt;“Agile Software Development: Principles, Patterns, and Practices”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The C-language is not object oriented which means that these principles are implemented at the module level. If you are interested, you could also look at how these principles drive the design of the RakefileHelper class that RSpec is driving for the build system.&lt;/p&gt;
+
+&lt;p&gt;There are plenty of articles on the internet which describe SOLID in different contexts so I’m only going to briefly describe how I understand these principles to apply to the embedded context.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;S Single Responsibility Principle&lt;/strong&gt; - The name says it all here; a module should have one job.  This often leads to very descriptive module names.  A module called LEDdriver.c is expected to turn the LEDs on and off.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;O Open Closed Principle&lt;/strong&gt; - ‘Open for extension, Closed for modification’. For example, The LedDriver.c module may leverage a separate BaseLedDriver.c module in order to trigger the specific actions for the teensy.  If you now want to add support for a new device (Netduino, for example), You would create a NetduinoLedDriver.c which also calls BaseLedDriver. Both devices would then interact with the rest of the application in the same way even if their underlying implementations are different.  As a developer, you do not need to modify BaseLedDriver.c to add a new target board.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;L Liskov Substitution Principle&lt;/strong&gt; - In the LEDdriver example, you might create a data structure that encompasses the basic information of an LedDriver.  This is what permits you to substitute in a mock interface during testing.  By doing this, any other module (an LedScheduler.c, for example) that wants to trigger an Led, will use the same function call. The calling module does not care about the implemenation details.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;I Interface Segregation Principle&lt;/strong&gt; - The interface of a module should be limited to a single concept.  An LedDriver.c is basically a light-switch.  It wouldn’t make sense for you to check the time by looking at a light switch.  Time and Light “Status” are very different concepts.  If you find yourself asking about both of those concepts within the same interface, function call, etc) Then the interfae of your module is probably not well segregated.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;D Dependency Inversion Principle&lt;/strong&gt; - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (u to and including cosmically-induced bit-flips) which suddenly place the device in &lt;em&gt;no man’s land&lt;/em&gt; as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.&lt;br /&gt;
+Putting this into practice in testing will often involve turning your module into a ‘black-box’.  Where the caller makes an abstracted call such as ‘is Led #5 on?’ or ‘turn the blue led off’.  The internal details of how the serving module makes that call is hidden from the caller.  In embedded TDD, function pointers are often used in order to allow testing of these abstracted interfaces.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dual-targeting-and-even-multi-targeting&quot;&gt;Dual-targeting and even multi-targeting&lt;/h3&gt;
+
+&lt;p&gt;There has been a lot of news lately about a global shortage in microcontrollers and semiconductors.  So the ability to write an embedded application that can build of multiple devices may mean the difference of whether or not your protoypes make it into production.  TDD forces you to decouple your application layer from the underlying hardware which, hopefully, makes for better portability to other devices.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-i-found-big-challenges-in-learning-automated-testing-for-embedded-systems&quot;&gt;Where I found big challenges in learning automated testing for embedded systems&lt;/h2&gt;
+
+&lt;p&gt;As I’ve been diving deeper into the world of embedded systems and mirocontrollers, I wanted to make sure that I had a handle on how to apply TDD in the world of C cross-compiling.  So I picked up copy of James Grenning’s book &lt;a href=&quot;https://pragprog.com/titles/jgade/test-driven-development-for-embedded-c/&quot;&gt;TDD for Embedded Systems&lt;/a&gt;.  Among the two testing frameworks he demonstrated, I preferred &lt;a href=&quot;http://www.throwtheswitch.org/unity&quot;&gt;Unity&lt;/a&gt; this is mainly because I am still a relative novice in C and I’d prefer to avoid mixing languages at this time.  The other option &lt;a href=&quot;http://cpputest.org/&quot;&gt;CppUTest&lt;/a&gt; is written in C++.&lt;/p&gt;
+
+&lt;p&gt;As a relative novice in c-programming just getting Grenning’s examples to build took a pretty big effort.  Eventually I got through and voila, my reward was a suite of passing tests that &lt;strong&gt;could NOT&lt;/strong&gt; be built on any particular device.  While it makes sense within the scope of the book, I found myself floundering a bit in trying to figure out how to get this well-tested &amp;amp; decoupled book code to deploy onto an actual device.&lt;/p&gt;
+
+&lt;p&gt;Embedded TDD tries to offer its practitioner the promise of development without hardware.  It’s an attractive but rather lofty goal for a small team. At the end of the day, if well-tested code doesn’t perform as expected on the board, then the whole effort is wasted.&lt;/p&gt;
+
+&lt;p&gt;The open-source &lt;a href=&quot;https://www.pjrc.com/teensy&quot;&gt;Teensy&lt;/a&gt; boards serve as a good starting point for learning how to get into ARM Cortex.  I had a couple Teensy 3.6 boards left over from another project. So that’s why I opted to use this model.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.pjrc.com/teensy/td_download.html&quot;&gt;Teensyduino&lt;/a&gt; package contains a starter makefile and blinky source code.  To ensure the necessary toolchain is set-up on your computer, please make sure you can build and run it before attempting to use this code.&lt;/p&gt;
+
+&lt;h2 id=&quot;rake-vs-make-for-embedded-development&quot;&gt;Rake vs Make for embedded development&lt;/h2&gt;
+
+&lt;p&gt;Slowly but surely, I’m learning to navigate makefiles, they are quite cryptic to read and learn but I as far as I can tell, they are still pretty much industry standard.  From a TDD &amp;amp; multitargeting perspective, they suffer from a couple important drawbacks:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;They are a domain-specific language that is super hard to read for the uninitiated&lt;/li&gt;
+  &lt;li&gt;They don’t have a way to test and protect against regressions &lt;strong&gt;Most important&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;While scripting languages often suffer performance wise, in this case, I feel that have a full object oriented language more than makes up for it and I’m very fond of &lt;a href=&quot;https://rspec.info/&quot;&gt;RSpec&lt;/a&gt; for its expressiveness and readability.  As the ruby version of Make, Rake does a lot of the heavy lifting for us on this job.  If you are curious to learn more about Rake, I pulled a lot from &lt;a href=&quot;https://avdi.codes/rake-part-1-basics/&quot;&gt;this blog&lt;/a&gt; while learning how rake handle dependencies and filetypes.  I leaned heavily on ElectronVector’s blog post on using &lt;a href=&quot;http://www.electronvector.com/blog/using-gcc-for-automatic-c-language-dependency-management-with-rake&quot;&gt;rake to drive GCC&lt;/a&gt;.  This example is basically a TDD version of that rakefile.&lt;/p&gt;
+
+&lt;p&gt;Unity provides a &lt;a href=&quot;https://github.com/ThrowTheSwitch/Unity/tree/master/examples/example_3&quot;&gt;starter rakefile&lt;/a&gt; &lt;strong&gt;without a test harness&lt;/strong&gt;.  It works well but in order for me to put a test harness around it, I needed to extract it to a class.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
+
+&lt;p&gt;To get started, let’s take an inventory of what we have to work with.&lt;br /&gt;
+If you mainly use arduino studio you may not have used make very much&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-your-toolchain-in-place&quot;&gt;Getting your toolchain in place&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The makefile and starter source code can be found at &lt;a href=&quot;https://www.pjrc.com/teensy/td_download.html&quot;&gt;Teensyduino&lt;/a&gt;. For my Teensy 3.6, the makefile is located at hardware/teensy/avr/cores/teensy3.  If you have a Teensy4, it will be at cores/teensy4 and so on.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running &lt;strong&gt;make&lt;/strong&gt; within this folder and seeing blinky running on your device&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The teensy loader should pop-up automatically.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/teensy_rake/teensy_loader.png&quot; alt=&quot;teensy_loader_interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The programming status bar should pop-up as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/teensy_rake/teensy_programming.png&quot; alt=&quot;teensy_programming_dialog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keep an eye out for both of these as you are progressing through the test-suite&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The rakefile and starter source code within &lt;a href=&quot;http://www.throwtheswitch.org/unity&quot;&gt;example 3 of Unity&lt;/a&gt; (located at examples/examples3). &lt;em&gt;Make sure your computer’s ruby buildchain is correctly setup by running &lt;strong&gt;rake&lt;/strong&gt; within this folder.  Unity should report a couple tested modules; each with some successful, failed and ignored tests&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;setting-up-a-new-project&quot;&gt;Setting up a new project&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;After cloning the &lt;a href=&quot;&quot;&gt;teensy_tdd_rake repo&lt;/a&gt;, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to set-up rake and rspec/&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Copy the teensy3 folder into the root folder&lt;/li&gt;
+  &lt;li&gt;Copy the unity.framework folder into the root folder. &lt;em&gt;you may want to include it as a git submodule&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With that, you should now have the following folder tree:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/teensy_rake/teensy_rake_folders.png&quot; alt=&quot;teensy_rake folder layout&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To test the buildchain, We are going to run first run with teensy disconnected, then with it connected.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-disconnect-the-teensy-and-type&quot;&gt;1. Disconnect the teensy and type&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec rspec&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It should return with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;49 examples and 1 failure&lt;/code&gt;.  What’s the failure?  Well, I’ve started you off on step 1 of the Red-Green-Refactor cycle.   We’ll come back to the failed test a little later..&lt;/p&gt;
+
+&lt;h4 id=&quot;2-connect-the-teensy-and-type&quot;&gt;2. Connect the teensy and type&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec rspec&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are running on an ubuntu install, this may work immediately.  However, 
+The Rakefile_helper will attempt identify if a device is connected at usb address &lt;em&gt;/dev/ttyACM0&lt;/em&gt; or &lt;em&gt;/dev/ttyACM1&lt;/em&gt;. These are the default usb locations on my linux mint install.  If the addresses on your system are different you can update within the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If it identifies that a teensy is connected, it will run those tests, otherwise it will skip them.  The teensy tests are a bit slow but it’s the best way I’ve found so far to do an &lt;a href=&quot;https://thoughtbot.com/blog/testing-from-the-outsidein&quot;&gt;outside-in&lt;/a&gt; test of the build.&lt;/p&gt;
+
+&lt;p&gt;If you’ve made it this far, congrats!  You’ve now got an open-source, TDD build system for your teensy to get you going on your way towards TDD and/or multi-targetting.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing-and-iterating&quot;&gt;Testing and Iterating&lt;/h2&gt;
+
+&lt;p&gt;Regardless of what kind of software you are building, there will be some variation of a testing pyramid similar to the picture below.  At the top are the ‘acceptance or feature’ tests which cover all of the important functionalities that your users expect to see.  These are slow to run and require the physical hardware and probably customized bench &amp;amp; field testing programs.  Writing these tests can help to clarify your thinking about what exactly you are expecting your software solution to achieve for your users.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/teensy_rake/TDD_pyramid.png&quot; alt=&quot;The TDD Pyramid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: this is not my picture.  the &lt;a href=&quot;https://medium.com/@joatmon08/test-driven-development-techniques-for-infrastructure-a73bd1ab273b&quot;&gt;source is here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the case of our TDD build-system, our interface is the Rakefile.  It will act differently depending on whether a USB is plugged in.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;unit (default)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;prepare_for_tests&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;deploy_teensy&lt;/li&gt;
+  &lt;li&gt;prepare_teensy_hex&lt;/li&gt;
+  &lt;li&gt;build_for_teensy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since the task ‘unit’ is the default, typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; is equivalent to typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake unit&lt;/code&gt;. Try it now.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Clearing build directory
+Running unit tests
+Running system tests...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;the-first-build-system-spec&quot;&gt;The first build-system spec.&lt;/h2&gt;
+
+&lt;p&gt;Before going forward, let’s have a look at layout of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spec/&lt;/code&gt; folder&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/teensy_rake/teensy_rake_spec_folders.png&quot; alt=&quot;teensy_rake spec folder layout&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are 3 files that defines specs:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Rakefile_spec.rb - As mentioned above, this is the interface for our buildsystem.&lt;/li&gt;
+  &lt;li&gt;spec/rakefile_helper_spec.rb - All of the application logic and customization is found in here.&lt;/li&gt;
+  &lt;li&gt;spec/helper_methods/helper_methods_spec.rb - These are methods to assist in setting up and tearing down tests.  They mostly perform string and file manipulation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s look at the failing spec:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Rakefile defaults to unit tests
+   Failure/Error: expect&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;check_for_file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;target_exe_filepath&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;.to eq&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   
+     expected: &lt;span class=&quot;nb&quot;&gt;true
+          &lt;/span&gt;got: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+   
+     &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;compared using &lt;span class=&quot;o&quot;&gt;==)&lt;/span&gt;
+   
+     Diff:
+     @@ &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; +1 @@
+     &lt;span class=&quot;nt&quot;&gt;-true&lt;/span&gt;
+     +false
+     
+   &lt;span class=&quot;c&quot;&gt;# ./spec/Rakefile_spec.rb:23:in `block (2 levels) in &amp;lt;top (required)&amp;gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;During this spec, Rspec was told to expect something to be true. Those instructions are located at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/spec/Rakefile_spec.rb:23&lt;/code&gt;.  Let’s have a look at that file &amp;amp; line.  We see the offending spec:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'defaults to unit tests'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;target_exe_filepath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build_folder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'TestLedController.exe'&lt;/span&gt;
+	&lt;span class=&quot;sb&quot;&gt;`rake`&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;check_for_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target_exe_filepath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In case you are not familiar with Ruby, here’s what the spec is requesting in plain english:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expect to find a file named 'TestLedController.exe' inside of the build folder&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;http://www.throwtheswitch.org/build/build-unity&quot;&gt;check this page&lt;/a&gt; for more details about how Unity is built.  For our purposes, we just need to know that the Unity build was triggered rather than the teensy build.  But why did it fail?  Well, this Rakefile instucts Unity to search in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test/&lt;/code&gt; folder for files named TestSomeModule.c.  There is no file like that so the test fails.  We are Red, in the Red-Green-Refactor loop.  Let’s create a blank file with the specified name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestLedController.c&lt;/code&gt; and try again&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Clearing build directory
+Running unit tests
+Running system tests...
+
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ build/TestLedController_Runner.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/TestLedController_Runner.o
+
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/TestLedController.o
+
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:1: warning: ISO C forbids an empty translation unit &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Wpedantic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/TestLedController_Runner.o build/TestLedController.o &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedController.exe&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Rake successfully recognized the new file! Great!  It began compiling its modules, first &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestLedController_Runner.o&lt;/code&gt; and then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestLedController.o&lt;/code&gt; before exiting with an error.  New information and new errors is progress in the TDD cycle.&lt;/p&gt;
+
+&lt;p&gt;Here’s the basic structure of a test in unity.  Try adding it to the empty file to see what you get…&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;unity.h&quot;
+#include &quot;LedController.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_Led_Controller_does_a_thing_and_fails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;TEST_FAIL_MESSAGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Our greatest glory is not in never falling, but in rising every time we fall. - Confucius&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Clearing build directory
+Running unit tests
+Running system tests...
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ unity.framework/src/unity.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/unity.o
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ build/LedController_Runner.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/TestLedController_Runner.o
+build/TestLedController_Runner.c:5:10: fatal error: LedController.h: No such file or directory
+    5 | &lt;span class=&quot;c&quot;&gt;#include &quot;LedController.h&quot;&lt;/span&gt;
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+rake aborted!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ok, this time it couldn’t find the header file.  For those of you who are still getting used to the difference between source and header files.  One way to think about it is that the header file defines the interface of the module.  So this is a good time to revisit the concept of SOLID and think about what we want this LedController.c to do.  Better yet, let’s evaluate how ‘SOLID’ the teensy starter code in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.cpp&lt;/code&gt; is.&lt;/p&gt;
+
+&lt;h3 id=&quot;solidifying-maincpp&quot;&gt;SOLIDifying main.cpp&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;S Single Responsibility Principle&lt;/strong&gt; - What is the responsibility of main.cpp right now?  Well, since it is the only file, it does everything.  Even in this very simple application, there are multiple responsibilities involved.
+    &lt;ol&gt;
+      &lt;li&gt;Start-up and initialize the board and name important variables&lt;/li&gt;
+      &lt;li&gt;Toggle an led ON or OFF&lt;/li&gt;
+      &lt;li&gt;Keep track of time and perform an action after a specified amount of time&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;O Open Closed Principle&lt;/strong&gt; - Let’s say you want to add some new functionality, for example a different LED that flashes on a different interval.  How would you do that? Would you extend main.cpp with new details or would you copy and paste the new pin number and interval into main.cpp?  Certainly the easier thing to do is copy/paste main.cpp and that would work fine for this example.  However, in that case you not extending main.cpp and you are modifying it.  So the easy/obvious route is in violation of OCP.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;L Liskov Substitution Principle&lt;/strong&gt; - Liskov substitution principle (LSP) evaluates the interface.  However as a single file monolith, main.cpp does not even have an interface!  So from that perspective, adding an interface is the obvious step to take to make this application more SOLID with a capital ‘L’!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;I Interface Segregation Principle&lt;/strong&gt; - So what interfaces do we need?  Well based on the 3 repsonsibilities mentioned in section 1, it would appear that main needs 3 interfaces:
+    &lt;ol&gt;
+      &lt;li&gt;For initialization and for establishing the important constant and variables needed by the application&lt;/li&gt;
+      &lt;li&gt;For reading and writing Led pins&lt;/li&gt;
+      &lt;li&gt;For monitoring time and taking action based on that information&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;D Dependency Inversion Principle&lt;/strong&gt; - Does the high level code (main.cpp) depend on the lower-level modules? Well, it depends on one interface: Arduino.h.  What does Arduino depend on? Open the file and have a look:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;WProgram.h&quot;
+#include &quot;pins_arduino.h&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pins_arduino.h&lt;/code&gt; is almost 300 lines of constant definitions while 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WProgram depends&lt;/code&gt; on 24 different modules.&lt;/p&gt;
+
+&lt;p&gt;If you are preparing to move from teensy to a different board (or vice-versa), be prepared for a LOT of reading, digging and research. I can personally attest to this.  I learned a lot, but it can take a very long time.  Nobody wants to be dealing with those sorts of challenges on a deadline.&lt;/p&gt;
+
+&lt;p&gt;That’s all a lot to take in but let’s take it step by step.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-a-unity-test&quot;&gt;Adding a unity test&lt;/h2&gt;
+
+&lt;h3 id=&quot;defining-the-interface-with-testledcontrollerc&quot;&gt;Defining the interface with TestLedController.c&lt;/h3&gt;
+
+&lt;p&gt;Looking again at the starter sourcecode for blinky.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;Arduino.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;extern&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;C&quot;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;pinMode() makes teensy toggleable.  So thats a good place to start. We want to be able to create an LedController with a pin number.&lt;/p&gt;
+
+&lt;p&gt;Let’s create the header now.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// includes/LedController.h&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#ifndef D_LedController_H
+#define D_LedController_H
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdint.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pinNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;When we run the tests,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;clearing build directory
+Running unit tests
+Running system tests...
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ unity.framework/src/unity.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/unity.o
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ build/TestLedController_Runner.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/TestLedController_Runner.o
+gcc &lt;span class=&quot;nt&quot;&gt;-DUNITY_INCLUDE_DOUBLE&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DUNITY_SUPPORT_TEST_CASES&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D__MK66FX1M0__&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-DF_CPU&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;48000000 &lt;span class=&quot;nt&quot;&gt;-DTEST&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Wno-address&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-pedantic&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Isrc&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iunity&lt;/span&gt;.framework/src/ &lt;span class=&quot;nt&quot;&gt;-Itest&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iincludes&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Imocks&lt;/span&gt;/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/avr/ &lt;span class=&quot;nt&quot;&gt;-Iteensy3&lt;/span&gt;/util/ &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c &lt;span class=&quot;nt&quot;&gt;-obuild&lt;/span&gt;/TestLedController.o
+gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/unity.o build/TestLedController_Runner.o build/TestLedController.o &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedController.exe
+build/TestLedController.exe
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:14:test_LedController_is_off_upon_creation:FAIL: Our greatest glory is not &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;never falling, but &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;rising every &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;we fall. - Confucius&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ok! So we have our first test!  Confucius isn’t telling us anything useful anymore, let’s write a test that describes what the code is (or isn’t doing). For the rest of the code snippets, I’m going to only include the bits that change.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// test/TestLedController.c&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_is_off_upon_creation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;									&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;[1] I find it useful to put in recognizably nonsense numbers or strings in the data of my tests.  It can help you catch your mistakes faster&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/unity.o build/TestLedController_Runner.o build/TestLedController.o &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedController.exe
+/usr/bin/ld: build/TestLedController.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;test_LedController_is_off_upon_creation&lt;span class=&quot;s1&quot;&gt;':
+TestLedController.c:(.text+0x57): undefined reference to `LedController_Create'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Unity can’t find the function.  Because we haven’t written it yet. So here’s our chance to finally make our code do something.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// src/LedController.c&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which returns:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:16:test_LedController_is_off_upon_creation:FAIL: Expected 0 Was 0xFACE
+
+&lt;span class=&quot;nt&quot;&gt;-----------------------&lt;/span&gt;
+1 Tests 1 Failures 0 Ignored 
+FAIL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ok! now let’s make it pass&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// src/LedController.c&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;So there it is, your first passing test on a teensy. Let’s keep going. This test will virtually turn on an Led&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_TurnOn_Led_seven&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x07&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Unity will complain that it doesn’t know about the new function, as it should.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c: In &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; ‘test_LedController_TurnOn_Led_seven’:
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:23:3: warning: implicit declaration of &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; ‘LedController_TurnOn’&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; did you mean ‘LedController_Create’? &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Wimplicit-function-declaration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+   23 |   LedController_TurnOn&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+      |   LedController_Create&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A quick note about the function names, at first I was annoyed by developers putting the module name in the front of each method call. Over time though, I came to appreciate that it makes a big difference in keeping things organized.  It might seem weird to readers coming from an object-oriented language but it does really help!&lt;/p&gt;
+
+&lt;p&gt;So next we add LedController_TurnOn() to the header file.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;TestLedController.c:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;.text+0xc6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: undefined reference to &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedController_TurnOn&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We’ve seen this before, time to edit the sourcefile.  If you just add the empty function and run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt;, it will fail. Good to see.  You want to see the test failing the way you expect before you implement the desired functionality.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:12:test_LedController_is_off_upon_creation:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:24:test_LedController_TurnOn_Led_seven:FAIL: Expected 1 Was 0
+
+&lt;span class=&quot;nt&quot;&gt;-----------------------&lt;/span&gt;
+2 Tests 1 Failures 0 Ignored 
+FAIL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ok, to achieve the desired functionality, we will make a pointer to the address and mark it static so it’s not accessible to outside callers.  To turn it on, we will make an over-simplification.  This is an example of the Agile principle of ‘selecting the simplest design that could possibly work’.&lt;/p&gt;
+
+&lt;p&gt;It’s ok (even encouraged) to oversimplify your solutions during TDD as it is expected to produce a more robust solution than trying to create the complete solution immediately.  These kinds of small, steady, well-tested steps can sometimes help to avoid careless (or rushed) mistakes.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This should pass. Congratulations, you can now virtually turn on your light.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:12:test_LedController_is_off_upon_creation:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:19:test_LedDriver_TurnOn_Led_seven:PASS
+
+&lt;span class=&quot;nt&quot;&gt;-----------------------&lt;/span&gt;
+2 Tests 0 Failures 0 Ignored 
+OK&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s also make sure we can turn one off.  Just to say we can.  Also to achieve the same level of function as the infamous ‘sample blinky’.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_TurnOff_Led_seven&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After adding the header definitions and empty functions.  You should be at a failing test.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:12:test_LedController_is_off_upon_creation:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:19:test_LedController_TurnOn_Led_seven:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:33:test_LedController_TurnOff_Led_seven:FAIL: Expected 0 Was 1
+
+&lt;span class=&quot;nt&quot;&gt;-----------------------&lt;/span&gt;
+3 Tests 1 Failures 0 Ignored 
+FAIL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It passes by reversing the command in TurnOn().&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;So that brings us to our first refactoring opportunity.  One of the ways codebases get out of hand over time is by writing the same instructions over and over in different parts of your code.  Another of the important tenets of programming is Don’t Repeat Yourself which is apparently attributed to the writers of Pragmatic Programmer who also published Grenning’s book.  You might say that I’ve drank the kool-aid when it comes to this testing stuff.
+At any rate, keeping your code DRY means always being on the lookout for opportunities to bring together duplicated statements into a single definition.  Many practitioners advocate for refactoring after the third duplication.  In our case, we now have a statement that occurs in every test.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;  &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;However, our test about of LedController_Create() involves a variable declaration beforehand.  So we can’t remove it.  That means we can only remove two of the duplicates but let’s take the opportunity to do it now anyway.  This statement will be required consistenly in upcoming tests anyway so it won’t be two for long:&lt;/p&gt;
+
+&lt;p&gt;Here’s how TestLedController.c looks after refactoring&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;unity.h&quot;
+#include &quot;LedController.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_is_off_upon_creation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_TurnOn_Led_seven&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_TurnOff_Led_seven&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The tests are short and sweet.  That makes a big difference as your codebase &amp;amp; test suite starts to grow.  The faster you can understand what a newly failed test is doing, the more likely you are to identify and fix it quickly as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;start-on-green-end-on-green-with-refactoring&quot;&gt;Start on green, end on green with refactoring&lt;/h4&gt;
+&lt;p&gt;Sometimes it can be tempting to refactor out a duplication you find while doing some other task.  Don’t do that. You always want a fully passing codebase before you start refactoring or you can get yourself into all kinds of confusing trouble.&lt;/p&gt;
+
+&lt;h3 id=&quot;turning-on-a-specific-led--a-point-about-binary&quot;&gt;Turning on a specific Led (&amp;amp; a point about binary)&lt;/h3&gt;
+&lt;p&gt;Right now the driver will represents all possible pins in a single binary value.  This is clearly not very useful on a board with multiple pins.  In this case, the 16-bit variable &lt;em&gt;ledsAddress&lt;/em&gt; represents 16 pins that represent whether its Led is on (1) or off (0).  So, for example, the binary &lt;em&gt;0000001001000000&lt;/em&gt; is equal to the hex value &lt;em&gt;0x240&lt;/em&gt; which is equal to &lt;em&gt;576&lt;/em&gt; on a decimal scale (the way we are accustomed to counting).  There are lots of binary-hexadecimal-decimal converters available online to help.&lt;/p&gt;
+
+&lt;p&gt;Anyways, it’s time to start toggling different pins. Here’s the test:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_TurnOn_MultipleLeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The test returns 0x0001 instead of 0x0240, just like we’d coded it earlier.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:15:test_LedController_is_off_upon_creation:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:22:test_LedController_TurnOn_Led_seven:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:28:test_LedController_TurnOff_Led_seven:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:39:test_LedController_TurnOn_MultipleLeds:FAIL: Expected 0x0180 Was 0x0001
+
+&lt;span class=&quot;nt&quot;&gt;-----------------------&lt;/span&gt;
+4 Tests 1 Failures 0 Ignored 
+FAIL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Time to fix that with a technique called bit-shifting.  Important in embedded systems so get comfortable with it if you’re not already.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which will make your tests pass. So we can move onto the same case but for turning off a specific Led.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_TurnOff_AnLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It fails with 0x0000 instead of the intended 0x0040. Again this is what we intentionally coded earlier.  You’ll use a different bitwise operate to turn a specific bit to 0.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which brings everything to passing again.  You could consider refactoring the bitshift into a function that is more expressive of the intention.  Your future teammates will probably thank you for that. Make it static and keep it out of the header since there’s no reason an external call would need to use this function.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getBitLocationFromLedNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getBitLocationFromLedNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getBitLocationFromLedNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There’s a bit of a nuance to what we’ve done here.  The pins on a teensy can be set to either &lt;a href=&quot;https://www.pjrc.com/teensy/td_digital.html&quot;&gt;read or write&lt;/a&gt;.  This means that a pin set to output (such as an LedController) cannot read the actual state of the pin. Instead it has to keep track of the values in its own separate memory location.&lt;/p&gt;
+
+&lt;p&gt;Why is this important? Well, it comes down to the difference between state and action. Many embedded systems will use &lt;a href=&quot;https://www.state-machine.com/fsm/&quot;&gt;finite state machines&lt;/a&gt; in order to carry out their tasks.  If you look to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delay()&lt;/code&gt; function in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt;, the processor is occupied during the delay and cannot be asked to do any other tasks.  Using a state machine can help to free up system resources while still keeping track of the various peripherals (such as LEDs).&lt;/p&gt;
+
+&lt;p&gt;Let’s look and how to ensure monitoring of state with a test:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedController_does_not_read_the_LedMemoryMap_for_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xffff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtualPin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which fails by returning the memory mapped location declared in the test setup&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestLedController.c:54:test_LedController_does_not_read_the_LedMemoryMap_for_state:FAIL: Expected 0x0080 Was 0xFFFF&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;note: this particular Rakefile will only recognize functions that start with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test_&amp;lt;WhateverModule&amp;gt;.c&lt;/code&gt; if you forget to add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test_&lt;/code&gt; at the front of the function, the test will not be run.&lt;/p&gt;
+
+&lt;p&gt;Here’s what the passing code looks like.  I didn’t include the Turn_off() function but it works the same:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x0000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getBitLocationFromLedNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;back-to-maincpp&quot;&gt;Back to main.cpp&lt;/h2&gt;
+
+&lt;p&gt;So now we have a tested LedDriver. But it doesn’t actually make any system calls yet.  It’s also not being called by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.cpp&lt;/code&gt;.  How do we fix that?&lt;/p&gt;
+
+&lt;p&gt;Before moving forward, double-check all is working correctly by plugging in the teensy and call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake deploy_teensy&lt;/code&gt;, to make sure it is loading blinky properly.  Since the test suite cleans up its objects after each build, rake is going to need to rebuild the teensy3 modules.  It takes 10 to 15s on my computer.&lt;/p&gt;
+
+&lt;p&gt;first add in the new module to make sure it builds ok. The Rakefile should handle it without complaint.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;extern&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;C&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &quot;LedController.h&quot;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note: The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extern &quot;C&quot; {}&lt;/code&gt; wrapper is important here or you will get a linker error when &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.cpp&lt;/code&gt; tries to call those functions.&lt;/p&gt;
+
+&lt;h3 id=&quot;moving-the-system-calls-from-main-into-ledcontroller&quot;&gt;Moving the system calls from main into LedController&lt;/h3&gt;
+
+&lt;p&gt;within main, there are 3 system calls:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pinMode(ledNumber, OUTPUT);&lt;/code&gt;   which tells the teensy to treat this pin as an output.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitalWriteFast(ledNumber, HIGH);&lt;/code&gt;  Which applies a high (3.3V) voltage to the pin, causing the connected LED to light.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitalWriteFast(ledNumber, LOW);&lt;/code&gt;  Which applies 0 voltage to the pin, causing the connected LED to go dark.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;let’s try moving the first call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pinMode()&lt;/code&gt; to LedController.&lt;/p&gt;
+
+&lt;p&gt;LedController.c:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;LedController.h&quot;
+#include &quot;Arduino.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//static variables&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_Activate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;main.cpp:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;Arduino.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;extern&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;C&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &quot;LedController.h&quot;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;extern&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;C&quot;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;uint16_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activeLeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LedController_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activeLeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LedController_Activate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// pinMode(ledNumber, OUTPUT);  // NOTE: this has been commented out&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Try deploying first with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake deploy_teensy&lt;/code&gt;.  That works! What about the tests with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt;?&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/unity.o build/LedController.o build/TestLedController_Runner.o build/TestLedController.o &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedController.exe
+/usr/bin/ld: build/LedController.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedController_Activate&lt;span class=&quot;s1&quot;&gt;':
+LedController.c:(.text+0xa8): undefined reference to `pinMode'&lt;/span&gt;
+collect2: error: ld returned 1 &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;status
+rake aborted!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Unity is looking for the pinMode() function which is buried in the teensy source code.  The build handles that without complaint but Unity is set-up to only reference the files directly called by the test.  You’ll notice that even if we &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &quot;Arduino.h&quot;&lt;/code&gt;, the command will still fail because unity does not attempt to find functions buried in submodules.
+The way to handle this is called a ‘link-time spy’.  A spy is an alternative, test-only module that gets allows you to stub a function and give a canned response to it.&lt;/p&gt;
+
+&lt;p&gt;comment out &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pinMode()&lt;/code&gt; so that it doesn’t bother you while setting up the Spy&lt;/p&gt;
+
+&lt;p&gt;What kind of behaviour might we expect from the Teensy?  Well, it should be recognized but off if it’s activated. Something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_Unactivated_Led_will_return_LED_if_activated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedController_Activate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LIGHT_OFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which will naturally fail if we run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; since those new functions are unrecognized. Comment out that test while we set-up the spy.&lt;/p&gt;
+
+&lt;p&gt;This is a good place to commit your work.&lt;/p&gt;
+
+&lt;p&gt;Ok, so now we will create a new folder called ‘mocks’ where we will place the spy (and it’s tests).
+mocks/TestTeensySpy.c:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;unity.h&quot;
+#include &quot;TeensySpy.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TeensySpy_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_TeensySpy_on_create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Nothing fancy here, a simple Create function to get started. Then a couple functions to store the result that was passed: GetLastId and GetLastState.&lt;/p&gt;
+
+&lt;p&gt;Let’s see what those functions look like within &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TeensySpy.h&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef D_TeensySpy_H
+#define D_TeensySpy_H
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdint.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TeensySpy_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TeensySpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TeensySpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and then the source:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;TeensySpy.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TeensySpy_Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;lastId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;lastState&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now we can start to ‘stub out’ the methods that are tucked away in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arduino.h&lt;/code&gt;.  The one we are focusing on is &lt;em&gt;pinMode()&lt;/em&gt; so let’s first create a test:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;TeensySpy.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_TeensySpy_set_pinMode_to_Output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and then add the function itself:&lt;/p&gt;
+
+&lt;p&gt;And then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TeensySpy.c&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;                       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;lastId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;lastState&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;These&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Symbols&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;more&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;but&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;since&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;they&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reside&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Spy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;they&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;have&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;impact&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;production&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Make sure to add it to the header file as well!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The tests should pass.&lt;/p&gt;
+
+&lt;p&gt;So if we turn our attention back to the &lt;strong&gt;LedController&lt;/strong&gt;, we can uncomment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pinMode()&lt;/code&gt; without breaking our tests.  Give it a try with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake clean&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake deploy_teensy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The LED should be blinking.  From here we can extract the rest of the Led functions into &lt;strong&gt;LedController&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s the while loop in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.cpp&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;  
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and the pin toggle functions added to &lt;strong&gt;LedController&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;  
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getBitLocationFromLedNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getBitLocationFromLedNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledsAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledsImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Naturally, this breaks the tests.  So let’s comment out the digitalWriteFast in LedController and then create some stubbed functions for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitalWriteFast()&lt;/code&gt;, within the spy.  We’ll add the tests first of course.&lt;br /&gt;
+There is an adage in TDD, ‘make it work for none, then make it work for one, then make it work for many’.  What does that mean?
+Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t already been set to output would it?  So we shouldn’t allow our Spy to either.  Here’s what that means in a test;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_TeensySpy_wont_respond_to_digitalWriteFast_if_no_pinMode_call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_TeensySpy_set_a_pin_to_HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeensySpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here’s a simple if clause that’ll check if the pinMode(OUTPUT) was called for the correct pin, if not, the Spy resets its values, if yes, it proceeds with the digitalWriteFast function call.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LEVEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lastState&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LEVEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lastId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;lastState&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;All tests passing? A similar test can/should be written for setting digitalWriteFast(LOW), since it doesn’t require a change to the logic, it’s good practice to change the code slightly to make the test fail.  For example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LEVEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lastState&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LEVEL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;will cause the last 2 tests to fail like this&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestTeensySpy.c:13:test_TeensySpy_on_create:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestTeensySpy.c:19:test_TeensySpy_set_pinMode_to_Output:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestTeensySpy.c:26:test_TeensySpy_wont_respond_to_digitalWriteFast_if_no_pinMode_call:PASS
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestTeensySpy.c:41:test_TeensySpy_set_a_pin_to_HIGH:FAIL: Expected 0x0001 Was 0x0002
+&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;/TestTeensySpy.c:50:test_TeensySpy_set_a_pin_to_LOW:FAIL: Expected 0x0000 Was 0x0001&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;So the tests are indeed checking that the code produces the expected result.  Great!  Revert the ‘+1’ and lets get back to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LedController&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we uncomment the digitalWriteFast() calls now, we get complaints about missing functions, we need to add a fake &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arduino.h&lt;/code&gt; file in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mocks&lt;/code&gt; and place the missing function declarations in there.  The enum contains variables that are declared within the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arduino.h&lt;/code&gt; library that we also need to include.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef D_Arduino_H
+#define D_Arduino_H
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdint.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LOW&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HIGH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OUTPUT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pinMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;digitalWriteFast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ledNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;At that point, the tests should pass and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake deploy_teensy&lt;/code&gt; also succeeds.&lt;/p&gt;
+
+&lt;p&gt;This is a good time to commit your work.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git add &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt;
+git commit &lt;span class=&quot;nt&quot;&gt;-am&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;finish extract led functions into LedController&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;extracting-time-functions&quot;&gt;Extracting time functions&lt;/h3&gt;
+
+&lt;p&gt;So where are we at now?&lt;br /&gt;
+ if we look at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.cpp&lt;/code&gt;, we see that there is still a function call to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arduino.h&lt;/code&gt; library&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LedController_TurnOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LedController_TurnOff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boardLed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delay(time)&lt;/code&gt; function causes the board to freeze for the specified time in milliseconds.  Scheduling and timing is a very important function in micro-controllers that are constant switching between different tasks on specified intervals.
+But that poses certain special challenges for testing.  For example.  If you had a task that only repeats once a day, are you going to wait around for that time?  What if you need to support daylight savings time or leap years?  Clearly you need a way to control the internal clock of the device from your test harness.  Grenning’s book used a scheduler to accomplish this.  We are going to mimic this approach although it is arguable overkill to just replace a simple delay function.
+Let’s get started.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-scheduler&quot;&gt;The Scheduler&lt;/h3&gt;
+
+&lt;p&gt;So the way this is going to work, it that main() will start a module called LightScheduler() and give it the variables necessary to function.  The LightScheduler will then constantly check the time via callbacks.  When the reported time matches the desired time, LedScheduler will call LedController to toggle the desired pin.&lt;/p&gt;
+
+&lt;p&gt;Let’s use a test to show the different components/function calls.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedScheduler_ScheduledDelay_didnt_arrive_yet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedScheduler_ScheduleDelay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;FakeTimeService_SetTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;499&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LedScheduler_WakeUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LedControllerSpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LedControllerSpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is too much functionality to implement all at once so we will just comment it out and hold onto it as a reference for now.&lt;/p&gt;
+
+&lt;p&gt;Here’s a much simpler test to get started with.  It requires us to setup a new spy:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_LedScheduler_No_Lights_On_Initialization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_ID_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LedControllerSpy_GetLastId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TEST_ASSERT_EQUAL_HEX16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LED_STATE_UNKNOWN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LedControllerSpy_GetLastState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We’ll also comment that out and now start out with a test of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LedControllerSpy&lt;/code&gt; itself.&lt;/p&gt;
+
+&lt;div class=&quot;newsletter_wrapper&quot;&gt;
+  &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="open-source" /><category term="embedded" /><category term="teensy" /><summary type="html">What are you getting out of completing this tutorial/exercise?</summary></entry><entry><title type="html">Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week</title><link href="https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/" rel="alternate" type="text/html" title="Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week" /><published>2021-06-26T01:08:07+08:00</published><updated>2021-06-26T01:08:07+08:00</updated><id>https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future</id><content type="html" xml:base="https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/">&lt;p&gt;As part the week in Social Sciences and Education at &lt;a href=&quot;ssse.mapua.edu.ph&quot;&gt;Mapua University&lt;/a&gt;, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/assets/pdfs/mapua-ssed-presentation.pdf&quot;&gt;Please click here to access: Past, Present and Future for Environmentalism&lt;/a&gt;&lt;/p&gt;
 
@@ -923,7 +1861,57 @@ They are targetting phosphorus, even 10 years ago, concerns were being raised ab
 
 &lt;div class=&quot;newsletter_wrapper&quot;&gt;
   &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Lois Gray</name></author><category term="supercapacitors" /><summary type="html">Supercapacitors increase battery efficiency by protecting the battery and other system components from excessive stress, and they enable onboard energy capture to reduce the energy cost for vehicle operation. Combining supercapacitors, batteries and onboard energy harvesting improves overall system operation efficiency and allows the vehicle to travel further on a single charge, compared to the battery alone.</summary></entry><entry><title type="html">The role of technology in bringing us to a Carbon-neutral Future - Presentation for CUNY’s Administration of Global Institutions class</title><link href="https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/" rel="alternate" type="text/html" title="The role of technology in bringing us to a Carbon-neutral Future - Presentation for CUNY’s Administration of Global Institutions class" /><published>2020-04-18T01:08:07+08:00</published><updated>2020-04-18T01:08:07+08:00</updated><id>https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation--he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future</id><content type="html" xml:base="https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/">&lt;p&gt;As the new school year came along, I got the chance to come in for another of Professor Binda’s classes on Administration of Global Institutions at the City University of New York (CUNY).  Once again they were discussing the ASEAN zone but our exciting news this time was getting accepted as SE Asia’s first labelled solution of the Solar Impulse Foundation.  Very exciting&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Lois Gray</name></author><category term="supercapacitors" /><summary type="html">Supercapacitors increase battery efficiency by protecting the battery and other system components from excessive stress, and they enable onboard energy capture to reduce the energy cost for vehicle operation. Combining supercapacitors, batteries and onboard energy harvesting improves overall system operation efficiency and allows the vehicle to travel further on a single charge, compared to the battery alone.</summary></entry><entry><title type="html">Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco</title><link href="https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/" rel="alternate" type="text/html" title="Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco" /><published>2020-10-24T01:08:07+08:00</published><updated>2020-10-24T01:08:07+08:00</updated><id>https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies</id><content type="html" xml:base="https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/">&lt;p&gt;Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within &lt;em&gt;&lt;a href=&quot;/assets/pdfs/Smart-Transport-Calabarzon-Poster-Smart-Regions-2018.pdf&quot;&gt;Smart Transport Calabarzon&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Little did any of us know the world was about to stop.  In early 2020, all plans were put on hold, including Smart Transport Calabarzon, as the Covid-19 virus took became a global concern.&lt;/p&gt;
+
+&lt;p&gt;Despite this, I was still buzzing from the new and emerging technologies that will one day change the way local governments administer their public services. My friend and fellow green technophile, Mic Carlos, asked my to show introduce some of the technologies that I found most exciting and relevant to the Canlubang chapter of the Brotherhood of Christian Business Professionals - &lt;a href=&quot;https://www.facebook.com/BCBP-Canlubang-Share-It-109798656251069/&quot;&gt;BCBP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;These are the slides I used with a brief description of each:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/pdfs/Smart-Cities-Presentation-BCBP-Canlubang.pdf&quot;&gt;Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Title and intro&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 2018 Smart Infrastructure Challenge -&lt;/strong&gt; A US infrastructure-oriented innovation competition which we hope to one day replicate in the Philippines with a &lt;em&gt;‘Sustainable Islands’&lt;/em&gt; theme&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. About Smart Transport Calabarzon -&lt;/strong&gt; the multi-sector advocacy group which we formed according to the drafted IEEE best practices to form the only non-US team to complete the Smart Infrastructure Challenge&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. IEEE Smart Cities Conference -&lt;/strong&gt; I became alerted to this event via the &lt;em&gt;IEEE Standard P2784&lt;/em&gt;, of which I became a member in late 2020. One of the major activities of IEEE is in formulating international standards around computing, data and wireless transmission protocols.  Usually these standards are primary driven by pure mathematics and physics.  This upcoming standard on Smart City Planning is arguably the standard that ventures furthest into the social and political realm and I am very curious to see how the members from various countries approach the problem&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Fog Comupting -&lt;/strong&gt; the next bold step forward from cloud computing, these ‘fog’ or ‘edge’ devices are able to perform the heavy Artifical Intelligence and Machine Learning (AI/ML) nearer to their physical locations reducing network congestion, data privacy concerns and lag times&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Federated Computing -&lt;/strong&gt; this was one of the themes that the IEEE participants were most excited about.  It gives new methods to allow important &amp;amp; sensitive government and citizen data to be kept in custodianship within trusted institutions and shared with more fine-grained terms &amp;amp; conditions than what currently exists outside of enterprise level cloud providers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Smart Contracts for Government -&lt;/strong&gt; This is largely enabled by upcoming blockchain technologies such as Ethereum.  It can be difficult to think about what it means when we can take ownership of our personal data and rely on our computers to handle our transactions with the government for us.  Humanity has historically known no other way.  Many exciting new projects have been proposed but only time will tell what new opportunities it will bring to local governments in the Philippines.  &lt;a href=&quot;https://e-estonia.com/solutions/security-and-safety/ksi-blockchain/&quot;&gt;Estonia&lt;/a&gt; is one of the leaders in this space.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. Online learning -&lt;/strong&gt; I’m sure these researchers had no idea that the whole world would be forced onto an online classroom in a few short months.  Well some of these researchers were already trialling online chemistry classes where the student would control a robot in order to conduct a chemical reaction for their lab module.  With recent events, we are sure to see lots more where that came from!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. Data Aggregation &amp;amp; Decisions -&lt;/strong&gt; With the exponentially growing volumes of data coming out of Internet of Things (IoT) sensors and AI/ML applications.  It becomes increasingly important to handle that data efficiently, safely and fast.  As we learn more about data, intelligence and even the process of learning itself, we are forced to think deeply about how we &lt;a href=&quot;https://towardsdatascience.com/applications-of-reinforcement-learning-in-real-world-1a94955bcd12&quot;&gt;Observe, Decide &amp;amp; Act&lt;/a&gt;.  This is one model that was proposed for how we think.  Maybe one day our creations will do it better than us!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;10. Automated Traffic Monitoring -&lt;/strong&gt; This was my primary interest going into the conference.  Traffic and transporation go hand in hand and I’ve never met a Filipino who didn’t want less traffic.  These kinds of counting projects are accessible to municipalities within Metro-Manila.  But there is also plenty of room for improvement across Southern Luzon.  It’s a common saying from engineers that you can’t improve what you don’t measure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;11. ‘Smartness’ &amp;amp; ‘Resilience’ -&lt;/strong&gt; From here, I proceeded to a more conceptual (even spiritual) conversation about the nature and behaviour of cities.  A common aspiration of ‘Smart City Engineers’ is to make cities more ‘resilient’.  It is ironic that they are commonly dealing with gadgets that may last less than 5 years.  The photos in this slide are of Morocco’s famous (&lt;a href=&quot;https://duckduckgo.com/?t=lm&amp;amp;q=atlas+mountain+rocks&amp;amp;iax=images&amp;amp;ia=images&quot;&gt;to geologists at least&lt;/a&gt;) Atlas Mountains.  People have been inhabiting this harsh, arid landscape for thousands of years.  Resilience to their climate is in their bones and I suggest the same is true of Filipinos in their own tropical environment.  No fancy, well-engineered gadget is going to change or replace that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;12. The ‘Physics’ of Cities -&lt;/strong&gt; &lt;a href=&quot;https://www.colorado.edu/socialreactors/sites/default/files/attached-files/bettencourt_2013_science.pdf&quot;&gt;The paper&lt;/a&gt; and figures in this slide relate cities to a &lt;a href=&quot;https://web.physics.ucsb.edu/~mmanning/What_are_Power_Laws.html&quot;&gt;power-law&lt;/a&gt; phenomenon also observed in many natural systems such as the size of stars in the universe.  This allows us to consider them in terms of power or “social entropy”.  In such a model, the urban planner seeks to harness or facilitate this inherent power through more efficient social linkages in order to help his/her city thrive.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;13. Cities as Fractals -&lt;/strong&gt; Fractal geometries and mathematics took the academic and artistics worlds by storm when they were first discovered in the 60s and 70s.  The beauty lies in the simplicity of the rules from which they are created.  In his &lt;a href=&quot;https://www.ted.com/talks/ron_eglash_the_fractals_at_the_heart_of_african_designs&quot;&gt;fascinating Ted Talk&lt;/a&gt;, Mathematician Ron Eglash reveals that these ‘discoveries’ of science are often just rediscovering what has been known since ancient times.  It serves to remind us that there are still areas where scientific inquiry is many steps behind religious and traditional wisdom.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;14. Gould’s Spandrels -&lt;/strong&gt; It may not look like it at first, but this slide is about design.  Stephen Jay Gould was a famous archaeologist who advanced our understanding of the nature of evolution in many areas.  Among the most famous is &lt;a href=&quot;https://cbs.asu.edu/sites/default/files/PDFS/GouldLewontinSpandrels.pdf&quot;&gt;his paper about spandrels&lt;/a&gt;.  Spandrels are created when you build an arch.  You can’t build an arch without a spandrel.  Both of the examples presented here show an animal which evolved a spandrel, but later found a creative &amp;amp; functional use for it (see the paper for details).  Many times, engineers and planners will focus on function and results.  This can often result in a lot of ‘unused space’.  As you can see in many famous cathedrals, often it is the spandrels that feature some of the most beautiful ornaments.  Cities are full of spandrels, it is up to us to unlock beauty within them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;15.  Solar Impulse Foundation -&lt;/strong&gt; If you look around this webpage you will quickly discover that here at sunE, we are big fans of Bertrand Piccard and the &lt;a href=&quot;www.solarimpulse.com&quot;&gt;Solar Impulse Foundation&lt;/a&gt;.  With the first solar-powered airplane to fly around the world, he has helped to create the beacon that we can orient ourselves towards as every year we see more news and evidence of Global Warming and the damage it will cause on our world, our homes, our lifestyles and our economies.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;16. CO2 emissions by country -&lt;/strong&gt; This slide outlines the different CO2 contributions made country to country.  While the Philippines is still a small contributor both per capita and on aggregate, they are rapidly approaching the ‘tipping point’ level.  If we can take this opportunity to transition towards low carbon transportation systems, it will position the country as a strong and committed participant in the global effort to avert the existential crisis of the 21st century.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;17. The glass of water -&lt;/strong&gt; This is a very difficult conversation within the geopolitical landscape. Discussions on how to avoid Global Warming are full of finger pointing.  The established science points to some very uncomfortable and inconvenient realities.  This glass of water is a reference to an &lt;a href=&quot;https://www.netzerowatch.com/ipcc-official-climate-policy-is-redistributing-the-worlds-wealth/&quot;&gt;analogy told by IPCC economist Ottmar Edenhofer&lt;/a&gt;.  In that story, he speaks of the global community as a group of travellers lost in the desert.  They happen to find a glass of water and the small number of rich countries drink it up without a second thought.  Upon realizing what they have done, they suggest to save the rest.  The rest of the countries are furious and demand their fair share of the remaining water.  The unfortunate reality that both sides are missing is that the glass of water is not going to save them.  If they want to survive, they need to find the oasis.  That is the challenge that our global community needs to rise to.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;18. Wrap-up -&lt;/strong&gt; The theoretical link between fossil fuel combustion &amp;amp; Global warming was first proposed in 1896 by Swedish Chemist Svante Arrhenius.  This was nearly 200 years since Watt’s steam engine kicked off the industrial revolution.  We are now faced with a danger that is as difficult to imagine and it is to accept.  The consequences are dire and the changes it demands from us are scary.  Technology and Society both have a role to play in the solution and I’m glad to be venturing towards in the ways that I know how.&lt;/p&gt;
+
+&lt;p&gt;Thanks so much for your time and attention! I hope to one day work with some of this audience on moving Canlubang in the right direction while also improving the lives of its citizens.&lt;/p&gt;
+
+&lt;div class=&quot;newsletter_wrapper&quot;&gt;
+  &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="presentations" /><category term="smart-cities" /><summary type="html">Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within Smart Transport Calabarzon.</summary></entry><entry><title type="html">The role of technology in bringing us to a Carbon-neutral Future - Presentation for CUNY’s Administration of Global Institutions class</title><link href="https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/" rel="alternate" type="text/html" title="The role of technology in bringing us to a Carbon-neutral Future - Presentation for CUNY’s Administration of Global Institutions class" /><published>2020-04-18T01:08:07+08:00</published><updated>2020-04-18T01:08:07+08:00</updated><id>https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation--he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future</id><content type="html" xml:base="https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/">&lt;p&gt;As the new school year came along, I got the chance to come in for another of Professor Binda’s classes on Administration of Global Institutions at the City University of New York (CUNY).  Once again they were discussing the ASEAN zone but our exciting news this time was getting accepted as SE Asia’s first labelled solution of the Solar Impulse Foundation.  Very exciting&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/assets/pdfs/sunE-cuny-presentation-apr-2020.pdf&quot;&gt;Please click here to access: The role of technology in bringing us to a Carbon-neutral Future&lt;/a&gt;&lt;/p&gt;
 
@@ -931,30 +1919,4 @@ They are targetting phosphorus, even 10 years ago, concerns were being raised ab
 
 &lt;div class=&quot;newsletter_wrapper&quot;&gt;
   &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="presentations" /><category term="carbon-neutral" /><summary type="html">As the new school year came along, I got the chance to come in for another of Professor Binda’s classes on Administration of Global Institutions at the City University of New York (CUNY). Once again they were discussing the ASEAN zone but our exciting news this time was getting accepted as SE Asia’s first labelled solution of the Solar Impulse Foundation. Very exciting Please click here to access: The role of technology in bringing us to a Carbon-neutral Future</summary></entry><entry><title type="html">sunE is now a Solar Impulse Efficient Solution</title><link href="https://sunetrike.com/solar-impulse/sune-is-now-a-solar-impulse-label/" rel="alternate" type="text/html" title="sunE is now a Solar Impulse Efficient Solution" /><published>2019-07-11T01:08:07+08:00</published><updated>2019-07-11T01:08:07+08:00</updated><id>https://sunetrike.com/solar-impulse/sune-is-now-a-solar-impulse-label</id><content type="html" xml:base="https://sunetrike.com/solar-impulse/sune-is-now-a-solar-impulse-label/">&lt;p&gt;&lt;img src=&quot;/assets/images/SIF_LABEL.png&quot; alt=&quot;Solar Impulse label&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;sunE has been named by the Solar Impulse World Alliance as one of their 1000 efficient solutions. As part of the Solar Impulse World Alliance of Efficient Solutions, sunE will showcase our solution to innovators, investors and decision makers around the world. The official announcement will happen by solar impulse in the coming months.&lt;/p&gt;
-
-&lt;p&gt;The Solar Impulse organization is spearheaded by renowned Swiss explorer Betrand Piccard who flew around the world in a solar-powered plane without using a single drop of fossil fuel. He set out on that mission to prove that today’s clean technologies can compete with conventional fossil fuels.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/piccard-with-solar-impulse.jpeg&quot; alt=&quot;Capt Bertrand Piccard&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Piccard is bringing together 1000 of the world’s most promising clean technology innovations and connect them to investors, and leaders from around the globe. The Solar Impulse purpose is to bridge the gap between those building the solutions and the decision makers who will implement them.&lt;/p&gt;
-
-&lt;p&gt;The sunE solution was assessed by a panel of international experts for its technological feasibility, environmental, socio-economic benefits, and economic profitability. We are proud to announce that we scored top marks in all 3 categories!&lt;/p&gt;
-
-&lt;p&gt;Being selected as a Solar Impulse Solution is a great honour for sunE and a significant step onto the public stage.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/sunE-w-solar-impulse-label.png&quot; alt=&quot;sunE Labelled Solution&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;newsletter_wrapper&quot;&gt;
-  &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Phil Gray</name></author><category term="solar-impulse" /><summary type="html"></summary></entry><entry><title type="html">Tales from Trying to Improve Transportation in the Philippines - Presentation for CUNY’s Administration of Global Institutions class</title><link href="https://sunetrike.com/presentations/tranportation/cuny-global-institutions-presentation-tales-of-trying-to-improve-transportation-in-the-philippines/" rel="alternate" type="text/html" title="Tales from Trying to Improve Transportation in the Philippines - Presentation for CUNY’s Administration of Global Institutions class" /><published>2018-11-03T01:08:07+08:00</published><updated>2018-11-03T01:08:07+08:00</updated><id>https://sunetrike.com/presentations/tranportation/cuny-global-institutions-presentation-tales-of-trying-to-improve-transportation-in-the-philippines</id><content type="html" xml:base="https://sunetrike.com/presentations/tranportation/cuny-global-institutions-presentation-tales-of-trying-to-improve-transportation-in-the-philippines/">&lt;p&gt;As a follow-on to our participation in the 2018 Smart Infrastructure Challenge, I got the very cool opportunity to share some of my experiences with Professor Binda’s class on Administration of Global Institutions at the City University of New York (CUNY).  They were reviewing the ASEAN zone and so I talked a bit about my experiences with entrepreneurship in SE Asia.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/pdfs/sunE-cuny-presentation-nov-2018.pdf&quot;&gt;Please click here to access: Tales from Trying to Improve Transportation in the Philippines&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Given the focus of the class, it was a good opportunity to summarize &amp;amp; synthesize some of the research I’d done on Public-Private Partnerships (P3) during the Smart Infrastructure Challenge.&lt;/p&gt;
-
-&lt;div class=&quot;newsletter_wrapper&quot;&gt;
-  &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="presentations" /><category term="tranportation" /><summary type="html">As a follow-on to our participation in the 2018 Smart Infrastructure Challenge, I got the very cool opportunity to share some of my experiences with Professor Binda’s class on Administration of Global Institutions at the City University of New York (CUNY). They were reviewing the ASEAN zone and so I talked a bit about my experiences with entrepreneurship in SE Asia. Please click here to access: Tales from Trying to Improve Transportation in the Philippines</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="presentations" /><category term="carbon-neutral" /><summary type="html">As the new school year came along, I got the chance to come in for another of Professor Binda’s classes on Administration of Global Institutions at the City University of New York (CUNY). Once again they were discussing the ASEAN zone but our exciting news this time was getting accepted as SE Asia’s first labelled solution of the Solar Impulse Foundation. Very exciting Please click here to access: The role of technology in bringing us to a Carbon-neutral Future</summary></entry></feed>

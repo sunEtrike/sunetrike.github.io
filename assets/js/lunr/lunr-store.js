@@ -65,6 +65,12 @@ var store = [{
         "url": "https://sunetrike.com/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/",
         "teaser": "https://sunetrike.com/assets/images/banners/wright-brothers.jpeg"
       },{
+        "title": "Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco",
+        "excerpt":"Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within Smart...","categories": ["presentations","smart-cities"],
+        "tags": [],
+        "url": "https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/",
+        "teaser": "https://sunetrike.com/assets/images/smart-infrastructure-challenge/BCBP-flyer.jpg"
+      },{
         "title": "Supercapacitors for LSEVs",
         "excerpt":"Supercapacitors increase battery efficiency by protecting the battery and other system components from excessive stress, and they enable onboard energy capture to reduce the energy cost for vehicle operation. Combining supercapacitors, batteries and onboard energy harvesting improves overall system operation efficiency and allows the vehicle to travel further on a...","categories": ["supercapacitors"],
         "tags": [],
@@ -94,6 +100,12 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
         "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
+      },{
+        "title": "A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example",
+        "excerpt":"What are you getting out of completing this tutorial/exercise? This article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp; embedded systems....","categories": ["open-source","embedded","teensy"],
+        "tags": [],
+        "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
+        "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
       },{
         "title": "sunE declares intention to achieve Net-Zero across its supply chain by 2025.",
         "excerpt":"We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here      Interested in hearing more from us?  Check out our newsletter   ","categories": ["announcements"],
