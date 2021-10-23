@@ -102,7 +102,7 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
       },{
         "title": "A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example",
-        "excerpt":"What are you getting out of completing this tutorial/exercise? This article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp; embedded systems....","categories": ["open-source","embedded","teensy"],
+        "excerpt":"Intro and background We are sunEtrike have big dreams for our software development. While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went. One of the things I hated most about coding was tracking down bugs. For us to...","categories": ["open-source","embedded","teensy"],
         "tags": [],
         "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
         "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"

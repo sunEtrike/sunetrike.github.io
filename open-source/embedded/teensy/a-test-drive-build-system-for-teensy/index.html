@@ -1,0 +1,2371 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example | sunE</title>
+<meta name="description" content="Intro and background">
+
+
+  <meta name="author" content="Allan Gray">
+  
+  <meta property="article:author" content="Allan Gray">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="sunE">
+<meta property="og:title" content="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example">
+<meta property="og:url" content="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">
+
+
+  <meta property="og:description" content="Intro and background">
+
+
+
+  <meta property="og:image" content="https://sunetrike.com/assets/images/teensy_rake/teensy.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-07-11T01:08:07+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Allan Gray",
+      "url": "https://sunetrike.com/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="H5ojrSb99Ydn9_YN1UZpf0mym8h6ljcb3U3dWu-YbLo" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="sunE Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/sunElogo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          sunE
+          <span class="site-subtitle">Clean Energy the Moves People</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/system">System</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/team/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">Contact Us!</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/assets/images/teensy_rake/teensy.png" alt="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/team/DAG-headshot.jpg" alt="Allan Gray" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Allan Gray</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Allan is a geologist and electrical geophysicist who moved to the Philippines with a simple idea: this is the best country in the world for developing solar electric transportation systems. <a href="/team/al-gray">Read More</a></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Calamba, Laguna, Philippines</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example">
+    <meta itemprop="description" content="Intro and background">
+    <meta itemprop="datePublished" content="2021-07-11T01:08:07+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="intro-and-background">Intro and background</h2>
+
+<p>We are sunEtrike have big dreams for our software development.  While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went.</p>
+
+<p>One of the things I hated most about coding was tracking down bugs.  For us to one day grow into a professional software group, we have to have strong systems in place for catching bugs and ensuring quality.
+Test Driven Development has gone up and down of favour over the years but I think by now everyone in the industry understands that code needs to be well tested before it goes out into to users.<br />
+An automated testing suite is a very important piece of that process, especially for devops oriented teams.
+With this tutorial, I have finally managed to combine my learnings into a test suite that builds on a real board.</p>
+
+<h2 id="what-are-you-getting-out-of-completing-this-tutorialexercise">What are you getting out of completing this tutorial/exercise?</h2>
+
+<p>If you are an Arduino hobbyist interested in upping your coding skills and learning how to get into TDD &amp; software testing, this tutorial is for you.</p>
+
+<p>If you are a Ruby developer interested in getting into embedded systems and IoT, this tutorial is for you as well.</p>
+
+<p>At the end of this tutorial, You will have a test driven version of the standard <code class="language-plaintext highlighter-rouge">blinky</code> module that is the <code class="language-plaintext highlighter-rouge">Hello World</code> of the embedded systems/Arduino world.</p>
+
+<p>Basically, this article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp; embedded systems.</p>
+
+<p>You can browse the <a href="https://github.com/graial/teensy_rake">github repo</a> to have a look.  It is a <a href="https://github.com/ruby/rake">Rake</a> based build using <a href="https://www.throwtheswitch.org">Unity</a> as the testing framework.  After getting the toolchain set-up, we’ll refactor the teensy starter blinky code into its own module and add an abstraction layer to the interface.</p>
+
+<h2 id="why-bother-with-automated-testing-for-embedded-systems">Why bother with automated testing for embedded systems?</h2>
+
+<p>I’m a big fan of automated testing.  As somebody who is always juggling a lot of balls in the air.  It gives me a lot of comfort to revisit an area of my codebase that I haven’t seen in 6-8 months and allow the tests to remind me how it works.</p>
+
+<h3 id="dual-targeting-and-even-multi-targeting">Dual-targeting and even multi-targeting</h3>
+
+<p>There has been a lot of news lately about a global shortage in microcontrollers and semiconductors.  So the ability to write an embedded application that can build of multiple devices may mean the difference of whether or not your protoypes make it into production.  TDD forces you to decouple your application layer from the underlying hardware which, hopefully, makes for better portability to other devices.</p>
+
+<h3 id="solid-flexible-and-testable-designs">SOLID, Flexible, and Testable Designs</h3>
+
+<p>The term ‘spaghetti code’ gets thrown around a lot in the software world.  Codebases that have long, complicated functions, nested ifs, etc can become a nightmare to tweak &amp; maintain over time.  As a codebase progresses and matures, these types of interwoven dependencies can significantly slow down progress and new releases.<br />
+One of the main benefits of TDD is the way it forces you to think about the design and structures of your code.  Grenning identifies the SOLID framework, originally attributed to “Uncle” Bob Martin in <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/pfi.21408">“Agile Software Development: Principles, Patterns, and Practices”</a>.</p>
+
+<p>The C-language is not object oriented which means that these principles are implemented at the module level. If you are interested, you could also look at how these principles drive the design of the RakefileHelper class that RSpec is driving for the build system.</p>
+
+<p>There are plenty of articles on the internet which describe SOLID in different contexts so I’m only going to briefly describe how I understand these principles to apply to the embedded context.</p>
+
+<ul>
+  <li>
+    <p><strong>S Single Responsibility Principle</strong> - The name says it all here; a module should have one job.  This often leads to very descriptive module names.  A module called LEDdriver.c is expected to turn the LEDs on and off.</p>
+  </li>
+  <li>
+    <p><strong>O Open Closed Principle</strong> - ‘Open for extension, Closed for modification’. For example, The LedDriver.c module may leverage a separate BaseLedDriver.c module in order to trigger the specific actions for the teensy.  If you now want to add support for a new device (Netduino, for example), You would create a NetduinoLedDriver.c which also calls BaseLedDriver. Both devices would then interact with the rest of the application in the same way even if their underlying implementations are different.  As a developer, you do not need to modify BaseLedDriver.c to add a new target board.</p>
+  </li>
+  <li>
+    <p><strong>L Liskov Substitution Principle</strong> - In the LEDdriver example, you might create a data structure that encompasses the basic information of an LedDriver.  This is what permits you to substitute in a mock interface during testing.  By doing this, any other module (an LedScheduler.c, for example) that wants to trigger an Led, will use the same function call. The calling module does not care about the implemenation details.</p>
+  </li>
+  <li>
+    <p><strong>I Interface Segregation Principle</strong> - The interface of a module should be limited to a single concept.  An LedDriver.c is basically a light-switch.  It wouldn’t make sense for you to check the time by looking at a light switch.  Time and Light “Status” are very different concepts.  If you find yourself asking about both of those concepts within the same interface, function call, etc) Then the interfae of your module is probably not well segregated.</p>
+  </li>
+  <li>
+    <p><strong>D Dependency Inversion Principle</strong> - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (u to and including cosmically-induced bit-flips) which suddenly place the device in <em>no man’s land</em> as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.<br />
+Putting this into practice in testing will often involve turning your module into a ‘black-box’.  Where the caller makes an abstracted call such as ‘is Led #5 on?’ or ‘turn the blue led off’.  The internal details of how the serving module makes that call is hidden from the caller.  In embedded TDD, function pointers are often used in order to allow testing of these abstracted interfaces.</p>
+  </li>
+</ul>
+
+<h2 id="where-i-found-big-challenges-in-learning-automated-testing-for-embedded-systems">Where I found big challenges in learning automated testing for embedded systems</h2>
+
+<p>As I’ve been diving deeper into the world of embedded systems and mirocontrollers, I wanted to make sure that I had a handle on how to apply TDD in the world of C cross-compiling.  So I picked up copy of James Grenning’s book <a href="https://pragprog.com/titles/jgade/test-driven-development-for-embedded-c/">TDD for Embedded Systems</a>.  Among the two testing frameworks he demonstrated, I preferred <a href="http://www.throwtheswitch.org/unity">Unity</a> this is mainly because I am still a relative novice in C and I’d prefer to avoid mixing languages at this time.  The other option <a href="http://cpputest.org/">CppUTest</a> is written in C++.</p>
+
+<p>As a relative novice in c-programming just getting Grenning’s examples to build took a pretty big effort.  Eventually I got through and voila, my reward was a suite of passing tests that <strong>could NOT</strong> be built on any particular device.  While it makes sense within the scope of his book, I found myself floundering a bit in trying to figure out how to get this well-tested &amp; decoupled book code to deploy onto an actual device.</p>
+
+<p>Embedded TDD tries to offer its practitioner the promise of development without hardware.  It’s an attractive but rather lofty goal for a small team. At the end of the day, if well-tested code doesn’t perform as expected on the board, then the whole effort is wasted.</p>
+
+<p>The open-source <a href="https://www.pjrc.com/teensy">Teensy</a> boards serve as a good starting point for learning how to get into ARM Cortex.  I had a couple Teensy 3.6 boards left over from another project. So that’s why I opted to use this model.</p>
+
+<p>The <a href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a> package contains a starter makefile and blinky source code.  To ensure the necessary toolchain is set-up on your computer, please make sure you can build and run it before attempting to use this code.</p>
+
+<h2 id="rake-vs-make-for-embedded-development">Rake vs Make for embedded development</h2>
+
+<p>Slowly but surely, I’m learning to navigate makefiles, they are quite cryptic to read and learn but I as far as I can tell, they are still pretty much industry standard.  From a TDD &amp; multitargeting perspective, they suffer from a couple important drawbacks:</p>
+<ol>
+  <li>They are a domain-specific language that is super hard to read for the uninitiated</li>
+  <li>They don’t have a way to test and protect against regressions <strong>Most important</strong></li>
+</ol>
+
+<p>While scripting languages often suffer speed wise, in this case, I feel that having a fully object-oriented language more than makes up for it and I’m very fond of <a href="https://rspec.info/">RSpec</a> for its expressiveness and readability.  As the ruby version of Make, Rake does a lot of the heavy lifting for us on this job.  If you are curious to learn more about Rake, I pulled a lot from <a href="https://avdi.codes/rake-part-1-basics/">this blog</a> while learning how rake handle dependencies and filetypes.  I leaned heavily on ElectronVector’s blog post on using <a href="http://www.electronvector.com/blog/using-gcc-for-automatic-c-language-dependency-management-with-rake">rake to drive GCC</a>.  This example is basically a TDD version of that rakefile.</p>
+
+<p>Unity provides a <a href="https://github.com/ThrowTheSwitch/Unity/tree/master/examples/example_3">starter rakefile</a> <strong>without a test harness</strong>.  It works well but in order for me to put a test harness around it, I needed to extract it to a class.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>To get started, let’s take an inventory of what we have to work with.<br />
+If you mainly use arduino studio you may not have used make very much</p>
+
+<h3 id="getting-your-toolchain-in-place">Getting your toolchain in place</h3>
+
+<ol>
+  <li>The makefile and starter source code can be found at <a href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a>. For my Teensy 3.6, the makefile is located at hardware/teensy/avr/cores/teensy3.  If you have a Teensy4, it will be at cores/teensy4 and so on.</li>
+</ol>
+
+<p><em>IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running <strong>make</strong> within this folder and seeing blinky running on your device</em>.</p>
+
+<p>The teensy loader should pop-up automatically.</p>
+
+<p><img src="/assets/images/teensy_rake/teensy_loader.png" alt="teensy_loader_interface" /></p>
+
+<p>The programming status bar should pop-up as well.</p>
+
+<p><img src="/assets/images/teensy_rake/teensy_programming.png" alt="teensy_programming_dialog" /></p>
+
+<p>Keep an eye out for both of these as you are progressing through the test-suite</p>
+
+<ol>
+  <li>The rakefile and starter source code within <a href="http://www.throwtheswitch.org/unity">example 3 of Unity</a> (located at examples/examples3). <em>Make sure your computer’s ruby buildchain is correctly setup by running <strong>rake</strong> within this folder.  Unity should report a couple tested modules; each with some successful, failed and ignored tests</em>.</li>
+</ol>
+
+<h3 id="setting-up-a-new-project">Setting up a new project</h3>
+
+<ul>
+  <li>
+    <p>After cloning the <a href="">teensy_tdd_rake repo</a>, run <code class="language-plaintext highlighter-rouge">bundle install</code> to set-up rake and rspec/</p>
+  </li>
+  <li>Copy the teensy3 folder into the root folder</li>
+  <li>Copy the unity.framework folder into the root folder. <em>you may want to include it as a git submodule</em></li>
+</ul>
+
+<p>With that, you should now have the following folder tree:</p>
+
+<p><img src="/assets/images/teensy_rake/teensy_rake_folders.png" alt="teensy_rake folder layout" /></p>
+
+<p>To test the buildchain, We are going to run first run with teensy disconnected, then with it connected.</p>
+
+<h4 id="1-disconnect-the-teensy-and-type">1. Disconnect the teensy and type</h4>
+<p><code class="language-plaintext highlighter-rouge">bundle exec rspec</code></p>
+
+<p>It should return with <code class="language-plaintext highlighter-rouge">49 examples and 1 failure</code>.  What’s the failure?  Well, I’ve started you off on step 1 of the Red-Green-Refactor cycle.   We’ll come back to the failed test a little later..</p>
+
+<h4 id="2-connect-the-teensy-and-type">2. Connect the teensy and type</h4>
+<p><code class="language-plaintext highlighter-rouge">bundle exec rspec</code></p>
+
+<p>If you are running on an ubuntu install, this may work immediately.  However, 
+The Rakefile_helper will attempt identify if a device is connected at usb address <em>/dev/ttyACM0</em> or <em>/dev/ttyACM1</em>. These are the default usb locations on my linux mint install.  If the addresses on your system are different you can update within the file <code class="language-plaintext highlighter-rouge">system.yml</code>.</p>
+
+<p>If it identifies that a teensy is connected, it will run those tests, otherwise it will skip them.  The teensy tests are a bit slow but it’s the best way I’ve found so far to do an <a href="https://thoughtbot.com/blog/testing-from-the-outsidein">outside-in</a> test of the build.</p>
+
+<p>If you’ve made it this far, congrats!  You’ve now got an open-source, TDD build system for your teensy to get you going on your way towards TDD and/or multi-targetting.</p>
+
+<h2 id="testing-and-iterating">Testing and Iterating</h2>
+
+<p>Regardless of what kind of software you are building, there will be some variation of a testing pyramid similar to the picture below.  At the top are the ‘acceptance or feature’ tests which cover all of the important functionalities that your users expect to see.  These are slow to run and require the physical hardware and probably customized bench &amp; field testing programs.  Writing these tests can help to clarify your thinking about what exactly you are expecting your software solution to achieve for your users.</p>
+
+<p><img src="/assets/images/teensy_rake/TDD_pyramid.png" alt="The TDD Pyramid" /></p>
+
+<p><em>Note: this is not my picture.  the <a href="https://medium.com/@joatmon08/test-driven-development-techniques-for-infrastructure-a73bd1ab273b">source is here</a></em></p>
+
+<p>In the case of our TDD build-system, our interface is the Rakefile.  It will act differently depending on whether a USB is plugged in.</p>
+<ul>
+  <li>unit (default)</li>
+  <li>
+    <p>prepare_for_tests</p>
+  </li>
+  <li>deploy_teensy</li>
+  <li>prepare_teensy_hex</li>
+  <li>build_for_teensy</li>
+</ul>
+
+<p>Since the task ‘unit’ is the default, typing <code class="language-plaintext highlighter-rouge">rake</code> is equivalent to typing <code class="language-plaintext highlighter-rouge">rake unit</code>. Try it now.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Clearing build directory
+Running unit tests
+Running system tests...</code></pre></figure>
+
+<h2 id="the-first-build-system-spec">The first build-system spec.</h2>
+
+<p>Before going forward, let’s have a look at layout of the <code class="language-plaintext highlighter-rouge">spec/</code> folder</p>
+
+<p><img src="/assets/images/teensy_rake/teensy_rake_spec_folders.png" alt="teensy_rake spec folder layout" /></p>
+
+<p>There are 3 files that defines specs:</p>
+<ol>
+  <li>Rakefile_spec.rb - As mentioned above, this is the interface for our buildsystem.</li>
+  <li>spec/rakefile_helper_spec.rb - All of the application logic and customization is found in here.</li>
+  <li>spec/helper_methods/helper_methods_spec.rb - These are methods to assist in setting up and tearing down tests.  They mostly perform string and file manipulation.</li>
+</ol>
+
+<p>Let’s look at the failing spec:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1<span class="o">)</span> Rakefile defaults to unit tests
+   Failure/Error: expect<span class="o">(</span>check_for_file<span class="o">(</span>target_exe_filepath<span class="o">))</span>.to eq<span class="o">(</span><span class="nb">true</span><span class="o">)</span>
+   
+     expected: <span class="nb">true
+          </span>got: <span class="nb">false</span>
+   
+     <span class="o">(</span>compared using <span class="o">==)</span>
+   
+     Diff:
+     @@ <span class="nt">-1</span> +1 @@
+     <span class="nt">-true</span>
+     +false
+     
+   <span class="c"># ./spec/Rakefile_spec.rb:23:in `block (2 levels) in &lt;top (required)&gt;'</span></code></pre></figure>
+
+<p>During this spec, Rspec was told to expect something to be true. Those instructions are located at <code class="language-plaintext highlighter-rouge">/spec/Rakefile_spec.rb:23</code>.  Let’s have a look at that file &amp; line.  We see the offending spec:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">it</span> <span class="s1">'defaults to unit tests'</span> <span class="k">do</span>
+	<span class="n">target_exe_filepath</span> <span class="o">=</span> <span class="n">build_folder</span> <span class="o">+</span> <span class="s1">'TestLedController.exe'</span>
+	<span class="sb">`rake`</span>
+
+	<span class="n">expect</span><span class="p">(</span><span class="n">check_for_file</span><span class="p">(</span><span class="n">target_exe_filepath</span><span class="p">)).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="kp">true</span><span class="p">)</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>In case you are not familiar with Ruby, here’s what the spec is requesting in plain english:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Expect to find a file named 'TestLedController.exe' inside of the build folder</code></p>
+
+<p>You can <a href="http://www.throwtheswitch.org/build/build-unity">check this page</a> for more details about how Unity is built.  For our purposes, we just need to know that the Unity build was triggered rather than the teensy build.  But why did it fail?  Well, this Rakefile instucts Unity to search in the <code class="language-plaintext highlighter-rouge">test/</code> folder for files named TestSomeModule.c.  There is no file like that so the test fails.  We are Red, in the Red-Green-Refactor loop.  Let’s create a blank file with the specified name <code class="language-plaintext highlighter-rouge">TestLedController.c</code> and try again</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Clearing build directory
+Running unit tests
+Running system tests...
+
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ build/TestLedController_Runner.c <span class="nt">-obuild</span>/TestLedController_Runner.o
+
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ <span class="nb">test</span>/TestLedController.c <span class="nt">-obuild</span>/TestLedController.o
+
+<span class="nb">test</span>/TestLedController.c:1: warning: ISO C forbids an empty translation unit <span class="o">[</span><span class="nt">-Wpedantic</span><span class="o">]</span>
+
+gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/TestLedController_Runner.o build/TestLedController.o <span class="nt">-o</span> build/TestLedController.exe</code></pre></figure>
+
+<p>Rake successfully recognized the new file! Great!  It began compiling its modules, first <code class="language-plaintext highlighter-rouge">TestLedController_Runner.o</code> and then <code class="language-plaintext highlighter-rouge">TestLedController.o</code> before exiting with an error.  New information and new errors is progress in the TDD cycle.</p>
+
+<p>Here’s the basic structure of a test in unity.  Try adding it to the empty file to see what you get…</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
+#include "LedController.h"
+</span>
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_Led_Controller_does_a_thing_and_fails</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">TEST_FAIL_MESSAGE</span><span class="p">(</span><span class="s">"Our greatest glory is not in never falling, but in rising every time we fall. - Confucius"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Clearing build directory
+Running unit tests
+Running system tests...
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ unity.framework/src/unity.c <span class="nt">-obuild</span>/unity.o
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ build/LedController_Runner.c <span class="nt">-obuild</span>/TestLedController_Runner.o
+build/TestLedController_Runner.c:5:10: fatal error: LedController.h: No such file or directory
+    5 | <span class="c">#include "LedController.h"</span>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+rake aborted!</code></pre></figure>
+
+<p>Ok, this time it couldn’t find the header file.  For those of you who are still getting used to the difference between source and header files.  One way to think about it is that the header file defines the interface of the module.  So this is a good time to revisit the concept of SOLID and think about what we want this LedController.c to do.  Better yet, let’s evaluate how ‘SOLID’ the teensy starter code in <code class="language-plaintext highlighter-rouge">main.cpp</code> is.</p>
+
+<h3 id="solidifying-maincpp">SOLIDifying main.cpp</h3>
+
+<ul>
+  <li><strong>S Single Responsibility Principle</strong> - What is the responsibility of main.cpp right now?  Well, since it is the only file, it does everything.  Even in this very simple application, there are multiple responsibilities involved.
+    <ol>
+      <li>Start-up and initialize the board and name important variables</li>
+      <li>Toggle an led ON or OFF</li>
+      <li>Keep track of time and perform an action after a specified amount of time</li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>O Open Closed Principle</strong> - Let’s say you want to add some new functionality, for example a different LED that flashes on a different interval.  How would you do that? Would you extend main.cpp with new details or would you copy and paste the new pin number and interval into main.cpp?  Certainly the easier thing to do is copy/paste main.cpp and that would work fine for this example.  However, in that case you not extending main.cpp and you are modifying it.  So the easy/obvious route is in violation of OCP.</p>
+  </li>
+  <li>
+    <p><strong>L Liskov Substitution Principle</strong> - Liskov substitution principle (LSP) evaluates the interface.  However as a single file monolith, main.cpp does not even have an interface!  So from that perspective, adding an interface is the obvious step to take to make this application more SOLID with a capital ‘L’!</p>
+  </li>
+  <li><strong>I Interface Segregation Principle</strong> - So what interfaces do we need?  Well based on the 3 repsonsibilities mentioned in section 1, it would appear that main needs 3 interfaces:
+    <ol>
+      <li>For initialization and for establishing the important constant and variables needed by the application</li>
+      <li>For reading and writing Led pins</li>
+      <li>For monitoring time and taking action based on that information</li>
+    </ol>
+  </li>
+  <li><strong>D Dependency Inversion Principle</strong> - Does the high level code (main.cpp) depend on the lower-level modules? Well, it depends on one interface: Arduino.h.  What does Arduino depend on? Open the file and have a look:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "WProgram.h"
+#include "pins_arduino.h"</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">pins_arduino.h</code> is almost 300 lines of constant definitions while 
+<code class="language-plaintext highlighter-rouge">WProgram depends</code> on 24 different modules.</p>
+
+<p>If you are preparing to move from teensy to a different board (or vice-versa), be prepared for a LOT of reading, digging and research. I can personally attest to this.  I learned a lot, but it can take a very long time.  Nobody wants to be dealing with those sorts of challenges on a deadline.</p>
+
+<p>That’s all a lot to take in but let’s take it step by step.</p>
+
+<h2 id="adding-a-unity-test">Adding a unity test</h2>
+
+<h3 id="defining-the-interface-with-testledcontrollerc">Defining the interface with TestLedController.c</h3>
+
+<p>Looking again at the starter sourcecode for blinky.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;Arduino.h&gt;
+</span>
+<span class="k">extern</span> <span class="s">"C"</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+	<span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">digitalWriteFast</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+		<span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+		<span class="n">digitalWriteFast</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+		<span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>pinMode() makes teensy toggleable.  So thats a good place to start. We want to be able to create an LedController with a pin number.</p>
+
+<p>Let’s create the header now.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// includes/LedController.h</span>
+
+<span class="cp">#ifndef D_LedController_H
+#define D_LedController_H
+</span>
+<span class="cp">#include &lt;stdint.h&gt;
+</span>
+<span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">pinNumber</span><span class="p">);</span>
+
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>When we run the tests,</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">clearing build directory
+Running unit tests
+Running system tests...
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ unity.framework/src/unity.c <span class="nt">-obuild</span>/unity.o
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ build/TestLedController_Runner.c <span class="nt">-obuild</span>/TestLedController_Runner.o
+gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPPORT_TEST_CASES</span> <span class="nt">-D__MK66FX1M0__</span> <span class="nt">-DF_CPU</span><span class="o">=</span>48000000 <span class="nt">-DTEST</span> <span class="nt">-c</span> <span class="nt">-m32</span> <span class="nt">-Wall</span> <span class="nt">-Wno-address</span> <span class="nt">-pedantic</span> <span class="nt">-Isrc</span>/ <span class="nt">-Iunity</span>.framework/src/ <span class="nt">-Itest</span>/ <span class="nt">-Iincludes</span>/ <span class="nt">-Iteensy3</span>/ <span class="nt">-Imocks</span>/ <span class="nt">-Iteensy3</span>/avr/ <span class="nt">-Iteensy3</span>/util/ <span class="nb">test</span>/TestLedController.c <span class="nt">-obuild</span>/TestLedController.o
+gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/unity.o build/TestLedController_Runner.o build/TestLedController.o <span class="nt">-o</span> build/TestLedController.exe
+build/TestLedController.exe
+<span class="nb">test</span>/TestLedController.c:14:test_LedController_is_off_upon_creation:FAIL: Our greatest glory is not <span class="k">in </span>never falling, but <span class="k">in </span>rising every <span class="nb">time </span>we fall. - Confucius</code></pre></figure>
+
+<p>Ok! So we have our first test!  Confucius isn’t telling us anything useful anymore, let’s write a test that describes what the code is (or isn’t doing). For the rest of the code snippets, I’m going to only include the bits that change.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedController.c</span>
+
+<span class="kt">void</span> <span class="nf">test_LedController_is_off_upon_creation</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">uint16_t</span> <span class="n">virtualPin</span> <span class="o">=</span> <span class="mh">0xface</span><span class="p">;</span>									<span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><em>[1] I find it useful to put in recognizably nonsense numbers or strings in the data of my tests.  It can help you catch your mistakes faster</em></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/unity.o build/TestLedController_Runner.o build/TestLedController.o <span class="nt">-o</span> build/TestLedController.exe
+/usr/bin/ld: build/TestLedController.o: <span class="k">in function</span> <span class="sb">`</span>test_LedController_is_off_upon_creation<span class="s1">':
+TestLedController.c:(.text+0x57): undefined reference to `LedController_Create'</span></code></pre></figure>
+
+<p>Unity can’t find the function.  Because we haven’t written it yet. So here’s our chance to finally make our code do something.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedController.c</span>
+
+<span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which returns:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:16:test_LedController_is_off_upon_creation:FAIL: Expected 0 Was 0xFACE
+
+<span class="nt">-----------------------</span>
+1 Tests 1 Failures 0 Ignored 
+FAIL</code></pre></figure>
+
+<p>Ok! now let’s make it pass</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedController.c</span>
+
+<span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="n">address</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>So there it is, your first passing test on a teensy. Let’s keep going. This test will virtually turn on an Led</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedController_TurnOn_Led_seven</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x07</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Unity will complain that it doesn’t know about the new function, as it should.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c: In <span class="k">function</span> ‘test_LedController_TurnOn_Led_seven’:
+<span class="nb">test</span>/TestLedController.c:23:3: warning: implicit declaration of <span class="k">function</span> ‘LedController_TurnOn’<span class="p">;</span> did you mean ‘LedController_Create’? <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
+   23 |   LedController_TurnOn<span class="o">(</span>7<span class="o">)</span><span class="p">;</span>
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+      |   LedController_Create</code></pre></figure>
+
+<p>A quick note about the function names, at first I was annoyed by developers putting the module name in the front of each method call. Over time though, I came to appreciate that it makes a big difference in keeping things organized.  It might seem weird to readers coming from an object-oriented language but it does really help!</p>
+
+<p>So next we add LedController_TurnOn() to the header file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">TestLedController.c:<span class="o">(</span>.text+0xc6<span class="o">)</span>: undefined reference to <span class="sb">`</span>LedController_TurnOn<span class="s1">'</span></code></pre></figure>
+
+<p>We’ve seen this before, time to edit the sourcefile.  If you just add the empty function and run <code class="language-plaintext highlighter-rouge">rake</code>, it will fail. Good to see.  You want to see the test failing the way you expect before you implement the desired functionality.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:12:test_LedController_is_off_upon_creation:PASS
+<span class="nb">test</span>/TestLedController.c:24:test_LedController_TurnOn_Led_seven:FAIL: Expected 1 Was 0
+
+<span class="nt">-----------------------</span>
+2 Tests 1 Failures 0 Ignored 
+FAIL</code></pre></figure>
+
+<p>Ok, to achieve the desired functionality, we will make a pointer to the address and mark it static so it’s not accessible to outside callers.  To turn it on, we will make an over-simplification.  This is an example of the Agile principle of ‘selecting the simplest design that could possibly work’.</p>
+
+<p>It’s ok (even encouraged) to oversimplify your solutions during TDD as it is expected to produce a more robust solution than trying to create the complete solution immediately.  These kinds of small, steady, well-tested steps can sometimes help to avoid careless (or rushed) mistakes.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">ledsAddress</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">address</span><span class="p">;</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">LedController_TurnOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">intNumber</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This should pass. Congratulations, you can now virtually turn on your light.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:12:test_LedController_is_off_upon_creation:PASS
+<span class="nb">test</span>/TestLedController.c:19:test_LedDriver_TurnOn_Led_seven:PASS
+
+<span class="nt">-----------------------</span>
+2 Tests 0 Failures 0 Ignored 
+OK</code></pre></figure>
+
+<p>Let’s also make sure we can turn one off.  Just to say we can.  Also to achieve the same level of function as the infamous ‘sample blinky’.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedController_TurnOff_Led_seven</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>After adding the header definitions and empty functions.  You should be at a failing test.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:12:test_LedController_is_off_upon_creation:PASS
+<span class="nb">test</span>/TestLedController.c:19:test_LedController_TurnOn_Led_seven:PASS
+<span class="nb">test</span>/TestLedController.c:33:test_LedController_TurnOff_Led_seven:FAIL: Expected 0 Was 1
+
+<span class="nt">-----------------------</span>
+3 Tests 1 Failures 0 Ignored 
+FAIL</code></pre></figure>
+
+<p>It passes by reversing the command in TurnOn().</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedController_TurnOff</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> </code></pre></figure>
+
+<p>So that brings us to our first refactoring opportunity.  One of the ways codebases get out of hand over time is by writing the same instructions over and over in different parts of your code.  Another of the important tenets of programming is Don’t Repeat Yourself which is apparently attributed to the writers of Pragmatic Programmer who also published Grenning’s book.  You might say that I’ve drank the kool-aid when it comes to this testing stuff.
+At any rate, keeping your code DRY means always being on the lookout for opportunities to bring together duplicated statements into a single definition.  Many practitioners advocate for refactoring after the third duplication.  In our case, we now have a statement that occurs in every test.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span></code></pre></figure>
+
+<p>However, our test about of LedController_Create() involves a variable declaration beforehand.  So we can’t remove it.  That means we can only remove two of the duplicates but let’s take the opportunity to do it now anyway.  This statement will be required consistenly in upcoming tests anyway so it won’t be two for long:</p>
+
+<p>Here’s how TestLedController.c looks after refactoring</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
+#include "LedController.h"
+</span>
+<span class="k">static</span> <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_LedController_is_off_upon_creation</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint16_t</span> <span class="n">virtualPin</span> <span class="o">=</span> <span class="mh">0xface</span><span class="p">;</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_LedController_TurnOn_Led_seven</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_LedController_TurnOff_Led_seven</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The tests are short and sweet.  That makes a big difference as your codebase &amp; test suite starts to grow.  The faster you can understand what a newly failed test is doing, the more likely you are to identify and fix it quickly as well.</p>
+
+<h4 id="start-on-green-end-on-green-with-refactoring">Start on green, end on green with refactoring</h4>
+<p>Sometimes it can be tempting to refactor out a duplication you find while doing some other task.  Don’t do that. You always want a fully passing codebase before you start refactoring or you can get yourself into all kinds of confusing trouble.</p>
+
+<h3 id="turning-on-a-specific-led--a-point-about-binary">Turning on a specific Led (&amp; a point about binary)</h3>
+<p>Right now the driver will represents all possible pins in a single binary value.  This is clearly not very useful on a board with multiple pins.  In this case, the 16-bit variable <em>ledsAddress</em> represents 16 pins that represent whether its Led is on (1) or off (0).  So, for example, the binary <em>0000001001000000</em> is equal to the hex value <em>0x240</em> which is equal to <em>576</em> on a decimal scale (the way we are accustomed to counting).  There are lots of binary-hexadecimal-decimal converters available online to help.</p>
+
+<p>Anyways, it’s time to start toggling different pins. Here’s the test:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedController_TurnOn_MultipleLeds</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x240</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The test returns 0x0001 instead of 0x0240, just like we’d coded it earlier.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:15:test_LedController_is_off_upon_creation:PASS
+<span class="nb">test</span>/TestLedController.c:22:test_LedController_TurnOn_Led_seven:PASS
+<span class="nb">test</span>/TestLedController.c:28:test_LedController_TurnOff_Led_seven:PASS
+<span class="nb">test</span>/TestLedController.c:39:test_LedController_TurnOn_MultipleLeds:FAIL: Expected 0x0180 Was 0x0001
+
+<span class="nt">-----------------------</span>
+4 Tests 1 Failures 0 Ignored 
+FAIL</code></pre></figure>
+
+<p>Time to fix that with a technique called bit-shifting.  Important in embedded systems so get comfortable with it if you’re not already.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedController_TurnOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">|=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ledNumber</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which will make your tests pass. So we can move onto the same case but for turning off a specific Led.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedController_TurnOff_AnLed</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+  <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>It fails with 0x0000 instead of the intended 0x0040. Again this is what we intentionally coded earlier.  You’ll use a different bitwise operate to turn a specific bit to 0.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedController_TurnOff</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ledNumber</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which brings everything to passing again.  You could consider refactoring the bitshift into a function that is more expressive of the intention.  Your future teammates will probably thank you for that. Make it static and keep it out of the header since there’s no reason an external call would need to use this function.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">uint16_t</span> <span class="nf">getBitLocationFromLedNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ledNumber</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedController_TurnOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">|=</span> <span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedController_TurnOff</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">));</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>There’s a bit of a nuance to what we’ve done here.  The pins on a teensy can be set to either <a href="https://www.pjrc.com/teensy/td_digital.html">read or write</a>.  This means that a pin set to output (such as an LedController) cannot read the actual state of the pin. Instead it has to keep track of the values in its own separate memory location.</p>
+
+<p>Why is this important? Well, it comes down to the difference between state and action. Many embedded systems will use <a href="https://www.state-machine.com/fsm/">finite state machines</a> in order to carry out their tasks.  If you look to the <code class="language-plaintext highlighter-rouge">delay()</code> function in <code class="language-plaintext highlighter-rouge">main()</code>, the processor is occupied during the delay and cannot be asked to do any other tasks.  Using a state machine can help to free up system resources while still keeping track of the various peripherals (such as LEDs).</p>
+
+<p>Let’s look and how to ensure monitoring of state with a test:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedController_does_not_read_the_LedMemoryMap_for_state</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">virtualPin</span> <span class="o">=</span> <span class="mh">0xffff</span><span class="p">;</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x80</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which fails by returning the memory mapped location declared in the test setup</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:54:test_LedController_does_not_read_the_LedMemoryMap_for_state:FAIL: Expected 0x0080 Was 0xFFFF</code></pre></figure>
+
+<p>note: this particular Rakefile will only recognize functions that start with <code class="language-plaintext highlighter-rouge">test_&lt;WhateverModule&gt;.c</code> if you forget to add <code class="language-plaintext highlighter-rouge">test_</code> at the front of the function, the test will not be run.</p>
+
+<p>Here’s what the passing code looks like.  I didn’t include the Turn_off() function but it works the same:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">uint16_t</span> <span class="n">ledsImage</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">ledsAddress</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">address</span><span class="p">;</span>
+	<span class="n">ledsImage</span> <span class="o">=</span> <span class="mh">0x0000</span><span class="p">;</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">ledsImage</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedController_TurnOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ledsImage</span> <span class="o">|=</span> <span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">);</span>
+	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">ledsImage</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="back-to-maincpp">Back to main.cpp</h2>
+
+<p>So now we have a tested LedDriver. But it doesn’t actually make any system calls yet.  It’s also not being called by <code class="language-plaintext highlighter-rouge">main.cpp</code>.  How do we fix that?</p>
+
+<p>Before moving forward, double-check all is working correctly by plugging in the teensy and call <code class="language-plaintext highlighter-rouge">rake deploy_teensy</code>, to make sure it is loading blinky properly.  Since the test suite cleans up its objects after each build, rake is going to need to rebuild the teensy3 modules.  It takes 10 to 15s on my computer.</p>
+
+<p>first add in the new module to make sure it builds ok. The Rakefile should handle it without complaint.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+<span class="cp">#include "LedController.h"
+</span><span class="p">}</span></code></pre></figure>
+
+<p>Note: The <code class="language-plaintext highlighter-rouge">extern "C" {}</code> wrapper is important here or you will get a linker error when <code class="language-plaintext highlighter-rouge">main.cpp</code> tries to call those functions.</p>
+
+<h3 id="moving-the-system-calls-from-main-into-ledcontroller">Moving the system calls from main into LedController</h3>
+
+<p>within main, there are 3 system calls:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pinMode(ledNumber, OUTPUT);</code>   which tells the teensy to treat this pin as an output.</li>
+  <li><code class="language-plaintext highlighter-rouge">digitalWriteFast(ledNumber, HIGH);</code>  Which applies a high (3.3V) voltage to the pin, causing the connected LED to light.</li>
+  <li><code class="language-plaintext highlighter-rouge">digitalWriteFast(ledNumber, LOW);</code>  Which applies 0 voltage to the pin, causing the connected LED to go dark.</li>
+</ul>
+
+<p>let’s try moving the first call <code class="language-plaintext highlighter-rouge">pinMode()</code> to LedController.</p>
+
+<p>LedController.c:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "LedController.h"
+#include "Arduino.h"
+</span>
+<span class="c1">//...</span>
+<span class="c1">//static variables</span>
+<span class="c1">//...</span>
+
+<span class="kt">void</span> <span class="nf">LedController_Activate</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>main.cpp:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;Arduino.h&gt;
+</span>
+<span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+<span class="cp">#include "LedController.h"
+</span><span class="p">}</span>
+
+<span class="k">extern</span> <span class="s">"C"</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">uint16_t</span> <span class="n">activeLeds</span><span class="p">;</span>
+    <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">activeLeds</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">boardLed</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+    <span class="n">LedController_Activate</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
+    <span class="c1">// pinMode(ledNumber, OUTPUT);  // NOTE: this has been commented out</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">digitalWriteFast</span><span class="p">(</span><span class="n">boardLed</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">digitalWriteFast</span><span class="p">(</span><span class="n">boardLed</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Try deploying first with <code class="language-plaintext highlighter-rouge">rake deploy_teensy</code>.  That works! What about the tests with <code class="language-plaintext highlighter-rouge">rake</code>?</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/unity.o build/LedController.o build/TestLedController_Runner.o build/TestLedController.o <span class="nt">-o</span> build/TestLedController.exe
+/usr/bin/ld: build/LedController.o: <span class="k">in function</span> <span class="sb">`</span>LedController_Activate<span class="s1">':
+LedController.c:(.text+0xa8): undefined reference to `pinMode'</span>
+collect2: error: ld returned 1 <span class="nb">exit </span>status
+rake aborted!</code></pre></figure>
+
+<p>Unity is looking for the pinMode() function which is buried in the teensy source code.  The build handles that without complaint but Unity is set-up to only reference the files directly called by the test.  You’ll notice that even if we <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code>, the command will still fail because unity does not attempt to find functions buried in submodules.
+The way to handle this is called a ‘link-time spy’.  A spy is an alternative, test-only module that gets allows you to stub a function and give a canned response to it.</p>
+
+<p>comment out <code class="language-plaintext highlighter-rouge">pinMode()</code> so that it doesn’t bother you while setting up the Spy</p>
+
+<p>What kind of behaviour might we expect from the Teensy?  Well, it should be recognized but off if it’s activated. Something like this:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_Unactivated_Led_will_return_LED_if_activated</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_Activate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">TeensySpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LIGHT_OFF</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which will naturally fail if we run <code class="language-plaintext highlighter-rouge">rake</code> since those new functions are unrecognized. Comment out that test while we set-up the spy.</p>
+
+<p>This is a good place to commit your work.</p>
+
+<p>Ok, so now we will create a new folder called ‘mocks’ where we will place the spy (and it’s tests).
+mocks/TestTeensySpy.c:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
+#include "TeensySpy.h"
+</span>
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TeensySpy_Create</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_TeensySpy_on_create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">TeensySpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Nothing fancy here, a simple Create function to get started. Then a couple functions to store the result that was passed: GetLastId and GetLastState.</p>
+
+<p>Let’s see what those functions look like within <code class="language-plaintext highlighter-rouge">TeensySpy.h</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_TeensySpy_H
+#define D_TeensySpy_H
+</span>
+<span class="cp">#include &lt;stdint.h&gt;
+</span>
+<span class="k">enum</span>
+<span class="p">{</span>
+  <span class="n">LED_ID_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">LED_STATE_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> 
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">TeensySpy_Create</span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="nf">TeensySpy_GetLastId</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">TeensySpy_GetLastState</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>and then the source:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "TeensySpy.h"
+</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">lastId</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">lastState</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">TeensySpy_Create</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">lastId</span> <span class="o">=</span> <span class="n">LED_ID_UNKNOWN</span><span class="p">;</span>
+  <span class="n">lastState</span> <span class="o">=</span> <span class="n">LED_STATE_UNKNOWN</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now we can start to ‘stub out’ the methods that are tucked away in <code class="language-plaintext highlighter-rouge">Arduino.h</code>.  The one we are focusing on is <em>pinMode()</em> so let’s first create a test:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "TeensySpy.h"
+</span>
+<span class="kt">void</span> <span class="nf">test_TeensySpy_set_pinMode_to_Output</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">TeensySpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">OUTPUT</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>and then add the function itself:</p>
+
+<p>And then <code class="language-plaintext highlighter-rouge">TeensySpy.c</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">enum</span>
+<span class="p">{</span>
+  <span class="n">LED_ID_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">LED_STATE_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">,</span> 
+  <span class="n">OUTPUT</span> <span class="o">=</span> <span class="mi">10</span>                       <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">pinMode</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">,</span> <span class="kt">int</span> <span class="n">command</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">lastId</span> <span class="o">=</span> <span class="n">ledNumber</span><span class="p">;</span>
+  <span class="n">lastState</span> <span class="o">=</span> <span class="n">command</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">These</span> <span class="n">Symbols</span> <span class="n">in</span> <span class="n">the</span> <span class="n">enums</span><span class="p">,</span> <span class="n">make</span> <span class="n">the</span> <span class="n">tests</span> <span class="n">more</span> <span class="n">readable</span> <span class="n">but</span> <span class="n">since</span> <span class="n">they</span> <span class="n">reside</span> <span class="n">in</span> <span class="n">the</span> <span class="n">header</span> <span class="n">file</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Spy</span><span class="p">,</span> <span class="n">they</span> <span class="n">have</span> <span class="n">no</span> <span class="n">impact</span> <span class="n">on</span> <span class="n">the</span> <span class="n">production</span> <span class="n">code</span></code></pre></figure>
+
+<p><strong>Make sure to add it to the header file as well!</strong></p>
+
+<p>The tests should pass.</p>
+
+<p>So if we turn our attention back to the <strong>LedController</strong>, we can uncomment <code class="language-plaintext highlighter-rouge">pinMode()</code> without breaking our tests.  Give it a try with <code class="language-plaintext highlighter-rouge">rake clean</code> &amp; <code class="language-plaintext highlighter-rouge">rake deploy_teensy</code></p>
+
+<p>The LED should be blinking.  From here we can extract the rest of the Led functions into <strong>LedController</strong>.</p>
+
+<p>Here’s the while loop in <code class="language-plaintext highlighter-rouge">main.cpp</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  
+  <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>and the pin toggle functions added to <strong>LedController</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  
+<span class="kt">void</span> <span class="nf">LedController_TurnOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ledsImage</span> <span class="o">|=</span> <span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">);</span>
+  <span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">ledsImage</span><span class="p">;</span>
+  <span class="n">digitalWriteFast</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedController_TurnOff</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ledsImage</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">));</span>
+  <span class="o">*</span><span class="n">ledsAddress</span> <span class="o">=</span> <span class="n">ledsImage</span><span class="p">;</span>
+  <span class="n">digitalWriteFast</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+<span class="p">}</span> 
+  </code></pre></figure>
+
+<p>Naturally, this breaks the tests.  So let’s comment out the digitalWriteFast in LedController and then create some stubbed functions for <code class="language-plaintext highlighter-rouge">digitalWriteFast()</code>, within the spy.  We’ll add the tests first of course.<br />
+There is an adage in TDD, ‘make it work for none, then make it work for one, then make it work for many’.  What does that mean?
+Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t already been set to output would it?  So we shouldn’t allow our Spy to either.  Here’s what that means in a test;</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TeensySpy_wont_respond_to_digitalWriteFast_if_no_pinMode_call</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">digitalWriteFast</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">TeensySpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_TeensySpy_set_a_pin_to_HIGH</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">digitalWriteFast</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">TeensySpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">HIGH</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here’s a simple if clause that’ll check if the pinMode(OUTPUT) was called for the correct pin, if not, the Spy resets its values, if yes, it proceeds with the digitalWriteFast function call.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">digitalWriteFast</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">,</span> <span class="kt">int</span> <span class="n">LEVEL</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">lastId</span> <span class="o">==</span> <span class="n">ledNumber</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">lastState</span> <span class="o">=</span> <span class="n">LEVEL</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="n">lastId</span> <span class="o">=</span> <span class="n">LED_ID_UNKNOWN</span><span class="p">;</span>
+      <span class="n">lastState</span> <span class="o">=</span> <span class="n">LED_STATE_UNKNOWN</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>All tests passing? A similar test can/should be written for setting digitalWriteFast(LOW), since it doesn’t require a change to the logic, it’s good practice to change the code slightly to make the test fail.  For example:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">digitalWriteFast</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">,</span> <span class="kt">int</span> <span class="n">LEVEL</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">lastId</span> <span class="o">==</span> <span class="n">ledNumber</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">lastState</span> <span class="o">=</span> <span class="n">LEVEL</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span>
+
+  <span class="p">.</span>
+  <span class="p">.</span>
+  <span class="p">.</span></code></pre></figure>
+
+<p>will cause the last 2 tests to fail like this</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestTeensySpy.c:13:test_TeensySpy_on_create:PASS
+<span class="nb">test</span>/TestTeensySpy.c:19:test_TeensySpy_set_pinMode_to_Output:PASS
+<span class="nb">test</span>/TestTeensySpy.c:26:test_TeensySpy_wont_respond_to_digitalWriteFast_if_no_pinMode_call:PASS
+<span class="nb">test</span>/TestTeensySpy.c:41:test_TeensySpy_set_a_pin_to_HIGH:FAIL: Expected 0x0001 Was 0x0002
+<span class="nb">test</span>/TestTeensySpy.c:50:test_TeensySpy_set_a_pin_to_LOW:FAIL: Expected 0x0000 Was 0x0001</code></pre></figure>
+
+<p>So the tests are indeed checking that the code produces the expected result.  Great!  Revert the ‘+1’ and lets get back to <code class="language-plaintext highlighter-rouge">LedController</code>.</p>
+
+<p>If we uncomment the digitalWriteFast() calls now, we get complaints about missing functions, we need to add a fake <code class="language-plaintext highlighter-rouge">Arduino.h</code> file in <code class="language-plaintext highlighter-rouge">/mocks</code> and place the missing function declarations in there.  The enum contains variables that are declared within the <code class="language-plaintext highlighter-rouge">Arduino.h</code> library that we also need to include.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_Arduino_H
+#define D_Arduino_H
+</span>
+<span class="cp">#include &lt;stdint.h&gt;
+</span>
+<span class="k">enum</span>
+<span class="p">{</span>
+  <span class="n">LOW</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">HIGH</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">OUTPUT</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">pinMode</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">ledNumber</span><span class="p">,</span><span class="kt">uint8_t</span> <span class="n">io</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">digitalWriteFast</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">ledNumber</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">level</span><span class="p">);</span>
+
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>At that point, the tests should pass and <code class="language-plaintext highlighter-rouge">rake deploy_teensy</code> also succeeds.</p>
+
+<p>This is a good time to commit your work.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git add <span class="nt">-A</span>
+git commit <span class="nt">-am</span> <span class="s2">"finish extract led functions into LedController"</span></code></pre></figure>
+
+<hr />
+
+<h3 id="extracting-time-functions">Extracting time functions</h3>
+
+<p>So where are we at now?<br />
+ if we look at <code class="language-plaintext highlighter-rouge">main.cpp</code>, we see that there is still a function call to the <code class="language-plaintext highlighter-rouge">Arduino.h</code> library</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>the <code class="language-plaintext highlighter-rouge">delay(time)</code> function causes the board to freeze for the specified time in milliseconds.  Scheduling and timing is a very important function in micro-controllers that are constant switching between different tasks on specified intervals.
+But that poses certain special challenges for testing.  For example.  If you had a task that only repeats once a day, are you going to wait around for that time?  What if you need to support daylight savings time or leap years?  Clearly you need a way to control the internal clock of the device from your test harness.  Grenning’s book used a scheduler to accomplish this.  We are going to mimic this approach although it is arguable overkill to just replace a simple delay function.
+Let’s get started.</p>
+
+<h3 id="the-scheduler">The Scheduler</h3>
+
+<p>So the way this is going to work, it that main() will start a module called LightScheduler() and give it the variables necessary to function.  The LightScheduler will then constantly check the time via callbacks.  When the reported time matches the desired time, LedScheduler will call LedController to toggle the desired pin.</p>
+
+<p>Let’s use a test to show the different components/function calls.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedScheduler_ScheduledDelay_didnt_arrive_yet</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="mi">499</span><span class="p">);</span>
+  <span class="n">LedScheduler_WakeUp</span><span class="p">();</span>
+
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This is too much functionality to implement all at once so we will just comment it out and hold onto it as a reference for now.</p>
+
+<p>Here’s a much simpler test to get started with.  It requires us to setup a new spy which we’ll call <code class="language-plaintext highlighter-rouge">LedControllerSpy</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedScheduler.c</span>
+
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_LedScheduler_No_Lights_On_Initialization</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>We’ll also comment that out and now start out with a test of the <code class="language-plaintext highlighter-rouge">LedControllerSpy</code> itself.  It’s going to be quite similar to <code class="language-plaintext highlighter-rouge">TeensySpy</code> that we wrote earlier.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestLedControllerSpy.c</span>
+
+<span class="cp">#include "unity.h"
+#include "LedControllerSpy.h"
+</span>
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_LedControllerSpy_on_create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which is satisfied by the following header:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_LedControllerSpy_H
+#define D_LedControllerSpy_H
+</span>
+<span class="cp">#include &lt;stdint.h&gt;
+#include "LedController.h"
+</span>
+<span class="k">enum</span>
+<span class="p">{</span>
+  <span class="n">LED_ID_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">LED_STATE_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> 
+  <span class="n">LED_OFF</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">LED_ON</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">};</span>
+<span class="kt">void</span> <span class="nf">LedControllerSpy_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">ledsAddress</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">LedControllerSpy_GetLastId</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">LedControllerSpy_GetLastState</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>and sourcefile:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "LedControllerSpy.h"
+</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">lastId</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">lastState</span><span class="p">;</span>
+
+
+<span class="kt">void</span> <span class="nf">LedControllerSpy_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">ledsAddress</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">lastId</span> <span class="o">=</span> <span class="n">LED_ID_UNKNOWN</span><span class="p">;</span>
+  <span class="n">lastState</span> <span class="o">=</span> <span class="n">LED_STATE_UNKNOWN</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">LedControllerSpy_GetLastId</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">lastId</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">LedControllerSpy_GetLastState</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">lastState</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>So now if we uncomment the test within testLedScheduler.c we get a failure:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedScheduler.c:26:test_LedScheduler_No_Lights_On_Initialization:
+FAIL: Expected 0xFFFF Was 0x0000
+
+<span class="nt">-----------------------</span>
+1 Tests 1 Failures 0 Ignored 
+FAIL</code></pre></figure>
+
+<p>We can solve that by creating the spy in the test setUp</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
+  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Great! Now let’s turn on a light.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedControllerSpy_remembers_light_after_TurnOn</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LightController_On</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ON</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And make it pass by adding the function to <code class="language-plaintext highlighter-rouge">LedControllerSpy</code>. Note we don’t need to add it to the header file since it is already defined in <code class="language-plaintext highlighter-rouge">LedController.h</code> which is #included in <code class="language-plaintext highlighter-rouge">LedControllerSpy.h</code>.  This makes sure that the real functions being called by our spy is consistent with the production code.</p>
+
+<p>The test to test for turning an Led off is identical so I won’t repeat it here.  We can now move on the the time aspect of our still commented test in <code class="language-plaintext highlighter-rouge">LedSchedulerTest</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">commit f9812ea</code></p>
+
+<h2 id="faking-time">Faking Time</h2>
+<p>Depending on your application time management may be hugely important and embedded systems face all sorts of challenges with handling time.  For our tests, we need to be able to fake the time on our board to create all of the different hypothetical situations we might need it to respond to.</p>
+
+<p>In our little example here, we just need to make sure that <code class="language-plaintext highlighter-rouge">LedScheduler</code> correctly implements the delay function.  So we need to fake that delay.  We’ll start by adding the tests to <code class="language-plaintext highlighter-rouge">mocks/FakeTimeServiceTest.c</code>.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
+#include "FakeTimeService.h"
+</span>
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TimeService_Create</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">tearDown</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TimeService_Destroy</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_FakeTimeService_on_create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">MILLISECONDS_UNKNOWN</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_FakeTimeService_sets_time</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="mi">77</span><span class="p">);</span>
+  <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The header <code class="language-plaintext highlighter-rouge">FakeTimeService.h</code> will look like this:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_FakeTimeService_H
+#define D_FakeTimeService_H
+</span>
+<span class="cp">#include "TimeService.h"
+</span>
+<span class="kt">void</span> <span class="nf">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="k">enum</span> <span class="p">{</span><span class="n">MILLISECONDS_UNKNOWN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">};</span>
+
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>Which will fail because it can’t find <code class="language-plaintext highlighter-rouge">TimeService.h</code>. The real <code class="language-plaintext highlighter-rouge">TimeService.c</code> is where we will put our teensy specific delay function a little later.  But we will need to create the header now:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_TimeService_H
+#define D_TimeService_H
+</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">Time</span> <span class="n">Time</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="n">Time</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">TimeService_GetTime</span><span class="p">(</span><span class="n">Time</span> <span class="o">*</span> <span class="p">);</span>
+
+<span class="kt">void</span> <span class="nf">TimeService_Create</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">TimeService_Destroy</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="cp">#endif </span></code></pre></figure>
+
+<p>Using typedefs &amp; structs in <code class="language-plaintext highlighter-rouge">c</code> is something that I’m still getting a hang of but using it for our Time abstraction is helpful since it allows us to add other types of time that might be relevant to the system at a later date (day, minute, etc).  However, all we need right now is milliseconds so this header might seem a little overkill.</p>
+
+<p>This is the passing code:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "FakeTimeService.h"
+</span>
+<span class="k">static</span> <span class="n">Time</span> <span class="n">fakeTime</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">TimeService_Create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">fakeTime</span><span class="p">.</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">MILLISECONDS_UNKNOWN</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">TimeService_Destroy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">TimeService_GetTime</span><span class="p">(</span><span class="n">Time</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">time</span><span class="o">-&gt;</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">fakeTime</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">fakeTime</span><span class="p">.</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Tests pass, sweet, now we can move back to the <code class="language-plaintext highlighter-rouge">TestLedScheduler</code>.  Using the ‘make it work for none, then one, then many’ methodology, we will gradually add the scheduling, test by test</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "FakeTimeService.h" //add this to the top
+</span>
+<span class="kt">void</span> <span class="nf">test_LedScheduler_No_Schedule_No_Action_Taken</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="mi">365</span><span class="p">);</span>
+  <span class="n">LedScheduler_WakeUp</span><span class="p">();</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>we’ll need to add <code class="language-plaintext highlighter-rouge">LedScheduler_WakeUp();</code> to the <code class="language-plaintext highlighter-rouge">LedScheduler.h</code> and just an empty function in <code class="language-plaintext highlighter-rouge">src/LedScheduler.c</code> will be sufficient to make the test pass.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "LedScheduler.h"
+</span>
+<span class="kt">void</span> <span class="nf">LedScheduler_WakeUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>From here we are finally ready to uncomment the test from the beginning of this section. Here it is again:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedScheduler_ScheduledDelay_didnt_arrive_yet</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="mi">499</span><span class="p">);</span>
+  <span class="n">LedScheduler_WakeUp</span><span class="p">();</span>
+
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ID_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Again, an empty function will cause the test to pass:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And now, finally, we hit the point where we can turn on the Led:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedScheduler_ScheduledDelay_just_arrived</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+  <span class="n">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">LedScheduler_WakeUp</span><span class="p">();</span>
+
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ON</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Sure enough, it fails:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedScheduler.c:20:test_LedScheduler_No_Lights_On_Initialization:PASS
+<span class="nb">test</span>/TestLedScheduler.c:26:test_LedScheduler_No_Schedule_No_Action_Taken:PASS
+<span class="nb">test</span>/TestLedScheduler.c:34:test_LedScheduler_ScheduledDelay_didnt_arrive_yet:PASS
+<span class="nb">test</span>/TestLedScheduler.c:50:test_LedScheduler_ScheduledDelay_just_arrived:FAIL: Expected 0x0004 Was 0xFFFF
+
+<span class="nt">-----------------------</span>
+4 Tests 1 Failures 0 Ignored 
+FAIL</code></pre></figure>
+
+<p>Like we did with Time, we are going to use a <code class="language-plaintext highlighter-rouge">typedef struct</code> to house the information of the scheduled event.  This will allow us to created multiple scheduled events and easily add extra parameters later if necessary.  Here’s how it looks:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "TimeService.h"
+#include "LedController.h"
+#include "LedScheduler.h"
+</span>
+<span class="k">enum</span>
+<span class="p">{</span>
+    <span class="n">UNUSED</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="p">};</span>
+
+<span class="k">typedef</span> <span class="k">struct</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">ScheduledLedEvent</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="n">ScheduledLedEvent</span> <span class="n">scheduledEvent</span><span class="p">;</span>
+
+
+<span class="kt">void</span> <span class="nf">LedScheduler_Create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">UNUSED</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedScheduler_Destroy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+  <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">LedScheduler_WakeUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">UNUSED</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span> <span class="o">&lt;</span> <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This should pass.  So we are now calling <code class="language-plaintext highlighter-rouge">TimeService</code> and comparing the value to our specified delay in order to trigger the Led.
+Let’s add a test for TurnOff for good measure:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedScheduler_ScheduledDelay_just_arrived_Led_is_on</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+  <span class="n">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+  <span class="n">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">LedScheduler_WakeUp</span><span class="p">();</span>
+
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastId</span><span class="p">());</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_OFF</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>To make this pass is a matter of checking whether the Led is on or off, This requires adding a test to and passing method to <code class="language-plaintext highlighter-rouge">TestLedController</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedController_knows_if_an_Led_is_On</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT</span><span class="p">(</span><span class="n">LedController_IsOn</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span>
+  <span class="n">TEST_ASSERT_FALSE</span><span class="p">(</span><span class="n">LedController_IsOn</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here’s The passing code for that test:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">BOOL</span> <span class="nf">LedController_IsOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">((</span><span class="err">\</span><span class="o">*</span><span class="n">ledsAddress</span> <span class="o">&amp;</span> <span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">))</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">ledNumber</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><em>Note: We’ve added some constants, BOOL, TRUE, FALSE, that don’t exist in the standard libraries but can make C a bit easier to read.  To incorporate these constant, we can create a new includes <code class="language-plaintext highlighter-rouge">common.h</code> with the following.  It will need to be included in both <code class="language-plaintext highlighter-rouge">LedController.h</code> &amp; <code class="language-plaintext highlighter-rouge">TestLedController.h</code></em></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_Common_H
+#define D_Common_H
+</span>
+<span class="cp">#ifndef BOOL
+#define BOOL int
+#endif
+</span>
+<span class="cp">#ifndef TRUE
+#define TRUE 1
+#endif
+</span>
+<span class="cp">#ifndef FALSE
+#define FALSE 0
+#endif
+</span>
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>Ok, back to <code class="language-plaintext highlighter-rouge">LedScheduler</code>.  Hmmm it has an error.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/objs/TestLedScheduler.o build/objs/TestLedScheduler_Runner.o build/objs/unity.o build/objs/LedScheduler.o build/objs/LedControllerSpy.o build/objs/FakeTimeService.o  <span class="nt">-o</span> build/TestLedScheduler.exe  <span class="nt">-lm</span>
+/usr/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_WakeUp<span class="s1">':
+LedScheduler.c:(.text+0xab): undefined reference to `LedController_IsOn'</span>
+collect2: error: ld returned 1 <span class="nb">exit </span>status
+rake aborted!
+ABORT RakefileHelper error: error during linking</code></pre></figure>
+
+<p>We usually see this when a function hasn’t been added yet.  What caused this issue?
+Well, this is an opportunity to explain a concept that took me ages to wrap my head around: the way the Unity uses the gcc linker to prepare the test files.  Let’s look at the <code class="language-plaintext highlighter-rouge">gcc</code> call that triggered the failure:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/objs/TestLedScheduler.o 
+build/objs/TestLedScheduler_Runner.o 
+build/objs/unity.o 
+build/objs/LedScheduler.o 
+build/objs/LedControllerSpy.o 
+build/objs/FakeTimeService.o  
+<span class="nt">-o</span> build/TestLedScheduler.exe  <span class="nt">-lm</span></code></pre></figure>
+
+<p>each of the files starting with ‘build/objs’ will get linked together in order to run the test.  So what’s the issue?  Well, we just edited <code class="language-plaintext highlighter-rouge">LedController.c</code> which isn’t mentioned in that list.  What we actually needed to do was adjust <code class="language-plaintext highlighter-rouge">LedControllerSpy.c</code> in order to get the test passing.<br />
+I jumped the gun a bit.  But since I wrote a test before implementing the function, it should still be safe.  Let’s adjust the spy now.  We can get away with cruder logic here (don’t forget to <code class="language-plaintext highlighter-rouge">#include "common.h"</code>).</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">BOOL</span> <span class="nf">LedController_IsOn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">lastId</span> <span class="o">==</span> <span class="n">ledNumber</span> <span class="o">&amp;</span> <span class="n">lastState</span> <span class="o">==</span> <span class="n">LED_ON</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And with that, we are back to passing tests!  We could keep going and add logic to incorporate additional ScheduledEvents, but that’s not necessary for us just to replace Teensy’s delay function. So we’re gonna move on from here.</p>
+
+<p><code class="language-plaintext highlighter-rouge">commit efd86fa</code></p>
+
+<h1 id="hooking-ledscheduler-into-the-teensy">Hooking LedScheduler into the Teensy</h1>
+
+<p>Ok, so now we are ready to actually displace the delay call.  How shall we start?  As mentioned above, we are going to move <code class="language-plaintext highlighter-rouge">delay()</code> into <code class="language-plaintext highlighter-rouge">TimeService.c</code>.  Like this:</p>
+
+<p>First, we’ll add <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code>.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "TimeService.h"
+#include "Arduino.h"
+</span>
+<span class="kt">void</span> <span class="nf">TimeService_Delay</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">delay</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>From there, we can move the looping logic into <code class="language-plaintext highlighter-rouge">main.cpp</code>, into <code class="language-plaintext highlighter-rouge">LedScheduler</code> like so:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">extern</span> <span class="s">"C"</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="kt">uint16_t</span> <span class="n">activeLeds</span><span class="p">;</span>
+    <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">activeLeds</span><span class="p">);</span>
+    <span class="n">LedScheduler_Create</span><span class="p">();</span>
+
+    <span class="kt">int</span> <span class="n">boardLed</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span>
+    <span class="n">LedController_Activate</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
+    <span class="n">LedScheduler_ScheduleDelay</span><span class="p">(</span><span class="n">boardLed</span><span class="p">,</span> <span class="n">delay</span><span class="p">);</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">LedScheduler_WakeUp</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Finally, we’ll briefly add <code class="language-plaintext highlighter-rouge">TimeService_Delay()</code> into <code class="language-plaintext highlighter-rouge">LedScheduler_WakeUp()</code>.  This is a temporary measure just to convince ourselves that we can deploy to the teensy.  We’ll comment out all of the logic which involves time checking:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedScheduler_WakeUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// Time time;</span>
+  <span class="c1">// TimeService_GetTime(&amp;time);</span>
+
+  <span class="c1">// if (scheduledEvent.id == UNUSED)</span>
+  <span class="c1">// {</span>
+  <span class="c1">//  return;</span>
+  <span class="c1">// }</span>
+  <span class="c1">// if (time.milliseconds != scheduledEvent.milliseconds)</span>
+  <span class="c1">// {</span>
+  <span class="c1">//  return;</span>
+  <span class="c1">// }</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">LedController_IsOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="n">TimeService_Delay</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>With that, you should have blinky fully functioning within the modules.  But what about the tests?</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/usr/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_WakeUp<span class="s1">':
+LedScheduler.c:(.text+0xb5): undefined reference to `TimeService_Delay'</span></code></pre></figure>
+
+<p>So we need to add a stub in the <code class="language-plaintext highlighter-rouge">FakeTimeService</code> for <code class="language-plaintext highlighter-rouge">TimeService_Delay()</code>. An empty function is fine since we aren’t actually calling it within our tests.  From here, a couple of our tests fail because of the commented out code.</p>
+
+<p>We now need <code class="language-plaintext highlighter-rouge">LedScheduler</code> to set the sampling interval and be aware when that sampling interval has been crossed.  This is going to require us to set-up a function pointer for the <code class="language-plaintext highlighter-rouge">WakeupCallback</code> within <code class="language-plaintext highlighter-rouge">TimeService</code>.  If you are not that comfortable with function pointers, here’s a <a href="https://www.learn-c.org/en/Function_Pointers">mini-tutorial</a> with some additional background.  Here’s the tests.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedScheduler_Initializes_with_correct_alarm</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TEST_ASSERT_EQUAL_PTR</span><span class="p">(</span>
+    <span class="o">&amp;</span><span class="n">LedScheduler_WakeUp</span><span class="p">,</span> 
+    <span class="n">FakeTimeService_GetAlarmCallback</span><span class="p">();</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">FakeTimeService_GetAlarmPeriod</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Let’s add the new funcions to <code class="language-plaintext highlighter-rouge">FakeTimeService</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">WakeUpCallback</span> <span class="nf">FakeTimeService_GetAlarmCallback</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">FakeTimeService_GetAlarmPeriod</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">WakeupCallback</code> is a function pointer that we will declare in <code class="language-plaintext highlighter-rouge">TimeService.h</code> as follows:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">WakeUpCallback</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span></code></pre></figure>
+
+<p>It is then referenced in <code class="language-plaintext highlighter-rouge">FakeTimeService.c</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="n">Time</span> <span class="n">fakeTime</span><span class="p">;</span>
+<span class="k">static</span> <span class="n">WakeUpCallback</span> <span class="n">callback</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">period</span><span class="p">;</span>
+
+<span class="n">WakeUpCallback</span> <span class="nf">FakeTimeService_GetAlarmCallback</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">callback</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">FakeTimeService_GetAlarmPeriod</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">period</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This is enough to allow the test suite to compile but not the test fails with the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedScheduler.c:67:test_LedScheduler_Initializes_with_correct_alarm:FAIL: Expected 0x56561B47 Was 0x00000000</code></pre></figure>
+
+<p>What you are seeing here is the memory addresses of the two pointers.  Now we need to add the code that ties them together within <code class="language-plaintext highlighter-rouge">LedScheduler.c</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedScheduler_Create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">UNUSED</span><span class="p">;</span>
+
+  <span class="n">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">LedScheduler_WakeUp</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>a function which we can add to the <code class="language-plaintext highlighter-rouge">TimeService.h</code> &amp; <code class="language-plaintext highlighter-rouge">FakeTimeService.c</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">,</span> <span class="n">WakeUpCallback</span> <span class="n">cb</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">callback</span> <span class="o">=</span> <span class="n">cb</span><span class="p">;</span>
+    <span class="n">period</span> <span class="o">=</span> <span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>So that passes the test, we can now move onto our next test which will cancel the same alarm.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_LedScheduler_Destroy_cancels_alarm</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">LedScheduler_Destroy</span><span class="p">();</span>
+  <span class="n">TEST_ASSERT_EQUAL_PTR</span><span class="p">(</span>
+    <span class="nb">NULL</span><span class="p">,</span> 
+    <span class="n">FakeTimeService_GetAlarmCallback</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which will pass with the following in <code class="language-plaintext highlighter-rouge">FakeTimeService</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">TimeService_CancelPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">,</span> <span class="n">WakeUpCallback</span> <span class="n">cb</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">callback</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">period</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">commit 35c25ab</code></p>
+
+<p>So how do we hook that into the teensy? Let’s try <code class="language-plaintext highlighter-rouge">rake deploy_teensy</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/home/al/practice/embedded/teensy_rake/src/LedScheduler.c:22: undefined reference to <span class="sb">`</span>TimeService_SetPeriodicAlarmInMilliseconds<span class="sb">`</span></code></pre></figure>
+
+<p>So we need to add this to <code class="language-plaintext highlighter-rouge">TimeService</code>.  What should our first test look like?</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
+#include "TimeService.h"
+#include "TeensySpy.h"
+</span>
+<span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TeensySpy_Create</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_TimeService_GetTime_0_on_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which yields:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestTimeService.c:18:test_TimeService_GetTime_0_on_init:FAIL: Expected 0x0000 Was 0xFCA8</code></pre></figure>
+
+<p>So we need to stub in the behaviour via <code class="language-plaintext highlighter-rouge">TeensySpy</code>. We are actually now going to discard <code class="language-plaintext highlighter-rouge">delay()</code> as it’s not obvious how to write a test and it’s not good programming practice to use this function anyways since your board won’t be able to do anything else while <code class="language-plaintext highlighter-rouge">delay</code> is executing.</p>
+
+<p>Instead, we will use a <a href="https://www.pjrc.com/teensy/td_timing_elaspedMillis.html">ElapsedMillis</a> which you can read more about if you’d like.  For now, let’s drop one level down into the stack to <code class="language-plaintext highlighter-rouge">TestTeensySpy</code> to add a couple stubs and tests.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TeensySpy_stubs_0_elapsedMillis_on_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>To get this passing, we’ll need to declare and initialize our stubbed elapsedMillis (named <code class="language-plaintext highlighter-rouge">timeCounter</code>);</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">int</span> <span class="n">lastId</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">lastState</span><span class="p">;</span>
+<span class="k">static</span> <span class="n">elapsedMillis</span> <span class="n">timeCounter</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">TeensySpy_Create</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">lastId</span> <span class="o">=</span> <span class="n">LED_ID_UNKNOWN</span><span class="p">;</span>
+  <span class="n">lastState</span> <span class="o">=</span> <span class="n">LED_STATE_UNKNOWN</span><span class="p">;</span>
+  <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">TeensySpy_GetElapsedMillis</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">timeCounter</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This should pass.  Now let’s create the ability to advance &amp; reset elapsedMillis within the spy:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TeensySpy_stubs_can_advance_elapsedMillis</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_TeensySpy_stubs_can_reset_elapsedMillis</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">TeensySpy_AdvanceElapsedMillis</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+  <span class="n">TeensySpy_ResetElapsedMillis</span><span class="p">();</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>which passes with the following:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">TeensySpy_AdvanceElapsedMillis</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">timeCounter</span> <span class="o">+=</span> <span class="n">milliseconds</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">TeensySpy_ResetElapsedMillis</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>From here, we can turn our attention back to <code class="language-plaintext highlighter-rouge">TestTimeService</code> which is still failing, <code class="language-plaintext highlighter-rouge">TimeService_GetTime()</code> needs to call on elapsedMillis</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">elapsedMillis</span> <span class="n">timeCounter</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">TimeService_GetTime</span><span class="p">(</span><span class="n">Time</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">time</span><span class="o">-&gt;</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">timeCounter</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which fails because the test doesn’t know what <code class="language-plaintext highlighter-rouge">elapsedMillis</code> is without the <code class="language-plaintext highlighter-rouge">Arduino.h</code> library.
+In regular operation, elapsedMillis will return an int.  So we can create a typedef within our <code class="language-plaintext highlighter-rouge">mocks/Arduino.h</code> to simulate this:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  typedef int elapsedMillis<span class="p">;</span></code></pre></figure>
+
+<p>Which gives us a passing test.  How about if we advance the stubbed time?</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TimeService_GetTime_after_advancing_spy</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">TeensySpy_AdvanceElapsedMillis</span><span class="p">(</span><span class="mi">85</span><span class="p">);</span>
+  <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+  <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>It fails with no result.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestTimeService.c:26:test_TimeService_GetTime_after_advancing_spy:FAIL: Expected 0x0055 Was 0x0000</code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">TimeService</code> is not seeing the <code class="language-plaintext highlighter-rouge">timeCounter</code> that is being produced by <code class="language-plaintext highlighter-rouge">TeensySpy</code>.  We’ll need to move the declaration into the <code class="language-plaintext highlighter-rouge">TeensySpy.h</code> header file in order for it to be visible to external caller modules.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_TeensySpy_H
+#define D_TeensySpy_H
+</span>
+<span class="k">typedef</span> <span class="kt">int</span> <span class="n">elapsedMillis</span><span class="p">;</span>
+<span class="n">elapsedMillis</span> <span class="n">timeCounter</span><span class="p">;</span>
+
+<span class="cp">#include &lt;stdint.h&gt;</span></code></pre></figure>
+
+<p>And with that, both <code class="language-plaintext highlighter-rouge">TimeService</code> tests are passing.  Now what?  What’s missing? Well, how do we decide it’s time for the callback?
+Here’s a tests to make it work for none:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TimeService_GetTime_triggers_callback_if_timeCounter_less_than_set_delay</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">testCallback</span><span class="p">);</span>
+   <span class="n">TeensySpy_AdvanceElapsedMillis</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+   <span class="n">TimeService_CheckForPeriodicAlarm</span><span class="p">();</span>
+   <span class="n">TEST_ASSERT_FALSE</span><span class="p">(</span><span class="n">TeensySpy_GetLastCallback</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This involves 2 new functions.  First we’ll add <code class="language-plaintext highlighter-rouge">TeensySpy_GetLastCallback()</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "common.h"
+</span><span class="p">.</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="k">static</span> <span class="n">BOOL</span> <span class="n">callback</span><span class="p">;</span>
+<span class="p">.</span>
+<span class="kt">void</span> <span class="nf">TeensySpy_Create</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">lastId</span> <span class="o">=</span> <span class="n">LED_ID_UNKNOWN</span><span class="p">;</span>
+  <span class="n">lastState</span> <span class="o">=</span> <span class="n">LED_STATE_UNKNOWN</span><span class="p">;</span>
+  <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Next we’ll add <code class="language-plaintext highlighter-rouge">TimeService_CheckForPeriodicAlarm();</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">TimeService_CheckForPeriodicAlarm</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">timeCounter</span> <span class="o">&lt;</span> <span class="n">board_delay</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This brings the test to passing.  Here’s the test to make it work for one:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TimeService_GetTime_triggers_callback_if_timeCounter_exceeds_set_delay</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">testCallback</span><span class="p">);</span>
+   <span class="n">TeensySpy_AdvanceElapsedMillis</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+   <span class="n">TimeService_CheckForPeriodicAlarm</span><span class="p">();</span>
+   <span class="n">TEST_ASSERT_TRUE</span><span class="p">(</span><span class="n">TeensySpy_GetLastCallback</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which we can make pass by calling the callback function pointer:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">TimeService_CheckForPeriodicAlarm</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">timeCounter</span> <span class="o">&lt;</span> <span class="n">board_delay</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="p">(</span><span class="n">callback</span><span class="p">)();</span>
+    <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And adding a stubbed function to <code class="language-plaintext highlighter-rouge">TeensySpy</code> for the function pointer referenced in the test, <code class="language-plaintext highlighter-rouge">testCallback</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">testCallback</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">commit e6fa988</code></p>
+
+<p>Do we dare try to uncomment our code in <code class="language-plaintext highlighter-rouge">LedScheduler</code> now?</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">src/TimeService.c:5:1: error: unknown <span class="nb">type </span>name <span class="s1">'elapsedMillis'</span>
+    5 | elapsedMillis timeCounter<span class="p">;</span></code></pre></figure>
+
+<p>Why isn’t it recognizing <code class="language-plaintext highlighter-rouge">elapsedMillis</code>? Turns out that <code class="language-plaintext highlighter-rouge">elapsedMillis</code> (along with all of the other Teensy and other Arduino timer libraries that I found) is defined in C++.  So it’s not going to be recognized when <code class="language-plaintext highlighter-rouge">TimeService.c</code> gets compiled.</p>
+
+<p>What if we change <code class="language-plaintext highlighter-rouge">TimeService</code> to a <code class="language-plaintext highlighter-rouge">.cpp</code> file?</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_WakeUp<span class="s1">':
+teensy_rake/src/LedScheduler.c:39: undefined reference to `TimeService_GetTime'</span>
+../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_Create<span class="s1">':
+teensy_rake/src/LedScheduler.c:22: undefined reference to `TimeService_SetPeriodicAlarmInMilliseconds'</span>
+../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_Destroy<span class="s1">':
+teensy_rake/src/LedScheduler.c:27: undefined reference to `TimeService_CancelPeriodicAlarmInMilliseconds'</span></code></pre></figure>
+
+<p>There are now unrecognized functions.  The 3 functions above need to be given <code class="language-plaintext highlighter-rouge">extern "C"</code> wrappers like so.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/TimeService.cpp</span>
+<span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+  <span class="kt">void</span> <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="n">Time</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">time</span><span class="o">-&gt;</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">timeCounter</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="kt">void</span> <span class="n">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">,</span> <span class="n">WakeUpCallback</span> <span class="n">cb</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">board_delay</span> <span class="o">=</span> <span class="n">milliseconds</span><span class="p">;</span>
+    <span class="n">callback</span> <span class="o">=</span> <span class="n">cb</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">void</span> <span class="n">TimeService_CancelPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">board_delay</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">callback</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">void</span> <span class="n">TimeService_CheckForPeriodicAlarm</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">timeCounter</span> <span class="o">&lt;</span> <span class="n">board_delay</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="p">(</span><span class="n">callback</span><span class="p">)();</span>
+      <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>in the header file, the <code class="language-plaintext highlighter-rouge">extern "C"</code> requires header guards</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">//includes/TimeService.h</span>
+<span class="cp">#ifdef __cplusplus
+</span><span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
+<span class="cp">#endif
+</span>    <span class="kt">void</span> <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="n">Time</span> <span class="o">*</span> <span class="n">time</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="n">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">,</span> <span class="n">WakeUpCallback</span> <span class="n">cb</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="n">TimeService_CancelPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">);</span>
+<span class="cp">#ifdef __cplusplus
+</span><span class="p">}</span>
+<span class="cp">#endif</span></code></pre></figure>
+
+<p>Do we dare uncomment the tested code? Run <code class="language-plaintext highlighter-rouge">rake clean &amp;&amp; rake deploy_teensy</code> first to make sure your blinky is still running and deploying. Then let’s go for it:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedScheduler_WakeUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">TimeService_GetTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">UNUSED</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span> <span class="o">!=</span> <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">LedController_IsOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="n">LedController_TurnOff</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// TimeService_Delay(scheduledEvent.milliseconds);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>It waits the proper delay time, flashes on and then stays on. How about the tests? They are compiling and passing. So what’s the deal with the flashing?</p>
+
+<p>Well, the callback is working correctly, but it’s not being reset after triggering the toggle switch.  That’s an easy fix, here’s a test:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">test_TimeService_Reset_sets_timeCounter_back_to_0</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">TimeService_SetPeriodicAlarmInMilliseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">testCallback</span><span class="p">);</span>
+   <span class="n">TeensySpy_AdvanceElapsedMillis</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+   <span class="n">TimeService_Reset</span><span class="p">();</span>
+   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">());</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Which we can make pass by adding the following to <code class="language-plaintext highlighter-rouge">TimeService.cpp</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="kt">void</span> <span class="nf">TimeService_Reset</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>If we now replace the commented out <code class="language-plaintext highlighter-rouge">TimeService_Delay()</code> with our <code class="language-plaintext highlighter-rouge">TimeService_Reset()</code>, then we are back to blinky again!</p>
+
+<p>We will need to stub a <code class="language-plaintext highlighter-rouge">TimeService_Reset()</code> call into <code class="language-plaintext highlighter-rouge">FakeTimeService</code> in order to get our test suite fully passing.  It can be empty since we aren’t changing any functionality with this.</p>
+
+<p><code class="language-plaintext highlighter-rouge">commit cd73fbc</code></p>
+
+<div class="newsletter_wrapper">
+  <h3>Interested in hearing more from us? <a href="/newsletter/"> Check out our newsletter</a></h3>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/embedded" class="page__taxonomy-item" rel="tag">embedded</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/open-source" class="page__taxonomy-item" rel="tag">open-source</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/teensy" class="page__taxonomy-item" rel="tag">teensy</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-07-11T01:08:07+08:00">July 11, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=A+TDD+rake+based+build-system+for+multi-targeting+-+using+the+teensy+3.6+as+an+example%20https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fa-test-drive-build-system-for-teensy%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fa-test-drive-build-system-for-teensy%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fa-test-drive-build-system-for-teensy%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/" class="pagination--pager" title="Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week
+">Previous</a>
+    
+    
+      <a href="/announcements/declaration-to-achieve-net-zero/" class="pagination--pager" title="sunE declares intention to achieve Net-Zero across its supply chain by 2025.
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/solar-impulse-sun-thumb.jpeg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/solar-impulse/in-flight-i-attain-a-higher-consciousness/" rel="permalink">In flight, I attain a higher consciousness.  Fear disappears - Translation of Bertrand Piccard’s interview on La Croix
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">In April, Capt Piccard sat down with the Malo Tresca and the podcast Place des Religions for a discussion about exploration, consciousness and how the Solar ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/sunev-thumb.JPG" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/announcements/declaration-to-achieve-net-zero/" rel="permalink">sunE declares intention to achieve Net-Zero across its supply chain by 2025.
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/mapua/mapual-background.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/" rel="permalink">Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">As part the week in Social Sciences and Education at Mapua University, I was grateful for the opportunity to share my thoughts about environmentalism with so...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/water-cleanup/hero.jpeg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/solar-impulse/se-asias-water-cleanup-solutions/" rel="permalink">SE Asia’s Labelled Solutions for water cleanup.
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here we are, one thousand solutions closer to a cleaner planet.  With the #beyond1000solutions campaign, Solar Impulse is gearing up to bring the forward the...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 sunE </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/open-source/embedded/teensy/a-test-drive-build-system-for-teensy"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-www-sunetrike-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
