@@ -343,21 +343,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>We are sunEtrike have big dreams for our software development.  While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went.</p>
 
 <p>One of the things I hated most about coding was tracking down bugs.  For us to one day grow into a professional software group, we have to have strong systems in place for catching bugs and ensuring quality.
-Test Driven Development has gone up and down of favour over the years but I think by now everyone in the industry understands that code needs to be well tested before it goes out into to users.<br />
+Test Driven Development has gone up and down of favour over the years but I think by now everyone in the industry understands that code needs to be well tested before it goes out to to users.<br />
 An automated testing suite is a very important piece of that process, especially for devops oriented teams.
 With this tutorial, I have finally managed to combine my learnings into a test suite that builds on a real board.</p>
 
-<h2 id="what-are-you-getting-out-of-completing-this-tutorialexercise">What are you getting out of completing this tutorial/exercise?</h2>
+<h2 id="what-are-you-getting-out-of-completing-this-tutorialexercise--a-modularized-tdd-example-of-blinky-using-minimalist-tools">What are you getting out of completing this tutorial/exercise?  A modularized TDD example of blinky using minimalist tools</h2>
 
-<p>If you are an Arduino hobbyist interested in upping your coding skills and learning how to get into TDD &amp; software testing, this tutorial is for you.</p>
-
-<p>If you are a Ruby developer interested in getting into embedded systems and IoT, this tutorial is for you as well.</p>
+<p>This tutorial is probably worthwhile for you
+if:</p>
+<ol>
+  <li>
+    <p>You are an Arduino developer who’s never built an app outside of a single file Arduino sketch and are interested in upping your coding skills and learning how to get into TDD &amp; software testing.</p>
+  </li>
+  <li>
+    <p>You are a TDD-inclined Ruby developer interested in getting into embedded systems and IoT, this tutorial is for you as well.</p>
+  </li>
+</ol>
 
 <p>At the end of this tutorial, You will have a test driven version of the standard <code class="language-plaintext highlighter-rouge">blinky</code> module that is the <code class="language-plaintext highlighter-rouge">Hello World</code> of the embedded systems/Arduino world.</p>
 
 <p>Basically, this article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp; embedded systems.</p>
 
 <p>You can browse the <a href="https://github.com/graial/teensy_rake">github repo</a> to have a look.  It is a <a href="https://github.com/ruby/rake">Rake</a> based build using <a href="https://www.throwtheswitch.org">Unity</a> as the testing framework.  After getting the toolchain set-up, we’ll refactor the teensy starter blinky code into its own module and add an abstraction layer to the interface.</p>
+
+<p>To date, I have not been successful in getting the GCC toolchain to work on Windows 10 (either via the source repo or chocolatey).  I have been a Linux user for about 5 years now so I’m not up to date on how to use these tools in windows.  Most likely, the easiest path is to use <a href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem Linux</a></p>
 
 <h2 id="why-bother-with-automated-testing-for-embedded-systems">Why bother with automated testing for embedded systems?</h2>
 
@@ -390,7 +399,7 @@ One of the main benefits of TDD is the way it forces you to think about the desi
     <p><strong>I Interface Segregation Principle</strong> - The interface of a module should be limited to a single concept.  An LedDriver.c is basically a light-switch.  It wouldn’t make sense for you to check the time by looking at a light switch.  Time and Light “Status” are very different concepts.  If you find yourself asking about both of those concepts within the same interface, function call, etc) Then the interfae of your module is probably not well segregated.</p>
   </li>
   <li>
-    <p><strong>D Dependency Inversion Principle</strong> - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (u to and including cosmically-induced bit-flips) which suddenly place the device in <em>no man’s land</em> as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.<br />
+    <p><strong>D Dependency Inversion Principle</strong> - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (up to and including cosmically-induced bit-flips) which suddenly place the device in <em>no man’s land</em> as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.<br />
 Putting this into practice in testing will often involve turning your module into a ‘black-box’.  Where the caller makes an abstracted call such as ‘is Led #5 on?’ or ‘turn the blue led off’.  The internal details of how the serving module makes that call is hidden from the caller.  In embedded TDD, function pointers are often used in order to allow testing of these abstracted interfaces.</p>
   </li>
 </ul>
@@ -430,7 +439,7 @@ If you mainly use arduino studio you may not have used make very much</p>
   <li>The makefile and starter source code can be found at <a href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a>. For my Teensy 3.6, the makefile is located at hardware/teensy/avr/cores/teensy3.  If you have a Teensy4, it will be at cores/teensy4 and so on.</li>
 </ol>
 
-<p><em>IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running <strong>make</strong> within this folder and seeing blinky running on your device</em>.</p>
+<p><em>IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running <strong>make</strong> within this folder and seeing blinky running on your device</em>.  Windows users can get <em>make</em> by installing <a href="https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/">MingW</a> (core, C++ &amp; msys) which has a helpful little <a href="https://nerdyelectronics.com/install-mingw-on-windows-for-make/">walkthrough for embedded developers here</a>.  If you prefer a package manager, there is also a <a href="https://community.chocolatey.org/packages/make">Chocolatey package</a></p>
 
 <p>The teensy loader should pop-up automatically.</p>
 
@@ -453,7 +462,7 @@ If you mainly use arduino studio you may not have used make very much</p>
     <p>After cloning the <a href="">teensy_tdd_rake repo</a>, run <code class="language-plaintext highlighter-rouge">bundle install</code> to set-up rake and rspec/</p>
   </li>
   <li>Copy the teensy3 folder into the root folder</li>
-  <li>Copy the unity.framework folder into the root folder. <em>you may want to include it as a git submodule</em></li>
+  <li>Copy the unity.framework folder into the root folder. <em>you may want to include it as a git submodule using <code class="language-plaintext highlighter-rouge">git submodule add https://github.com/ThrowTheSwitch/Unity</code></em></li>
 </ul>
 
 <p>With that, you should now have the following folder tree:</p>

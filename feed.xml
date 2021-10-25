@@ -1,23 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-10-26T00:18:44+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-10-26T00:29:21+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
 
 &lt;p&gt;We are sunEtrike have big dreams for our software development.  While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went.&lt;/p&gt;
 
 &lt;p&gt;One of the things I hated most about coding was tracking down bugs.  For us to one day grow into a professional software group, we have to have strong systems in place for catching bugs and ensuring quality.
-Test Driven Development has gone up and down of favour over the years but I think by now everyone in the industry understands that code needs to be well tested before it goes out into to users.&lt;br /&gt;
+Test Driven Development has gone up and down of favour over the years but I think by now everyone in the industry understands that code needs to be well tested before it goes out to to users.&lt;br /&gt;
 An automated testing suite is a very important piece of that process, especially for devops oriented teams.
 With this tutorial, I have finally managed to combine my learnings into a test suite that builds on a real board.&lt;/p&gt;
 
-&lt;h2 id=&quot;what-are-you-getting-out-of-completing-this-tutorialexercise&quot;&gt;What are you getting out of completing this tutorial/exercise?&lt;/h2&gt;
+&lt;h2 id=&quot;what-are-you-getting-out-of-completing-this-tutorialexercise--a-modularized-tdd-example-of-blinky-using-minimalist-tools&quot;&gt;What are you getting out of completing this tutorial/exercise?  A modularized TDD example of blinky using minimalist tools&lt;/h2&gt;
 
-&lt;p&gt;If you are an Arduino hobbyist interested in upping your coding skills and learning how to get into TDD &amp;amp; software testing, this tutorial is for you.&lt;/p&gt;
-
-&lt;p&gt;If you are a Ruby developer interested in getting into embedded systems and IoT, this tutorial is for you as well.&lt;/p&gt;
+&lt;p&gt;This tutorial is probably worthwhile for you
+if:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;You are an Arduino developer who’s never built an app outside of a single file Arduino sketch and are interested in upping your coding skills and learning how to get into TDD &amp;amp; software testing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You are a TDD-inclined Ruby developer interested in getting into embedded systems and IoT, this tutorial is for you as well.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;At the end of this tutorial, You will have a test driven version of the standard &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blinky&lt;/code&gt; module that is the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello World&lt;/code&gt; of the embedded systems/Arduino world.&lt;/p&gt;
 
 &lt;p&gt;Basically, this article is my attempt to distill what I’ve learned about embedded testing to date and hopefully give a starting point to anybody who is interested in trying automated testing/Test Driven Development (TDD) within the world of open-source &amp;amp; embedded systems.&lt;/p&gt;
 
 &lt;p&gt;You can browse the &lt;a href=&quot;https://github.com/graial/teensy_rake&quot;&gt;github repo&lt;/a&gt; to have a look.  It is a &lt;a href=&quot;https://github.com/ruby/rake&quot;&gt;Rake&lt;/a&gt; based build using &lt;a href=&quot;https://www.throwtheswitch.org&quot;&gt;Unity&lt;/a&gt; as the testing framework.  After getting the toolchain set-up, we’ll refactor the teensy starter blinky code into its own module and add an abstraction layer to the interface.&lt;/p&gt;
+
+&lt;p&gt;To date, I have not been successful in getting the GCC toolchain to work on Windows 10 (either via the source repo or chocolatey).  I have been a Linux user for about 5 years now so I’m not up to date on how to use these tools in windows.  Most likely, the easiest path is to use &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install&quot;&gt;Windows Subsystem Linux&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;why-bother-with-automated-testing-for-embedded-systems&quot;&gt;Why bother with automated testing for embedded systems?&lt;/h2&gt;
 
@@ -50,7 +59,7 @@ One of the main benefits of TDD is the way it forces you to think about the desi
     &lt;p&gt;&lt;strong&gt;I Interface Segregation Principle&lt;/strong&gt; - The interface of a module should be limited to a single concept.  An LedDriver.c is basically a light-switch.  It wouldn’t make sense for you to check the time by looking at a light switch.  Time and Light “Status” are very different concepts.  If you find yourself asking about both of those concepts within the same interface, function call, etc) Then the interfae of your module is probably not well segregated.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;D Dependency Inversion Principle&lt;/strong&gt; - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (u to and including cosmically-induced bit-flips) which suddenly place the device in &lt;em&gt;no man’s land&lt;/em&gt; as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.&lt;br /&gt;
+    &lt;p&gt;&lt;strong&gt;D Dependency Inversion Principle&lt;/strong&gt; - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (up to and including cosmically-induced bit-flips) which suddenly place the device in &lt;em&gt;no man’s land&lt;/em&gt; as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.&lt;br /&gt;
 Putting this into practice in testing will often involve turning your module into a ‘black-box’.  Where the caller makes an abstracted call such as ‘is Led #5 on?’ or ‘turn the blue led off’.  The internal details of how the serving module makes that call is hidden from the caller.  In embedded TDD, function pointers are often used in order to allow testing of these abstracted interfaces.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -90,7 +99,7 @@ If you mainly use arduino studio you may not have used make very much&lt;/p&gt;
   &lt;li&gt;The makefile and starter source code can be found at &lt;a href=&quot;https://www.pjrc.com/teensy/td_download.html&quot;&gt;Teensyduino&lt;/a&gt;. For my Teensy 3.6, the makefile is located at hardware/teensy/avr/cores/teensy3.  If you have a Teensy4, it will be at cores/teensy4 and so on.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running &lt;strong&gt;make&lt;/strong&gt; within this folder and seeing blinky running on your device&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running &lt;strong&gt;make&lt;/strong&gt; within this folder and seeing blinky running on your device&lt;/em&gt;.  Windows users can get &lt;em&gt;make&lt;/em&gt; by installing &lt;a href=&quot;https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/&quot;&gt;MingW&lt;/a&gt; (core, C++ &amp;amp; msys) which has a helpful little &lt;a href=&quot;https://nerdyelectronics.com/install-mingw-on-windows-for-make/&quot;&gt;walkthrough for embedded developers here&lt;/a&gt;.  If you prefer a package manager, there is also a &lt;a href=&quot;https://community.chocolatey.org/packages/make&quot;&gt;Chocolatey package&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The teensy loader should pop-up automatically.&lt;/p&gt;
 
@@ -113,7 +122,7 @@ If you mainly use arduino studio you may not have used make very much&lt;/p&gt;
     &lt;p&gt;After cloning the &lt;a href=&quot;&quot;&gt;teensy_tdd_rake repo&lt;/a&gt;, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to set-up rake and rspec/&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Copy the teensy3 folder into the root folder&lt;/li&gt;
-  &lt;li&gt;Copy the unity.framework folder into the root folder. &lt;em&gt;you may want to include it as a git submodule&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Copy the unity.framework folder into the root folder. &lt;em&gt;you may want to include it as a git submodule using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git submodule add https://github.com/ThrowTheSwitch/Unity&lt;/code&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;With that, you should now have the following folder tree:&lt;/p&gt;
