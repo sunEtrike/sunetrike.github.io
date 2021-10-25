@@ -112,4 +112,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/",
         "teaser": "https://sunetrike.com/assets/images/solar-impulse-sun-thumb.jpeg"
+      },{
+        "title": "A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example",
+        "excerpt":"Intro and background We are sunEtrike have big dreams for our software development. While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went. One of the things I hated most about coding was tracking down bugs. For us to...","categories": ["open-source","embedded","teensy"],
+        "tags": [],
+        "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
+        "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
       }]
