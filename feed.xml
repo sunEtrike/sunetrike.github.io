@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-10-26T00:29:21+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-11-03T21:34:22+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
 
 &lt;p&gt;We are sunEtrike have big dreams for our software development.  While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went.&lt;/p&gt;
 
@@ -2610,7 +2610,7 @@ Around the same time, Nevada stared stretching apart like a piece of taffy.  Thi
 &lt;p&gt;You may find the video a little hard to understand, but take note of the oily, yellow film on top of the water.  Absorbent pillows like these are often used in oil spills on the ocean.&lt;/p&gt;
 
 &lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/0_ctmxYjVgI&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/0_ctmxYjVgI&quot; loading=&quot;lazy&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
 &lt;/div&gt;
 
@@ -2619,7 +2619,7 @@ Around the same time, Nevada stared stretching apart like a piece of taffy.  Thi
 &lt;p&gt;The term for a material that strongly repels water is &lt;em&gt;&lt;strong&gt;‘Cat’&lt;/strong&gt;&lt;/em&gt;.  Just kidding, it’s considered a ‘hydrophobic’ material and there are some great video demonstrations like this one out there in the cloud&lt;/p&gt;
 
 &lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/Ls_ISb7lG-I&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/Ls_ISb7lG-I&quot; loading=&quot;lazy&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
 &lt;/div&gt;
 
@@ -2629,7 +2629,7 @@ Around the same time, Nevada stared stretching apart like a piece of taffy.  Thi
 &lt;p&gt;ECR targets contaminated wastewater by applying electric fields which cause dissolved contaminants to lump together or coagulate (like your blood, when you get cut).  Today, this process is often done using chemicals called floculants.&lt;/p&gt;
 
 &lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/yFlrfZK8ErU&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/yFlrfZK8ErU&quot; loading=&quot;lazy&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
 &lt;/div&gt;
 
@@ -2642,7 +2642,7 @@ They are targetting phosphorus, even 10 years ago, concerns were being raised ab
 &lt;p&gt;Ocean Plastics is a sector where the &lt;a href=&quot;https://www.researchgate.net/figure/waste-hierarchy-8-Eventually-the-higher-concepts-of-waste-management-such-as-3R-and_fig1_303369997&quot;&gt;Cleaner Production Pyramid&lt;/a&gt; plays a hugely important role.  The shear volume of plastics entering oceans every day is difficult to fathom.  To really make a dent on this issue will require solutions at every level of the pyramid.&lt;/p&gt;
 
 &lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/19x7ur_vCv0&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/19x7ur_vCv0&quot; loading=&quot;lazy&quot; width=&quot;700&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
 &lt;/div&gt;
 
