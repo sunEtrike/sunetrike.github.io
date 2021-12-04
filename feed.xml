@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-11-09T22:48:09+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2021-12-04T12:01:37+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
 
 &lt;p&gt;We are sunEtrike have big dreams for our software development.  While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went.&lt;/p&gt;
 
@@ -199,12 +199,12 @@ Running system tests...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
      &lt;span class=&quot;nt&quot;&gt;-true&lt;/span&gt;
      +false
      
-   &lt;span class=&quot;c&quot;&gt;# ./spec/Rakefile_spec.rb:23:in `block (2 levels) in &amp;lt;top (required)&amp;gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+   &lt;span class=&quot;c&quot;&gt;# ./spec/Rakefile_spec.rb:23:in `block (2 levels) in &amp;lt;top (required)&amp;gt;&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;During this spec, Rspec was told to expect something to be true. Those instructions are located at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/spec/Rakefile_spec.rb:23&lt;/code&gt;.  Let’s have a look at that file &amp;amp; line.  We see the offending spec:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'defaults to unit tests'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;target_exe_filepath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build_folder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'TestLedController.exe'&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;defaults to unit tests&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;target_exe_filepath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build_folder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;TestLedController.exe&apos;&lt;/span&gt;
 	&lt;span class=&quot;sb&quot;&gt;`rake`&lt;/span&gt;
 
 	&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;check_for_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target_exe_filepath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -212,7 +212,7 @@ Running system tests...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;In case you are not familiar with Ruby, here’s what the spec is requesting in plain english:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expect to find a file named 'TestLedController.exe' inside of the build folder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expect to find a file named &apos;TestLedController.exe&apos; inside of the build folder&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;You can &lt;a href=&quot;http://www.throwtheswitch.org/build/build-unity&quot;&gt;check this page&lt;/a&gt; for more details about how Unity is built.  For our purposes, we just need to know that the Unity build was triggered rather than the teensy build.  But why did it fail?  Well, this Rakefile instucts Unity to search in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test/&lt;/code&gt; folder for files named TestSomeModule.c.  There is no file like that so the test fails.  We are Red, in the Red-Green-Refactor loop.  Let’s create a blank file with the specified name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestLedController.c&lt;/code&gt; and try again&lt;/p&gt;
 
@@ -357,8 +357,8 @@ build/TestLedController.exe
 &lt;p&gt;&lt;em&gt;[1] I find it useful to put in recognizably nonsense numbers or strings in the data of my tests.  It can help you catch your mistakes faster&lt;/em&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/unity.o build/TestLedController_Runner.o build/TestLedController.o &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedController.exe
-/usr/bin/ld: build/TestLedController.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;test_LedController_is_off_upon_creation&lt;span class=&quot;s1&quot;&gt;':
-TestLedController.c:(.text+0x57): undefined reference to `LedController_Create'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+/usr/bin/ld: build/TestLedController.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;test_LedController_is_off_upon_creation&lt;span class=&quot;s1&quot;&gt;&apos;:
+TestLedController.c:(.text+0x57): undefined reference to `LedController_Create&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Unity can’t find the function.  Because we haven’t written it yet. So here’s our chance to finally make our code do something.&lt;/p&gt;
 
@@ -407,7 +407,7 @@ FAIL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;So next we add LedController_TurnOn() to the header file.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;TestLedController.c:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;.text+0xc6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: undefined reference to &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedController_TurnOn&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;TestLedController.c:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;.text+0xc6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: undefined reference to &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedController_TurnOn&lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;We’ve seen this before, time to edit the sourcefile.  If you just add the empty function and run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt;, it will fail. Good to see.  You want to see the test failing the way you expect before you implement the desired functionality.&lt;/p&gt;
 
@@ -686,8 +686,8 @@ FAIL&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Try deploying first with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake deploy_teensy&lt;/code&gt;.  That works! What about the tests with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt;?&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/unity.o build/LedController.o build/TestLedController_Runner.o build/TestLedController.o &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedController.exe
-/usr/bin/ld: build/LedController.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedController_Activate&lt;span class=&quot;s1&quot;&gt;':
-LedController.c:(.text+0xa8): undefined reference to `pinMode'&lt;/span&gt;
+/usr/bin/ld: build/LedController.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedController_Activate&lt;span class=&quot;s1&quot;&gt;&apos;:
+LedController.c:(.text+0xa8): undefined reference to `pinMode&apos;&lt;/span&gt;
 collect2: error: ld returned 1 &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;status
 rake aborted!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -1323,8 +1323,8 @@ Let’s add a test for TurnOff for good measure:&lt;/p&gt;
 &lt;p&gt;Ok, back to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LedScheduler&lt;/code&gt;.  Hmmm it has an error.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gcc &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m32&lt;/span&gt; build/objs/TestLedScheduler.o build/objs/TestLedScheduler_Runner.o build/objs/unity.o build/objs/LedScheduler.o build/objs/LedControllerSpy.o build/objs/FakeTimeService.o  &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; build/TestLedScheduler.exe  &lt;span class=&quot;nt&quot;&gt;-lm&lt;/span&gt;
-/usr/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_WakeUp&lt;span class=&quot;s1&quot;&gt;':
-LedScheduler.c:(.text+0xab): undefined reference to `LedController_IsOn'&lt;/span&gt;
+/usr/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_WakeUp&lt;span class=&quot;s1&quot;&gt;&apos;:
+LedScheduler.c:(.text+0xab): undefined reference to `LedController_IsOn&apos;&lt;/span&gt;
 collect2: error: ld returned 1 &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;status
 rake aborted!
 ABORT RakefileHelper error: error during linking&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -1417,8 +1417,8 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
 
 &lt;p&gt;With that, you should have blinky fully functioning within the modules.  But what about the tests?&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/usr/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_WakeUp&lt;span class=&quot;s1&quot;&gt;':
-LedScheduler.c:(.text+0xb5): undefined reference to `TimeService_Delay'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/usr/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_WakeUp&lt;span class=&quot;s1&quot;&gt;&apos;:
+LedScheduler.c:(.text+0xb5): undefined reference to `TimeService_Delay&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;So we need to add a stub in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FakeTimeService&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeService_Delay()&lt;/code&gt;. An empty function is fine since we aren’t actually calling it within our tests.  From here, a couple of our tests fail because of the commented out code.&lt;/p&gt;
 
@@ -1687,19 +1687,19 @@ Here’s a tests to make it work for none:&lt;/p&gt;
 
 &lt;p&gt;Do we dare try to uncomment our code in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LedScheduler&lt;/code&gt; now?&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;src/TimeService.c:5:1: error: unknown &lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;name &lt;span class=&quot;s1&quot;&gt;'elapsedMillis'&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;src/TimeService.c:5:1: error: unknown &lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;name &lt;span class=&quot;s1&quot;&gt;&apos;elapsedMillis&apos;&lt;/span&gt;
     5 | elapsedMillis timeCounter&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Why isn’t it recognizing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elapsedMillis&lt;/code&gt;? Turns out that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elapsedMillis&lt;/code&gt; (along with all of the other Teensy and other Arduino timer libraries that I found) is defined in C++.  So it’s not going to be recognized when &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeService.c&lt;/code&gt; gets compiled.&lt;/p&gt;
 
 &lt;p&gt;What if we change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeService&lt;/code&gt; to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.cpp&lt;/code&gt; file?&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_WakeUp&lt;span class=&quot;s1&quot;&gt;':
-teensy_rake/src/LedScheduler.c:39: undefined reference to `TimeService_GetTime'&lt;/span&gt;
-../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_Create&lt;span class=&quot;s1&quot;&gt;':
-teensy_rake/src/LedScheduler.c:22: undefined reference to `TimeService_SetPeriodicAlarmInMilliseconds'&lt;/span&gt;
-../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_Destroy&lt;span class=&quot;s1&quot;&gt;':
-teensy_rake/src/LedScheduler.c:27: undefined reference to `TimeService_CancelPeriodicAlarmInMilliseconds'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_WakeUp&lt;span class=&quot;s1&quot;&gt;&apos;:
+teensy_rake/src/LedScheduler.c:39: undefined reference to `TimeService_GetTime&apos;&lt;/span&gt;
+../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_Create&lt;span class=&quot;s1&quot;&gt;&apos;:
+teensy_rake/src/LedScheduler.c:22: undefined reference to `TimeService_SetPeriodicAlarmInMilliseconds&apos;&lt;/span&gt;
+../arm-none-eabi/bin/ld: build/objs/LedScheduler.o: &lt;span class=&quot;k&quot;&gt;in function&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LedScheduler_Destroy&lt;span class=&quot;s1&quot;&gt;&apos;:
+teensy_rake/src/LedScheduler.c:27: undefined reference to `TimeService_CancelPeriodicAlarmInMilliseconds&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are now unrecognized functions.  The 3 functions above need to be given &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extern &quot;C&quot;&lt;/code&gt; wrappers like so.&lt;/p&gt;
 
