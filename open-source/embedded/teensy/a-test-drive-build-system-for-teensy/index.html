@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example | sunE</title>
-<meta name="description" content="Intro and background">
+<meta name="description" content="Learn how to create modular code for embedded systems using a Test Driven Development approach">
 
 
   <meta name="author" content="Allan Gray">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">
 
 
-  <meta property="og:description" content="Intro and background">
+  <meta property="og:description" content="Learn how to create modular code for embedded systems using a Test Driven Development approach">
 
 
 
@@ -302,7 +302,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example">
-    <meta itemprop="description" content="Intro and background">
+    <meta itemprop="description" content="Learn how to create modular code for embedded systems using a Test Driven Development approach">
     <meta itemprop="datePublished" content="2021-10-22T01:08:07+08:00">
     
 
@@ -319,15 +319,17 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="intro-and-background">Intro and background</h2>
+        <p><strong>Learn how to create modular code for embedded systems using a Test Driven Development approach</strong></p>
 
-<p>Want to dig deeper into developing with Arm Cortex MCUs?  Interested in seeing how embedded systems are tested or developing some TDD skills for Arduino projects?  Have a crack at this tutorial.</p>
+<h2 id="intro-and-background">Intro and background</h2>
+
+<p>Want to dig deeper into developing with Arm Cortex MCUs?  Interested in seeing how embedded systems are tested or developing some TDD skills for Arduino projects?  Have a go at this tutorial!</p>
 
 <p>We at sunEtrike have big dreams for our software development.  While I did take one CompSci course during my first year of college/uni, beyond that I’ve had to learn everything else as I went.</p>
 
 <p>One of the things I hated most about coding was tracking down bugs.  For us to one day grow into a professional software team, we have to have strong systems in place for catching bugs and ensuring quality.</p>
 
-<p>Test Driven Development has gone up and down of favour over the years but I think by now it’s well understood in the industry understands that code needs to be well tested before it goes out to to users.</p>
+<p>Test Driven Development has gone up and down of favour over the years but I think by now it’s well understood in the industry understands that code needs to be well tested before it goes out to users.</p>
 
 <p>An automated testing suite is a very important piece of that process, especially for devops oriented teams.
 With this tutorial, I have finally managed to combine my learnings into a test suite that builds on a real board.</p>
@@ -355,7 +357,7 @@ With this tutorial, I have finally managed to combine my learnings into a test s
 
 <p>You can browse the <a href="https://github.com/graial/teensy_rake">github repo</a> to have a look.  It is a <a href="https://github.com/ruby/rake">Rake</a> based build using <a href="https://www.throwtheswitch.org">Unity</a> as the testing framework.  After getting the toolchain set-up, we’ll use TDD to refactor teensy’s starter blinky code into its own module and add an abstraction layer to the interface.</p>
 
-<p>This Rakefile was developed and tested using a Linux system and GCC11.  I am pretty rusty with Windows these days but I realize its still super common for embedded systems developer to use Windows so don’t worry if that’s you.  Here’s an NXP tutorial for setting up the <a href="https://www.nxp.com/document/guide/get-started-with-the-frdm-kl25z:NGS-FRDM-KL25Z#0">GCC toolchain on  Windows via MingW</a>. 
+<p>This Rakefile was developed and tested using a Linux system and GCC11.  I am pretty rusty with Windows these days but I realize it’s still super common for embedded systems developer to use Windows so don’t worry if that’s you.  Here’s an NXP tutorial for setting up the <a href="https://www.nxp.com/document/guide/get-started-with-the-frdm-kl25z:NGS-FRDM-KL25Z#0">GCC toolchain on  Windows via MingW</a>. 
  Alternatively, if you dont have Linux on your CPU you can also try <a href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem Linux</a></p>
 
 <h2 id="why-bother-with-automated-testing-for-embedded-systems">Why bother with automated testing for embedded systems?</h2>
@@ -377,20 +379,20 @@ One of the main benefits of TDD is the way it forces you to think about the desi
 
 <ul>
   <li>
-    <p><strong>S Single Responsibility Principle</strong> - The name says it all here; a module should have one job.  This often leads to very descriptive module names.  A module called LEDdriver.c is expected to turn the LEDs on and off.</p>
+    <p><strong>S Single Responsibility Principle</strong> - The name says it all here; a module should have one job.  This often leads to very descriptive module names.  A module called <strong>LEDdriver.c</strong> is expected to turn the LEDs on and off.</p>
   </li>
   <li>
-    <p><strong>O Open-Closed Principle</strong> - ‘Open for extension, Closed for modification’. For example, The LedDriver.c module may leverage a separate BaseLedDriver.c module in order to trigger the specific actions for the teensy.  If you now want to add support for a new device (Netduino, for example), You would create a NetduinoLedDriver.c which also calls BaseLedDriver. Both devices would then interact with the rest of the application in the same way even if their underlying implementations are different.  As a developer, you do not need to modify BaseLedDriver.c to add a new target board.</p>
+    <p><strong>O Open-Closed Principle</strong> - ‘Open for extension, Closed for modification’. For example, The LedDriver.c module may leverage a separate <strong>BaseLedDriver.c</strong> module in order to trigger the specific actions for the teensy.  If you now want to add support for a new device (Netduino, for example), You would create a <strong>NetduinoLedDriver.c</strong> which also calls <strong>BaseLedDriver</strong>. Both devices would then interact with the rest of the application in the same way even if their underlying implementations are different.  As a developer, you do not need to modify <strong>BaseLedDriver.c</strong> to add a new target board.  We will dig into this when we abstract our teensy code to handle a second device.</p>
   </li>
   <li>
-    <p><strong>L Liskov Substitution Principle</strong> - In the LEDdriver example, you might create a data structure that encompasses the basic information of an LedDriver.  This is what permits you to substitute in a mock interface during testing.  By doing this, any other module (an LedScheduler.c, for example) that wants to trigger an Led, will use the same function call. The calling module does not care about the implemenation details.</p>
+    <p><strong>L Liskov Substitution Principle</strong> - In the LEDdriver example, you might create a data structure that encompasses the basic information of an LedDriver.  This is what permits you to substitute in a mock interface during testing.  By doing this, any other module (an <strong>LedScheduler.c</strong>, for example) that wants to trigger an Led, will use the same function call. The calling module does not care about the implemenation details.</p>
   </li>
   <li>
-    <p><strong>I Interface Segregation Principle</strong> - The interface of a module should be limited to a single concept.  An LedDriver.c is basically a light-switch.  It wouldn’t make sense for you to check the time by looking at a light switch.  Time and Light “Status” are very different concepts.  If you find yourself asking about both of those concepts within the same interface, function call, etc) Then the interfae of your module is probably not well segregated.</p>
+    <p><strong>I Interface Segregation Principle</strong> - The interface of a module should be limited to a single concept.  An <strong>LedDriver.c</strong> is basically a light-switch.  It wouldn’t make sense for you to check the time by looking at a light switch.  Time and Light “Status” are very different concepts.  If you find yourself asking about both of those concepts within the same interface, function call, etc) Then the interfae of your module is probably not well segregated.</p>
   </li>
   <li>
     <p><strong>D Dependency Inversion Principle</strong> - Dependencies between modules create problems both for testing and for changing over time.  It’s can be very challenging to debug embedded systems especially since the physical world can do something unexpected (up to and including cosmically-induced bit-flips) which suddenly place the device in <em>no man’s land</em> as far as your code is concerned.  While these issues will always challenge even the most battle-hardened software vets who are operating down near the bare-metal, the ability to reduce dependencies can help to simplify the problem of how to escape from an unknown state-space.<br />
-Putting this into practice in testing will often involve turning your module into a ‘black-box’.  Where the caller makes an abstracted call such as ‘is Led #5 on?’ or ‘turn the blue led off’.  The internal details of how the serving module makes that call is hidden from the caller.  In embedded TDD, function pointers are often used in order to allow testing of these abstracted interfaces.</p>
+Putting this into practice in testing will often involve turning your module into a ‘black-box’.  Where the caller makes an abstracted call such as <strong>‘is Led #5 on?’</strong> or <strong>‘turn the blue led off’</strong>.  The internal details of how the serving module makes that call is hidden from the caller.  In embedded TDD, function pointers are often used in order to allow testing of these abstracted interfaces.</p>
   </li>
 </ul>
 
@@ -428,10 +430,10 @@ If you mainly use arduino studio you may not have used <code class="language-pla
 <h3 id="getting-your-toolchain-in-place">Getting your toolchain in place</h3>
 
 <ol>
-  <li>The makefile and starter source code can be found at <a href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a>. For my Teensy 3.6, the makefile is located at hardware/teensy/avr/cores/teensy3.  If you have a Teensy4, it will be at cores/teensy4 and so on.</li>
+  <li>The makefile and starter source code can be found at <a href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a>. For my Teensy 3.6, the makefile is located at <strong>hardware/teensy/avr/cores/teensy3</strong>.  If you have a Teensy4, it will be at <strong>cores/teensy4</strong> and so on.</li>
 </ol>
 
-<p><em>IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running <strong>make</strong> within this folder and seeing blinky running on your device</em>.  Windows users can get <em>make</em> by installing <a href="https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/">MingW</a> (core, C++ &amp; msys) which has a helpful little <a href="https://nerdyelectronics.com/install-mingw-on-windows-for-make/">walkthrough for embedded developers here</a>.  If you prefer a package manager, there is also a <a href="https://community.chocolatey.org/packages/make">Chocolatey package</a></p>
+<p><em>IMPORTANT: Make sure your computer’s teensy buildchain is correctly setup by running <code class="language-plaintext highlighter-rouge">make</code> within this folder and seeing blinky running on your device</em>.  Windows users can get <em>make</em> by installing <a href="https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/">MingW</a> (core, C++ &amp; msys) which has a helpful little <a href="https://nerdyelectronics.com/install-mingw-on-windows-for-make/">walkthrough for embedded developers here</a>.  If you prefer a package manager, there is also a <a href="https://community.chocolatey.org/packages/make">Chocolatey package</a></p>
 
 <p>The teensy loader should pop-up automatically.</p>
 
@@ -490,16 +492,16 @@ The Rakefile_helper will attempt identify if a device is connected at usb addres
 
 <p>For testing:</p>
 <ul>
-  <li>prepare_for_tests</li>
-  <li>unit (the default, will run on the basic <code class="language-plaintext highlighter-rouge">rake</code> command)</li>
+  <li><code class="language-plaintext highlighter-rouge">prepare_for_tests</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unit</code> (the default, will run on the basic <code class="language-plaintext highlighter-rouge">rake</code> command)</li>
 </ul>
 
 <p>For deployment:</p>
 <ul>
-  <li><strong>deploy</strong>  Loads the binary to the target via USB</li>
-  <li><strong>prepare_binary</strong>  Links the compiled source code and converts the binary into a hex ready for upload</li>
-  <li><strong>build_main</strong>  compiles your application code</li>
-  <li><strong>build_target</strong> compiles all sources provided by the target into a static library that can be linked in at a later stage</li>
+  <li><code class="language-plaintext highlighter-rouge">deploy</code>  Loads the binary to the target via USB</li>
+  <li><code class="language-plaintext highlighter-rouge">prepare_binary</code>  Links the compiled source code and converts the binary into a hex ready for upload</li>
+  <li><code class="language-plaintext highlighter-rouge">build_main</code>  compiles your application code</li>
+  <li><code class="language-plaintext highlighter-rouge">build_target</code> compiles all sources provided by the target into a static library that can be linked in at a later stage</li>
 </ul>
 
 <p>Since the task ‘unit’ is the default, typing <code class="language-plaintext highlighter-rouge">rake</code> is equivalent to typing <code class="language-plaintext highlighter-rouge">rake unit</code>. Try it now if you need any convincing.</p>
@@ -511,16 +513,20 @@ Running unit tests
 Running system tests...</code></pre></figure>
 
 <h2 id="the-first-build-system-spec">The first build-system spec.</h2>
-<p><code class="language-plaintext highlighter-rouge">commit 9393d17</code>
-Before going forward, let’s have a look at layout of the <code class="language-plaintext highlighter-rouge">spec/</code> folder</p>
+<p><code class="language-plaintext highlighter-rouge">commit 9393d17</code></p>
+
+<p><em>Pro tip: If you cloned the github project above, you can check your progress against these commit using <code class="language-plaintext highlighter-rouge">git diff &lt;commit_id&gt; &lt;filename&gt;</code></em>
+<em>For example.  If you are working on the file <strong>src/LedController.c</strong> and cant seem to get the same result as me, try typing git <code class="language-plaintext highlighter-rouge">diff 9393d17 src/LedController.c</code></em></p>
+
+<p>Before going forward, let’s have a look at layout of the <strong>spec/</strong> folder</p>
 
 <p><img src="/assets/images/teensy_rake/teensy_rake_spec_folders.png" alt="teensy_rake spec folder layout" /></p>
 
 <p>There are 3 files that defines specs:</p>
 <ol>
-  <li>Rakefile_spec.rb - As mentioned above, this is the interface for our buildsystem.</li>
-  <li>spec/rakefile_helper_spec.rb - All of the application logic and customization is found in here.</li>
-  <li>spec/helper_methods/helper_methods_spec.rb - These are methods to assist in setting up and tearing down tests.  They mostly perform string and file manipulation.</li>
+  <li><strong>Rakefile_spec.rb</strong> - As mentioned above, this is the interface for our buildsystem.</li>
+  <li><strong>spec/rakefile_helper_spec.rb</strong> - All of the application logic and customization is found in here.</li>
+  <li><strong>spec/helper_methods/helper_methods_spec.rb</strong> - These are methods to assist in setting up and tearing down tests.  They mostly perform string and file manipulation.</li>
 </ol>
 
 <p>Let’s look again at the failing spec by hitting <code class="language-plaintext highlighter-rouge">bundle exec rspec</code>:</p>
@@ -540,7 +546,7 @@ Before going forward, let’s have a look at layout of the <code class="language
      
    <span class="c"># ./spec/Rakefile_spec.rb:43:in `block (2 levels) in &lt;top (required)&gt;`</span></code></pre></figure>
 
-<p>During this spec, Rspec was told to expect something to be true. Those instructions are located at <code class="language-plaintext highlighter-rouge">/spec/Rakefile_spec.rb:43</code>.  Let’s have a look at that file &amp; line.  We see the offending spec:</p>
+<p>During this spec, Rspec was told to expect something to be true. Those instructions are located at <strong>/spec/Rakefile_spec.rb:43</strong>.  Let’s have a look at that file &amp; line.  We see the offending spec:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">it</span> <span class="s1">'defaults to unit tests'</span> <span class="k">do</span>
 	<span class="n">target_exe_filepath</span> <span class="o">=</span> <span class="n">build_folder</span> <span class="o">+</span> <span class="s1">'TestLedController.exe'</span>
@@ -553,7 +559,7 @@ Before going forward, let’s have a look at layout of the <code class="language
 
 <p><code class="language-plaintext highlighter-rouge">Expect to find a file named 'TestLedController.exe' inside of the build folder</code></p>
 
-<p>You can <a href="http://www.throwtheswitch.org/build/build-unity">check this page</a> for more details about how Unity is built.  For our purposes, we just need to know that the Unity build was triggered rather than the teensy build.  But why did it fail?  Well, this Rakefile instucts Unity to search in the <code class="language-plaintext highlighter-rouge">test/</code> folder for files named TestSomeModule.c.  There is no file like that so the test fails.  We are Red, in the Red-Green-Refactor loop.  Let’s create a blank file with the specified name <code class="language-plaintext highlighter-rouge">TestLedController.c</code> and try again</p>
+<p>You can <a href="http://www.throwtheswitch.org/build/build-unity">check this page</a> for more details about how Unity is built.  For our purposes, we just need to know that the Unity build was triggered rather than the teensy build.  But why did it fail?  Well, this Rakefile instucts Unity to search in the <strong>test/</strong> folder for files named <strong>TestSomeModule.c</strong>.  There is no file like that so the test fails.  We are Red, in the Red-Green-Refactor loop.  Let’s create a blank file with the specified name <strong>TestLedController.c</strong> and try again</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Clearing build directory
 Running unit tests
@@ -567,7 +573,7 @@ gcc <span class="nt">-DUNITY_INCLUDE_DOUBLE</span> <span class="nt">-DUNITY_SUPP
 
 gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/TestLedController_Runner.o build/TestLedController.o <span class="nt">-o</span> build/TestLedController.exe</code></pre></figure>
 
-<p>Rake successfully recognized the new file! Great!  It began compiling its modules, first <code class="language-plaintext highlighter-rouge">TestLedController_Runner.o</code> and then <code class="language-plaintext highlighter-rouge">TestLedController.o</code> before exiting with an error.  New information and new errors is progress in the TDD cycle.</p>
+<p>Rake successfully recognized the new file! Great!  It began compiling its modules, first <strong>TestLedController_Runner.o</strong> and then <strong>TestLedController.o</strong> before exiting with an error.  New information and new errors is progress in the TDD cycle.</p>
 
 <p>Here’s the basic structure of a test in unity.  Try adding it to the empty file to see what you get…</p>
 
@@ -590,7 +596,7 @@ build/TestLedController_Runner.c:5:10: fatal error: LedController.h: No such fil
 compilation terminated.
 rake aborted!</code></pre></figure>
 
-<p>Ok, this time it couldn’t find the header file.  For those of you who are still getting used to the difference between source and header files.  One way to think about it is that the header file defines the interface of the module.  So this is a good time to revisit the concept of SOLID and think about what we want this LedController.c to do.  Better yet, let’s evaluate how ‘SOLID’ the teensy starter code in <code class="language-plaintext highlighter-rouge">main.cpp</code> is.</p>
+<p>Ok, this time it couldn’t find the header file.  For those of you who are still getting used to the difference between source and header files.  One way to think about it is that the header file defines the interface of the module.  So this is a good time to revisit the concept of SOLID and think about what we want this LedController.c to do.  Better yet, let’s evaluate how ‘SOLID’ the teensy starter code in <strong>main.cpp</strong> is.</p>
 
 <h3 id="solidifying-maincpp">SOLIDifying main.cpp</h3>
 
@@ -603,7 +609,7 @@ rake aborted!</code></pre></figure>
     </ol>
   </li>
   <li>
-    <p><strong>O Open Closed Principle</strong> - Let’s say you want to add some new functionality, for example a different LED that flashes on a different interval.  How would you do that? Would you extend main.cpp with new details or would you copy and paste the new pin number and interval into main.cpp?  Certainly the easier thing to do is copy/paste main.cpp and that would work fine for this example.  However, in that case you are not extending main.cpp and you are modifying it.  So the easy/obvious route is offside of OCP.</p>
+    <p><strong>O Open Closed Principle</strong> - Let’s say you want to add some new functionality, for example a different LED that flashes on a different interval.  How would you do that? Would you extend main.cpp with new details or would you copy and paste the new pin number and interval into <strong>main.cpp</strong>?  Certainly the easier thing to do is copy/paste main.cpp and that would work fine for this example.  However, in that case you are not extending main.cpp and you are modifying it.  So the easy/obvious route is offside of OCP.</p>
   </li>
   <li>
     <p><strong>L Liskov Substitution Principle</strong> - Liskov substitution principle (LSP) evaluates the interface.  However as a single file monolith, main.cpp does not even have an interface!  So from that perspective, adding an interface is the obvious step to take to make this application more SOLID with a capital ‘L’!</p>
@@ -615,14 +621,14 @@ rake aborted!</code></pre></figure>
       <li>For monitoring time and taking action based on that information</li>
     </ol>
   </li>
-  <li><strong>D Dependency Inversion Principle</strong> - Does the high level code (main.cpp) depend on the lower-level modules? Well, it depends on one interface: Arduino.h.  What does Arduino depend on? Open the file and have a look:</li>
+  <li><strong>D Dependency Inversion Principle</strong> - Does the high level code (<strong>main.cpp</strong>) depend on the lower-level modules? Well, it depends on one interface: <strong>Arduino.h</strong>.  What does Arduino depend on? Open the file and have a look:</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "WProgram.h"
 #include "pins_arduino.h"</span></code></pre></figure>
 
-<p><code class="language-plaintext highlighter-rouge">pins_arduino.h</code> is almost 300 lines of constant definitions while 
-<code class="language-plaintext highlighter-rouge">WProgram depends</code> on 24 different modules.</p>
+<p><strong>pins_arduino.h</strong> is almost 300 lines of constant definitions while 
+<strong>WProgram</strong> depends on 24 different modules.</p>
 
 <p>If you are preparing to move from teensy to a different board (or vice-versa), be prepared for a LOT of reading, digging and research. I can personally attest to this.  I learned a lot, but it can take a very long time.  Nobody wants to be dealing with those sorts of challenges on a deadline.</p>
 
@@ -649,7 +655,7 @@ rake aborted!</code></pre></figure>
 	<span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>pinMode() makes teensy toggleable.  So thats a good place to start. We want to be able to create an LedController with a pin number.</p>
+<p><code class="language-plaintext highlighter-rouge">pinMode()</code> makes teensy toggleable.  So thats a good place to start. We want to be able to create an <strong>LedController</strong> with a pin number.</p>
 
 <p>Let’s create the header now.</p>
 
@@ -744,7 +750,7 @@ FAIL</code></pre></figure>
 
 <p>A quick note about the function names, at first I was annoyed by developers putting the module name in the front of each method call. Over time though, I came to appreciate that it makes a big difference in keeping things organized.  It might seem weird to readers coming from an object-oriented language but it does really help!</p>
 
-<p>So next we add LedController_TurnOn() to the header file.</p>
+<p>So next we add <strong>LedController_TurnOn()</strong> to the header file.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">TestLedController.c:<span class="o">(</span>.text+0xc6<span class="o">)</span>: undefined reference to <span class="sb">`</span>LedController_TurnOn<span class="s1">'</span></code></pre></figure>
 
@@ -805,7 +811,7 @@ OK</code></pre></figure>
 3 Tests 1 Failures 0 Ignored 
 FAIL</code></pre></figure>
 
-<p>It passes by reversing the command in TurnOn().</p>
+<p>It passes by reversing the command in <code class="language-plaintext highlighter-rouge">TurnOn()</code>.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">LedController_TurnOff</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">)</span>
 <span class="p">{</span>
@@ -814,15 +820,15 @@ FAIL</code></pre></figure>
 
 <p><code class="language-plaintext highlighter-rouge">commit 38d4ee4</code></p>
 
-<p>So that brings us to our first refactoring opportunity.  One of the ways codebases get out of hand over time is by writing the same instructions over and over in different parts of your code.  Another of the important tenets of programming is Don’t Repeat Yourself which is apparently attributed to the writers of Pragmatic Programmer who also published Grenning’s book.  You might say that I’ve drank the kool-aid when it comes to this testing stuff.</p>
+<p>So that brings us to our first refactoring opportunity.  One of the ways codebases get out of hand over time is by writing the same instructions over and over in different parts of your code.  Another of the important tenets of programming is <strong>Don’t Repeat Yourself</strong> which is apparently attributed to the writers of Pragmatic Programmer who also published Grenning’s book.  You might say that I’ve drank the kool-aid when it comes to this testing stuff.</p>
 
 <p>At any rate, keeping your code DRY means always being on the lookout for opportunities to bring together duplicated statements into a single definition.  Many practitioners advocate for refactoring after the third duplication.  In our case, we now have a statement that occurs in every test.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="n">LedController_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">virtualPin</span><span class="p">);</span></code></pre></figure>
 
-<p>However, our test about of LedController_Create() involves a variable declaration beforehand.  So we can’t remove it.  That means we can only remove two of the duplicates but let’s take the opportunity to do it now anyway.  This statement will be required consistenly in upcoming tests anyway so it won’t be two for long:</p>
+<p>However, our test about of <code class="language-plaintext highlighter-rouge">LedController_Create()</code> involves a variable declaration beforehand.  So we can’t remove it.  That means we can only remove two of the duplicates but let’s take the opportunity to do it now anyway.  This statement will be required consistenly in upcoming tests anyway so it won’t be two for long:</p>
 
-<p>Here’s how TestLedController.c looks after refactoring</p>
+<p>Here’s how <strong>TestLedController.c</strong> looks after refactoring</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
 #include "LedController.h"
@@ -877,7 +883,7 @@ FAIL</code></pre></figure>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x240</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>The test returns 0x0001 instead of 0x0240, just like we’d coded it earlier.</p>
+<p>The test returns <em>0x0001</em> instead of <em>0x0240</em>, just like we’d coded it earlier.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:15:test_LedController_is_off_upon_creation:PASS
 <span class="nb">test</span>/TestLedController.c:22:test_LedController_TurnOn_Led_seven:PASS
@@ -907,7 +913,7 @@ FAIL</code></pre></figure>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">virtualPin</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>It fails with 0x0000 instead of the intended 0x0040. Again this is what we intentionally coded earlier.  You’ll use a different bitwise operate to turn a specific bit to 0.</p>
+<p>It fails with <em>0x0000</em> instead of the intended <em>0x0040</em>. Again this is what we intentionally coded earlier.  You’ll use a different bitwise operate to turn a specific bit to 0.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedController.c</span>
 
@@ -935,7 +941,7 @@ FAIL</code></pre></figure>
 	<span class="o">*</span><span class="n">ledsAddress</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">getBitLocationFromLedNumber</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">));</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>There’s a bit of a nuance to what we’ve done here.  The pins on a teensy can be set to either <a href="https://www.pjrc.com/teensy/td_digital.html">read or write</a>.  This means that a pin set to output (such as an LedController) cannot read the actual state of the pin. Instead it has to keep track of the values in its own separate memory location.</p>
+<p>There’s a bit of a nuance to what we’ve done here.  The pins on a teensy can be set to either <a href="https://www.pjrc.com/teensy/td_digital.html">read or write</a>.  This means that a pin set to output (such as an <strong>LedController</strong>) cannot read the actual state of the pin. Instead it has to keep track of the values in its own separate memory location.</p>
 
 <p>Why is this important? Well, it comes down to the difference between state and action. Many embedded systems will use <a href="https://www.state-machine.com/fsm/">finite state machines</a> in order to carry out their tasks.  If you look to the <code class="language-plaintext highlighter-rouge">delay()</code> function in <code class="language-plaintext highlighter-rouge">main()</code>, the processor is occupied during the delay and cannot be asked to do any other tasks.  Using a state machine can help to free up system resources while still keeping track of the various peripherals (such as LEDs).</p>
 
@@ -954,9 +960,9 @@ FAIL</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedController.c:54:test_LedController_does_not_read_the_LedMemoryMap_for_state:FAIL: Expected 0x0080 Was 0xFFFF</code></pre></figure>
 
-<p>note: this particular Rakefile will only recognize functions that start with <code class="language-plaintext highlighter-rouge">test_&lt;WhateverModule&gt;.c</code> if you forget to add <code class="language-plaintext highlighter-rouge">test_</code> at the front of the function, the test will not be run.</p>
+<p>note: this particular Rakefile will only recognize functions that start with <strong>test_&lt; WhateverModule &gt;.c</strong> if you forget to add <code class="language-plaintext highlighter-rouge">test_</code> at the front of the function, the test will not be run.</p>
 
-<p>Here’s what the passing code looks like.  I didn’t include the Turn_off() function but it works the same:</p>
+<p>Here’s what the passing code looks like.  I didn’t include the <code class="language-plaintext highlighter-rouge">Turn_off()</code> function but it works the same:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedController.c</span>
 
@@ -978,7 +984,7 @@ FAIL</code></pre></figure>
 
 <h2 id="back-to-maincpp">Back to main.cpp</h2>
 
-<p>So now we have a tested LedDriver. But it doesn’t actually make any system calls yet.  It’s also not being called by <code class="language-plaintext highlighter-rouge">main.cpp</code>.  How do we fix that?</p>
+<p>So now we have a tested <strong>LedDriver</strong>. But it doesn’t actually make any system calls yet.  It’s also not being called by <strong>main.cpp</strong>.  How do we fix that?</p>
 
 <p>Before moving forward, double-check all is working correctly by plugging in the teensy and call<code class="language-plaintext highlighter-rouge">rake clean</code> and then <code class="language-plaintext highlighter-rouge">RAKE_TARGET=teensy rake deploy</code>, to make sure it is loading blinky properly.  Since the test suite cleans up its objects after each build, rake is going to need to rebuild the <code class="language-plaintext highlighter-rouge">teensy3</code> modules.  It takes 10 to 15s on my computer.</p>
 
@@ -996,7 +1002,7 @@ FAIL</code></pre></figure>
   <span class="p">.</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Note: The <code class="language-plaintext highlighter-rouge">extern "C" {}</code> wrapper is important here or you will get a linker error when <code class="language-plaintext highlighter-rouge">main.cpp</code> tries to call those functions.  NOTE: This kills our ability to use Serial.println() for debugging.</p>
+<p>Note: The <code class="language-plaintext highlighter-rouge">extern "C" {}</code> wrapper is important here or you will get a linker error when <strong>main.cpp</strong> tries to call those functions.  NOTE: This kills our ability to use <code class="language-plaintext highlighter-rouge">Serial.println()</code> for debugging but we do still have GDB.</p>
 
 <h3 id="moving-the-system-calls-from-main-into-ledcontroller">Moving the system calls from main into LedController</h3>
 
@@ -1007,9 +1013,9 @@ FAIL</code></pre></figure>
   <li><code class="language-plaintext highlighter-rouge">digitalWriteFast(ledNumber, LOW);</code>  Which applies 0 voltage to the pin, causing the connected LED to go dark.</li>
 </ul>
 
-<p>let’s try moving the first call <code class="language-plaintext highlighter-rouge">pinMode()</code> to LedController.</p>
+<p>let’s try moving the first call <code class="language-plaintext highlighter-rouge">pinMode()</code> to <strong>LedController</strong>.</p>
 
-<p>LedController.c:</p>
+<p><strong>LedController.c</strong>:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "LedController.h"
 #include "Arduino.h"
@@ -1023,7 +1029,7 @@ FAIL</code></pre></figure>
   <span class="n">pinMode</span><span class="p">(</span><span class="n">ledNumber</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>main.cpp:</p>
+<p><strong>main.cpp:</strong></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;Arduino.h&gt;
 </span>
@@ -1055,7 +1061,7 @@ LedController.c:(.text+0xa8): undefined reference to `pinMode'</span>
 collect2: error: ld returned 1 <span class="nb">exit </span>status
 rake aborted!</code></pre></figure>
 
-<p>Unity is looking for the pinMode() function which is buried in the teensy source code.  The build handles that without complaint but Unity is set-up to only reference the files directly called by the test.  You’ll notice that even if we <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code>, the command will still fail because unity does not attempt to find functions buried in submodules.
+<p>Unity is looking for the <code class="language-plaintext highlighter-rouge">pinMode()</code> function which is buried in the teensy source code.  The build handles that without complaint but Unity is set-up to only reference the files directly called by the test.  You’ll notice that even if we <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code>, the command will still fail because unity does not attempt to find functions buried in submodules.
 The way to handle this is called a ‘link-time spy’.  A spy is an alternative, test-only module that allows you to stub a function and give a canned response to it.</p>
 
 <p>comment out <code class="language-plaintext highlighter-rouge">pinMode()</code> and <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code> so that they don’t bother you while setting up the Spy</p>
@@ -1073,9 +1079,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 
 <p>Which will naturally fail if we run <code class="language-plaintext highlighter-rouge">rake</code> since those new functions are unrecognized. Comment out that test while we set-up the spy.</p>
 
-<p>This is a good place to commit your work.</p>
-
-<p>Ok, so now we will create a new folder called ‘mocks’ where we will place the spy (and it’s tests).</p>
+<p>Ok, so now we will create a new folder called <code class="language-plaintext highlighter-rouge">mocks</code> where we will place the spy (and it’s tests).</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestTeensySpy.c:</span>
 
@@ -1097,9 +1101,9 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Nothing fancy here, a simple Create function to get started. Then a couple functions to store the result that was passed: GetLastId and GetLastState.</p>
+<p>Nothing fancy here, a simple Create function to get started. Then a couple functions to store the result that was passed: <code class="language-plaintext highlighter-rouge">GetLastId</code> and <code class="language-plaintext highlighter-rouge">GetLastState</code>.</p>
 
-<p>Let’s see what those functions look like within <code class="language-plaintext highlighter-rouge">TeensySpy.h</code></p>
+<p>Let’s see what those functions look like within <strong>TeensySpy.h</strong></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TeensySpy.h</span>
 
@@ -1144,7 +1148,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
   <span class="k">return</span> <span class="n">lastState</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Now we can start to ‘stub out’ the methods that are tucked away in <code class="language-plaintext highlighter-rouge">Arduino.h</code>.  The one we are focusing on is <em>pinMode()</em> so let’s first create a test:</p>
+<p>Now we can start to ‘stub out’ the methods that are tucked away in <strong>Arduino.h</strong>.  The one we are focusing on is <em>pinMode()</em> so let’s first create a test:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestTeensySpy.c</span>
 <span class="n">include</span> <span class="s">"unity.h"</span>
@@ -1159,7 +1163,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 
 <p>and then add the function itself:</p>
 
-<p>And then <code class="language-plaintext highlighter-rouge">TeensySpy.c</code></p>
+<p>And then <strong>TeensySpy.c</strong></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">enum</span>
 <span class="p">{</span>
@@ -1180,7 +1184,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 
 <p>The tests should pass.</p>
 
-<p>So if we turn our attention back to the <strong>LedController</strong>, we can now uncomment <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code> &amp; <code class="language-plaintext highlighter-rouge">pinMode()</code>.  This breaks the tests because there is no <code class="language-plaintext highlighter-rouge">Arduino.h</code> in the test environment.
+<p>So if we turn our attention back to the <strong>LedController</strong>, we can now uncomment <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code> &amp; <code class="language-plaintext highlighter-rouge">pinMode()</code>.  This breaks the tests because there is no <strong>Arduino.h</strong> in the test environment.
 If we create an empty header file:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/Arduino.h</span>
@@ -1206,11 +1210,13 @@ If we create an empty header file:</p>
 
 <p>Give it a try with <code class="language-plaintext highlighter-rouge">rake clean</code> &amp; <code class="language-plaintext highlighter-rouge">RAKE_TARGET=teensy rake deploy</code></p>
 
+<p>This is a good place to commit your work.</p>
+
 <p><code class="language-plaintext highlighter-rouge">commit 25077e5</code></p>
 
 <p>The LED should be blinking.  From here we can extract the rest of the Led functions into <strong>LedController</strong>.</p>
 
-<p>Here’s the while loop in <code class="language-plaintext highlighter-rouge">main.cpp</code> with the <code class="language-plaintext highlighter-rouge">LedController</code> calls added:</p>
+<p>Here’s the while loop in <strong>main.cpp</strong> with the <strong>LedController</strong> calls added:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="c1">// src/LedController.c</span>
 
@@ -1240,7 +1246,7 @@ If we create an empty header file:</p>
 <span class="p">}</span>
   </code></pre></figure>
 
-<p>Naturally, this breaks the tests.  So let’s comment out the digitalWriteFast in LedController and then create some stubbed functions for <code class="language-plaintext highlighter-rouge">digitalWriteFast()</code>, within the spy.  We’ll add the tests first of course.<br />
+<p>Naturally, this breaks the tests.  So let’s comment out the digitalWriteFast in <strong>LedController</strong> and then create some stubbed functions for <code class="language-plaintext highlighter-rouge">digitalWriteFast()</code>, within the spy.  We’ll add the tests first of course.<br />
 There is an adage in TDD, ‘make it work for none, then make it work for one, then make it work for many’.  What does that mean?
 Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t already been set to output would it?  So we shouldn’t allow our Spy to either.  Here’s what that means in a test;</p>
 
@@ -1263,7 +1269,7 @@ Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t alrea
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">HIGH</span><span class="p">,</span> <span class="n">TeensySpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Here’s a simple if clause that’ll check if the pinMode(OUTPUT) was called for the correct pin, if not, the Spy resets its values, if yes, it proceeds with the digitalWriteFast function call.</p>
+<p>Here’s a simple if clause that’ll check if the <code class="language-plaintext highlighter-rouge">pinMode(OUTPUT)</code> was called for the correct pin, if not, the Spy resets its values, if yes, it proceeds with the <code class="language-plaintext highlighter-rouge">digitalWriteFast</code> function call.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TeensySpy.c</span>
 
@@ -1279,7 +1285,7 @@ Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t alrea
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>We’ll need to add the <code class="language-plaintext highlighter-rouge">HIGH</code> and <code class="language-plaintext highlighter-rouge">LOW</code> definitions to our mock Arduino header.  The complete file will look like this:</p>
+<p>We’ll need to add the <code class="language-plaintext highlighter-rouge">HIGH</code> and <code class="language-plaintext highlighter-rouge">LOW</code> definitions to our mock <strong>Arduino</strong> header.  The complete file will look like this:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_Arduino_H
 #define D_Arduino_H
@@ -1296,9 +1302,9 @@ Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t alrea
 
 <span class="cp">#endif</span></code></pre></figure>
 
-<p>The compiler will now complain that <code class="language-plaintext highlighter-rouge">OUTPUT</code> has been declared twice since it’s already in <code class="language-plaintext highlighter-rouge">TeensySpy.h</code>. We can resolve that by removing it <code class="language-plaintext highlighter-rouge">OUTPUT</code> from the spy.  Now <code class="language-plaintext highlighter-rouge">TestTeensySpy</code> will complain because that function is now missing.  That is resolved by adding <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code> to &amp; <code class="language-plaintext highlighter-rouge">TestTeensySpy</code> &amp; <code class="language-plaintext highlighter-rouge">TestLedController</code>.</p>
+<p>The compiler will now complain that <code class="language-plaintext highlighter-rouge">OUTPUT</code> has been declared twice since it’s already in <strong>TeensySpy.h</strong>. We can resolve that by removing it <code class="language-plaintext highlighter-rouge">OUTPUT</code> from the spy.  Now <strong>TestTeensySpy</strong> will complain because that function is now missing.  That is resolved by adding <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code> to &amp; <strong>TestTeensySpy</strong> &amp; <strong>TestLedController</strong>.</p>
 
-<p>All tests passing? A similar test can/should be written for setting digitalWriteFast(LOW), since it doesn’t require a change to the logic, it’s good practice to change the code slightly to make the test fail.  For example:</p>
+<p>All tests passing? A similar test can/should be written for setting <code class="language-plaintext highlighter-rouge">digitalWriteFast(LOW)</code>, since it doesn’t require a change to the logic, it’s good practice to change the code slightly to make the test fail.  For example:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">digitalWriteFast</span><span class="p">(</span><span class="kt">int</span> <span class="n">ledNumber</span><span class="p">,</span> <span class="kt">int</span> <span class="n">LEVEL</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1319,7 +1325,7 @@ Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t alrea
 <span class="nb">test</span>/TestTeensySpy.c:41:test_TeensySpy_set_a_pin_to_HIGH:FAIL: Expected 0x0001 Was 0x0002
 <span class="nb">test</span>/TestTeensySpy.c:50:test_TeensySpy_set_a_pin_to_LOW:FAIL: Expected 0x0000 Was 0x0001</code></pre></figure>
 
-<p>So the tests are indeed checking that the code produces the expected result.  Great!  Remove the ‘+ 1’ and lets get back to <code class="language-plaintext highlighter-rouge">LedController</code>.</p>
+<p>So the tests are indeed checking that the code produces the expected result.  Great!  Remove the ‘+ 1’ and lets get back to <strong>LedController</strong>.</p>
 
 <p>At that point, the tests should pass and <code class="language-plaintext highlighter-rouge">rake deploy_teensy</code> also succeeds.</p>
 
@@ -1337,7 +1343,7 @@ git commit <span class="nt">-am</span> <span class="s2">"finish extracting led f
 <h3 id="extracting-time-functions">Extracting time functions</h3>
 
 <p>So where are we at now?<br />
- if we look at <code class="language-plaintext highlighter-rouge">main.cpp</code>, we see that there is still a function call to the <code class="language-plaintext highlighter-rouge">Arduino.h</code> library</p>
+ if we look at <strong>main.cpp</strong>, we see that there is still a function call to the <strong>Arduino.h</strong> library</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">boardLed</span><span class="p">);</span>
@@ -1352,7 +1358,7 @@ Let’s get started.</p>
 
 <h3 id="the-scheduler">The Scheduler</h3>
 
-<p>So the way this is going to work, is that main() will start a module called LightScheduler() and give it the variables necessary to function.  The LightScheduler will then constantly check the time via callbacks.  When the reported time matches the desired time, LedScheduler will call LedController to toggle the desired pin.</p>
+<p>So the way this is going to work, is that <code class="language-plaintext highlighter-rouge">main()</code> will start a module called <strong>LightScheduler</strong> and give it the variables necessary to function.  The <strong>LightScheduler</strong> will then constantly check the time via callbacks.  When the reported time matches the desired time, <strong>LedScheduler</strong> will call <strong>LedController</strong> to toggle the desired pin.</p>
 
 <p>Let’s use a test to show the different components/function calls.</p>
 
@@ -1371,8 +1377,8 @@ Let’s get started.</p>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>What the test is saying is that our <code class="language-plaintext highlighter-rouge">LedScheduler</code> will create a delay of 500ms, then we will use a fake timer to advance to just before the delay (499ms), and confirm that <code class="language-plaintext highlighter-rouge">LedScheduler</code> didnt turn on any Leds yet.<br />
-We will create an <code class="language-plaintext highlighter-rouge">LedControllerSpy</code> to watch for the calls of <code class="language-plaintext highlighter-rouge">LedScheduler</code>. It will be quite similar to the <code class="language-plaintext highlighter-rouge">TeensySpy</code> we implemented for the <code class="language-plaintext highlighter-rouge">LedController</code> tests.</p>
+<p>What the test is saying is that our <strong>LedScheduler</strong> will create a delay of 500ms, then we will use a fake timer to advance to just before the delay (499ms), and confirm that <strong>LedScheduler</strong> didnt turn on any Leds yet.<br />
+We will create an <strong>LedControllerSpy</strong> to watch for the calls of <strong>LedScheduler</strong>. It will be quite similar to the <strong>TeensySpy</strong> we implemented for the <strong>LedController</strong> tests.</p>
 
 <p>This is too much functionality to implement all at once though so we will just comment it out and hold onto it as a reference for now.</p>
 
@@ -1385,7 +1391,7 @@ We will create an <code class="language-plaintext highlighter-rouge">LedControll
 </span>
 <span class="cp">#endif</span></code></pre></figure>
 
-<p>Here’s a much simpler test to get started with.  It requires us to setup a new spy which we’ll call <code class="language-plaintext highlighter-rouge">LedControllerSpy</code>:</p>
+<p>Here’s a much simpler test to get started with.  It requires us to setup a new spy which we’ll call <strong>LedControllerSpy</strong>:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedScheduler.c</span>
 
@@ -1400,7 +1406,7 @@ We will create an <code class="language-plaintext highlighter-rouge">LedControll
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>We’ll also comment that out and now start out with a test of the <code class="language-plaintext highlighter-rouge">LedControllerSpy</code> itself.  It’s going to be quite similar to <code class="language-plaintext highlighter-rouge">TeensySpy</code> that we wrote earlier.</p>
+<p>We’ll also comment that out and now start out with a test of the <strong>LedControllerSpy</strong> itself.  It’s going to be quite similar to <strong>TeensySpy</strong> that we wrote earlier.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestLedControllerSpy.c</span>
 
@@ -1461,12 +1467,12 @@ We will create an <code class="language-plaintext highlighter-rouge">LedControll
   <span class="k">return</span> <span class="n">lastState</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>So now if we uncomment the test within <code class="language-plaintext highlighter-rouge">testLedScheduler.c</code> we get a failure:</p>
+<p>So now if we uncomment the test within <strong>testLedScheduler.c</strong> we get a failure:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedScheduler.c:26:test_LedScheduler_No_Lights_On_Initialization:
 FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
-<p>We can solve that by creating the spy in the test setUp</p>
+<p>We can solve that by creating the spy in the test <code class="language-plaintext highlighter-rouge">setUp</code></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestLedControllerSpy.c</span>
 
@@ -1488,16 +1494,16 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_ON</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>And make it pass by adding the function to <code class="language-plaintext highlighter-rouge">LedControllerSpy</code>. Note we don’t need to add it to the header file since it is already defined in <code class="language-plaintext highlighter-rouge">LedController.h</code> which is #included in <code class="language-plaintext highlighter-rouge">LedControllerSpy.h</code>.  This makes sure that the real functions being called by our spy is consistent with the production code.</p>
+<p>And make it pass by adding the function to <strong>LedControllerSpy</strong>. Note we don’t need to add it to the header file since it is already defined in <strong>LedController.h</strong> which is <code class="language-plaintext highlighter-rouge">#included</code> in <strong>LedControllerSpy.h</strong>.  This makes sure that the real functions being called by our spy is consistent with the production code.</p>
 
-<p>The test to test for turning an Led off is identical so I won’t repeat it here but you should definitiely write it!  We can now move on to the time aspect of our still commented test in <code class="language-plaintext highlighter-rouge">LedSchedulerTest</code>.</p>
+<p>The test to test for turning an Led off is identical so I won’t repeat it here but you should definitiely write it!  We can now move on to the time aspect of our still commented test in <strong>LedSchedulerTest</strong>.</p>
 
 <p><code class="language-plaintext highlighter-rouge">commit 0a032ac</code></p>
 
 <h2 id="faking-time">Faking Time</h2>
 <p>Depending on your application, time management may be hugely important and embedded systems face all sorts of challenges with handling time.  For our tests, we need to be able to fake the time on our board to create all of the different hypothetical situations we might need it to respond to.</p>
 
-<p>In our little example here, we just need to make sure that <code class="language-plaintext highlighter-rouge">LedScheduler</code> correctly implements the delay function.  So we need to fake that delay.  We’ll start by adding the tests to <code class="language-plaintext highlighter-rouge">mocks/FakeTimeServiceTest.c</code>.</p>
+<p>In our little example here, we just need to make sure that <strong>LedScheduler</strong> correctly implements the delay function.  So we need to fake that delay.  We’ll start by adding the tests to <strong>mocks/FakeTimeServiceTest.c</strong>.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestFakeTimeService.c</span>
 
@@ -1524,7 +1530,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>The header <code class="language-plaintext highlighter-rouge">FakeTimeService.h</code> will look like this:</p>
+<p>The header <strong>FakeTimeService.h</strong> will look like this:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/FakeTimeService.h</span>
 
@@ -1539,7 +1545,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
 <span class="cp">#endif</span></code></pre></figure>
 
-<p>Which will fail because it can’t find <code class="language-plaintext highlighter-rouge">TimeService.h</code>. The real <code class="language-plaintext highlighter-rouge">TimeService.c</code> is where we will put our teensy specific delay function a little later.  But we will need to create the header now:</p>
+<p>Which will fail because it can’t find <strong>TimeService.h</strong>. The real <strong>TimeService.c</strong> is where we will put our teensy specific delay function a little later.  But we will need to create the header now:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// includes/TimeService.h</span>
 
@@ -1560,7 +1566,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
 <span class="cp">#endif </span></code></pre></figure>
 
-<p>Using typedefs &amp; structs in <code class="language-plaintext highlighter-rouge">c</code> is something that I’m still getting a hang of but using it for our Time abstraction is helpful since it allows us to add other types of time that might be relevant to the system at a later date (day, minute, etc).  However, all we need right now is milliseconds so this header might seem a little overkill.</p>
+<p>Using <code class="language-plaintext highlighter-rouge">typedefs</code> &amp; <code class="language-plaintext highlighter-rouge">structs</code> in <strong>c</strong> is something that I’m still getting a hang of but using it for our Time abstraction is helpful since it allows us to add other types of time that might be relevant to the system at a later date (day, minute, etc).  However, all we need right now is milliseconds so this header might seem a little overkill.</p>
 
 <p>This is the passing code:</p>
 
@@ -1589,7 +1595,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
   <span class="n">fakeTime</span><span class="p">.</span><span class="n">milliseconds</span> <span class="o">=</span> <span class="n">milliseconds</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Tests pass, sweet, now we can move back to the <code class="language-plaintext highlighter-rouge">TestLedScheduler</code>.  Using the ‘make it work for none, then one, then many’ methodology, we will gradually add the scheduling, test by test</p>
+<p>Tests pass, sweet, now we can move back to the <strong>TestLedScheduler</strong>.  Using the ‘make it work for none, then one, then many’ methodology, we will gradually add the scheduling, test by test</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestLedScheduler.c</span>
 
@@ -1603,7 +1609,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_STATE_UNKNOWN</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>we’ll need to add <code class="language-plaintext highlighter-rouge">LedScheduler_WakeUp();</code> to the <code class="language-plaintext highlighter-rouge">LedScheduler.h</code> and just an empty function in <code class="language-plaintext highlighter-rouge">src/LedScheduler.c</code> will be sufficient to make the test pass.</p>
+<p>we’ll need to add <code class="language-plaintext highlighter-rouge">LedScheduler_WakeUp();</code> to the <strong>LedScheduler.h</strong> and just an empty function in <strong>src/LedScheduler.c</strong> will be sufficient to make the test pass.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedScheduler.c</span>
 
@@ -1654,7 +1660,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 4 Tests 1 Failures 0 Ignored 
 FAIL</code></pre></figure>
 
-<p>Like we did with Time, we are going to use a <code class="language-plaintext highlighter-rouge">typedef struct</code> to house the information of the scheduled event.  This will allow us to create multiple scheduled events and easily add extra parameters later if necessary.  Here’s how it looks:</p>
+<p>Like we did with <code class="language-plaintext highlighter-rouge">Time</code>, we are going to use a <code class="language-plaintext highlighter-rouge">typedef struct</code> to house the information of the scheduled event.  This will allow us to create multiple scheduled events and easily add extra parameters later if necessary.  Here’s how it looks:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedScheduler.c</span>
 
@@ -1694,8 +1700,7 @@ FAIL</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestLedScheduler.c:19:test_LedScheduler_No_Schedule_No_Action_Taken:FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
-<p>Our tests have caught another bug for us.  This is why we write them!<br />
-We need to initialize <code class="language-plaintext highlighter-rouge">LedScheduler</code> in an unused state and add a guard to check if a <code class="language-plaintext highlighter-rouge">ScheduledEvent</code> has been created.</p>
+<p>Our tests have caught another bug for us.  This is why we write them!  We need to initialize <strong>LedScheduler</strong> in an unused state and add a guard to check if a <code class="language-plaintext highlighter-rouge">ScheduledEvent</code> has been created.</p>
 
 <p>First add a <code class="language-plaintext highlighter-rouge">Create</code> function to the test setUp and header:</p>
 
@@ -1707,7 +1712,7 @@ We need to initialize <code class="language-plaintext highlighter-rouge">LedSche
   <span class="n">LedControllerSpy_Create</span><span class="p">();</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Then add the function and test to <code class="language-plaintext highlighter-rouge">LedScheduler</code>:</p>
+<p>Then add the function and test to <strong>LedScheduler</strong>:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedScheduler.c</span>
 
@@ -1715,24 +1720,16 @@ We need to initialize <code class="language-plaintext highlighter-rouge">LedSche
 <span class="p">{</span>
     <span class="n">UNUSED</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="p">};</span>
-
 <span class="p">.</span>
-
 <span class="p">.</span>
-
 <span class="p">.</span>
-
 <span class="kt">void</span> <span class="nf">LedScheduler_Create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">UNUSED</span><span class="p">;</span>
 <span class="p">}</span>
-
 <span class="p">.</span>
-
 <span class="p">.</span>
-
 <span class="p">.</span>
-
 <span class="kt">void</span> <span class="nf">LedScheduler_WakeUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
@@ -1749,8 +1746,8 @@ We need to initialize <code class="language-plaintext highlighter-rouge">LedSche
   <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Which passes.  So we are now calling <code class="language-plaintext highlighter-rouge">TimeService</code> and comparing the value to our specified delay in order to trigger the Led.
-Let’s add a test for TurnOff for good measure:</p>
+<p>Which passes.  So we are now calling <strong>TimeService</strong> and comparing the value to our specified delay in order to trigger the Led.
+Let’s add a test for <code class="language-plaintext highlighter-rouge">TurnOff</code> for good measure:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedScheuduler.c</span>
 
@@ -1765,7 +1762,7 @@ Let’s add a test for TurnOff for good measure:</p>
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="n">LED_OFF</span><span class="p">,</span> <span class="n">LedControllerSpy_GetLastState</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>To make this pass is a matter of checking whether the Led is on or off.</p>
+<p>To make this pass is a matter of checking whether the Led is <em>on</em> or <em>off</em>.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedScheduler.c</span>
 
@@ -1776,7 +1773,7 @@ Let’s add a test for TurnOff for good measure:</p>
   <span class="n">LedController_TurnOn</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Since this is a new function for <code class="language-plaintext highlighter-rouge">LedController</code>, we’ll first write a test for it. This requires adding a test to and passing method to <code class="language-plaintext highlighter-rouge">TestLedController</code>:</p>
+<p>Since this is a new function for <strong>LedController</strong>, we’ll first write a test for it. This requires adding a test to and passing method to <strong>TestLedController</strong>:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedController.c</span>
 
@@ -1801,7 +1798,7 @@ Let’s add a test for TurnOff for good measure:</p>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p><em>Note: We’ve added some constants, BOOL, TRUE, FALSE, that don’t exist in the standard libraries but can make C a bit easier to read.  To incorporate these constant, we can create a new includes <code class="language-plaintext highlighter-rouge">common.h</code> with the following.  It will need to be included in <code class="language-plaintext highlighter-rouge">LedController.h</code></em></p>
+<p><em>Note: We’ve added some constants, BOOL, TRUE, FALSE, that don’t exist in the standard libraries but can make C a bit easier to read.  To incorporate these constant, we can create a new includes <strong>common.h</strong> with the following.  It will need to be included in <strong>LedController.h</strong></em></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// includes/common.h</span>
 
@@ -1822,14 +1819,14 @@ Let’s add a test for TurnOff for good measure:</p>
 </span>
 <span class="cp">#endif</span></code></pre></figure>
 
-<p>Ok, back to <code class="language-plaintext highlighter-rouge">LedScheduler</code>.  Hmmm it has an error.</p>
+<p>Ok, back to <strong>LedScheduler</strong>.  Hmmm it has an error.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/objs/TestLedScheduler.o build/objs/TestLedScheduler_Runner.o build/objs/unity.o build/objs/LedScheduler.o build/objs/LedControllerSpy.o build/objs/FakeTimeService.o  <span class="nt">-o</span> build/TestLedScheduler.exe  <span class="nt">-lm</span>
-/usr/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_WakeUp<span class="s1">':
-LedScheduler.c:(.text+0xab): undefined reference to `LedController_IsOn'</span>
-collect2: error: ld returned 1 <span class="nb">exit </span>status
+/usr/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="k">**</span>LedScheduler_WakeUp<span class="k">**</span>:
+LedScheduler.c:<span class="o">(</span>.text+0xab<span class="o">)</span>: undefined reference to <span class="sb">`</span>LedController_IsOn<span class="s1">'
+collect2: error: ld returned 1 exit status
 rake aborted!
-ABORT RakefileHelper error: error during linking</code></pre></figure>
+ABORT RakefileHelper error: error during linking</span></code></pre></figure>
 
 <p>We usually see this when a function hasn’t been added yet.  What caused this issue?
 Well, this is an opportunity to explain a concept that took me ages to wrap my head around: the way the Unity uses the gcc linker to prepare the test files.  Let’s look at the <code class="language-plaintext highlighter-rouge">gcc</code> call that triggered the failure:</p>
@@ -1842,7 +1839,7 @@ build/objs/LedControllerSpy.o
 build/objs/FakeTimeService.o  
 <span class="nt">-o</span> build/TestLedScheduler.exe  <span class="nt">-lm</span></code></pre></figure>
 
-<p>each of the files starting with ‘build/objs’ will get linked together in order to run the test.  So what’s the issue?  Well, we just edited <code class="language-plaintext highlighter-rouge">LedController.c</code> which isn’t mentioned in that list.  What we actually needed to do was adjust <code class="language-plaintext highlighter-rouge">LedControllerSpy.c</code> in order to get the test passing.<br />
+<p>each of the files starting with <em>build/objs</em> will get linked together in order to run the test.  So what’s the issue?  Well, we just edited <strong>LedController.c</strong> which isn’t mentioned in that list.  What we actually needed to do was adjust <strong>LedControllerSpy.c</strong> in order to get the test passing.<br />
 I jumped the gun a bit.  But since I wrote a test before implementing the function, it should still be safe.  Let’s adjust the spy now.  We can get away with cruder logic here (don’t forget to <code class="language-plaintext highlighter-rouge">#include "common.h"</code>).</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/LedControllerSpy.c</span>
@@ -1857,7 +1854,7 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>And with that, we are back to passing tests!  We could keep going and add logic to incorporate additional ScheduledEvents, but that’s not necessary for us just to replace Teensy’s delay function. So we’re gonna move on from here.</p>
+<p>And with that, we are back to passing tests!  We could keep going and add logic to incorporate additional <code class="language-plaintext highlighter-rouge">ScheduledEvents</code>, but that’s not necessary for us just to replace Teensy’s <code class="language-plaintext highlighter-rouge">delay</code> function. So we’re gonna move on from here.</p>
 
 <p><code class="language-plaintext highlighter-rouge">commit 3a1312b</code></p>
 
@@ -1869,7 +1866,7 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
 
 <p>Still flashing? On we go.</p>
 
-<p>As mentioned above, we are going to move <code class="language-plaintext highlighter-rouge">delay()</code> into a newly created <code class="language-plaintext highlighter-rouge">TimeService.cpp</code>.  Like this:</p>
+<p>As mentioned above, we are going to move <code class="language-plaintext highlighter-rouge">delay()</code> into a newly created <strong>TimeService.cpp</strong>.  Like this:</p>
 
 <p>First, we’ll add <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code>.</p>
 
@@ -1890,9 +1887,9 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p><em>NOTE: Since <code class="language-plaintext highlighter-rouge">delay()</code> is a .cpp function, it needs to be called from within a cpp file.  However, <code class="language-plaintext highlighter-rouge">LedScheduler.c</code> will only recognize function defintions declared from within an <code class="language-plaintext highlighter-rouge">extern "C"</code> wrapper.  Going forward, anything calling functions or types from the teensy library should be called from outside the <code class="language-plaintext highlighter-rouge">extern "C"</code> wrapper. Anything called from our own .c files should be inside the wrapper.</em></p>
+<p><em>NOTE: Since <code class="language-plaintext highlighter-rouge">delay()</code> is a .cpp function, it needs to be called from within a cpp file.  However, <strong>LedScheduler.c</strong> will only recognize function defintions declared from within an <code class="language-plaintext highlighter-rouge">extern "C"</code> wrapper.  Going forward, anything calling functions or types from the teensy library should be called from outside the <code class="language-plaintext highlighter-rouge">extern "C"</code> wrapper. Anything called from our own .c files should be inside the wrapper.</em></p>
 
-<p>From there, we can move the looping logic from <code class="language-plaintext highlighter-rouge">main.cpp</code>, into <code class="language-plaintext highlighter-rouge">LedScheduler</code> like so:</p>
+<p>From there, we can move the looping logic from <strong>main.cpp</strong>, into <strong>LedScheduler</strong> like so:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/main.cpp</span>
 
@@ -1918,7 +1915,7 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>What’s more, we’ve now removed all of the cpp function calls from main.  If you follow Jack Ganssle of the Embedded Muse, you will probably read multiple criticisms about using cpp in embedded sysems.<br />
+<p>What’s more, we’ve now removed all of the cpp function calls from main.  If you follow Jack Ganssle of the <a href="http://www.ganssle.com/tem-subunsub.html">Embedded Muse</a>, you will probably read multiple criticisms about using cpp in embedded sysems.<br />
 Im not going to try to wade into that argument as I still have a lot to learn just in C.
 So now we are going to refactor it into a .c file.</p>
 
@@ -1971,7 +1968,7 @@ So now we are going to refactor it into a .c file.</p>
   <span class="n">TimeService_Delay</span><span class="p">(</span><span class="n">scheduledEvent</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Finally, we’ll also need to add header guards to <code class="language-plaintext highlighter-rouge">TimeServce.h</code> to or the compiler will get confused that sometimes it is being included in the compilation of a C file and other times for a C++ file</p>
+<p>Finally, we’ll also need to add header guards to <strong>TimeServce.h</strong> to or the compiler will get confused that sometimes it is being included in the compilation of a C file and other times for a C++ file</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifdef __cplusplus
 </span><span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
@@ -1998,9 +1995,9 @@ So now we are going to refactor it into a .c file.</p>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">/usr/bin/ld: build/objs/LedScheduler.o: <span class="k">in function</span> <span class="sb">`</span>LedScheduler_WakeUp<span class="s1">':
 LedScheduler.c:(.text+0xb5): undefined reference to `TimeService_Delay'</span></code></pre></figure>
 
-<p>So we need to add a stub in the <code class="language-plaintext highlighter-rouge">FakeTimeService</code> for <code class="language-plaintext highlighter-rouge">TimeService_Delay()</code>. An empty function is fine since we aren’t actually calling it within our tests.  From here, a couple of our tests fail because of the commented out code.</p>
+<p>So we need to add a stub in the <strong>FakeTimeService</strong> for <code class="language-plaintext highlighter-rouge">TimeService_Delay()</code>. An empty function is fine since we aren’t actually calling it within our tests.  From here, a couple of our tests fail because of the commented out code.</p>
 
-<p>At this point, we can begin implementing the actual functions in <code class="language-plaintext highlighter-rouge">TimeService</code>.  What should our first test look like?</p>
+<p>At this point, we can begin implementing the actual functions in <strong>TimeService</strong>.  What should our first test look like?</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestTimeService.c</span>
 
@@ -2020,14 +2017,14 @@ LedScheduler.c:(.text+0xb5): undefined reference to `TimeService_Delay'</span></
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">milliseconds</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Which initially fails because there is no <code class="language-plaintext highlighter-rouge">delay()</code> function within the scope of this test (ie the 2 headers we’ve declared: <code class="language-plaintext highlighter-rouge">Timeservice.h</code> and <code class="language-plaintext highlighter-rouge">TeensySpy.c</code>.</p>
+<p>Which initially fails because there is no <code class="language-plaintext highlighter-rouge">delay()</code> function within the scope of this test (ie the 2 headers we’ve declared: <strong>Timeservice.h</strong> and <strong>TeensySpy.c</strong>.</p>
 
-<p>We could add <code class="language-plaintext highlighter-rouge">delay()</code> to our mock header <code class="language-plaintext highlighter-rouge">mocks/Arduino.h</code>.  But that would reuire us to also generate a fake or mock delay function. 
+<p>We could add <code class="language-plaintext highlighter-rouge">delay()</code> to our mock header <strong>mocks/Arduino.h</strong>.  But that would reuire us to also generate a fake or mock delay function. 
 It’s not obvious to me how to write a test for it and <code class="language-plaintext highlighter-rouge">delay()</code> is not a great function to use anyways since your board isn’t able to do anything else while <code class="language-plaintext highlighter-rouge">delay</code> is executing.</p>
 
 <p>So with that in mind, we are actually going to discard <code class="language-plaintext highlighter-rouge">delay()</code> from here in favour of <a href="https://www.pjrc.com/teensy/td_timing_elaspedMillis.html">ElapsedMillis</a> which you can read more about if you’d like.</p>
 
-<p>On that note, go ahead and comment out <code class="language-plaintext highlighter-rouge">delay</code> now. While you are at it, add <code class="language-plaintext highlighter-rouge">#include &lt;stdint.h&gt;</code> to <code class="language-plaintext highlighter-rouge">mocks/Arduino.h</code> since <code class="language-plaintext highlighter-rouge">TimeService.cpp will otherwise get it from the teensy library</code></p>
+<p>On that note, go ahead and comment out <code class="language-plaintext highlighter-rouge">delay</code> now. While you are at it, add <code class="language-plaintext highlighter-rouge">#include &lt;stdint.h&gt;</code> to <strong>mocks/Arduino.h</strong> since <strong>TimeService.cpp</strong> will otherwise get it from the teensy library`</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/TimeService.cpp</span>
 
@@ -2036,17 +2033,17 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
   <span class="c1">// delay(milliseconds);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>From here, we end up with a missing function in <code class="language-plaintext highlighter-rouge">TimeService</code>:</p>
+<p>From here, we end up with a missing function in <strong>TimeService</strong>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">TestTimeService.c:<span class="o">(</span>.text+0x43<span class="o">)</span>: undefined reference to <span class="sb">`</span>TimeService_GetTime<span class="sb">`</span></code></pre></figure>
 
-<p>We already have the function prototype in <code class="language-plaintext highlighter-rouge">TimeService.h</code> so we can just copy it in as an empty function to get past this error.</p>
+<p>We already have the function prototype in <strong>TimeService.h</strong> so we can just copy it in as an empty function to get past this error.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestTimeService.c:18:test_TimeService_GetTime_0_on_init:FAIL: Expected 0x0000 Was 0x9488</code></pre></figure>
 
-<p>So we need to stub in the behaviour via <code class="language-plaintext highlighter-rouge">TeensySpy</code>.</p>
+<p>So we need to stub in the behaviour via <strong>TeensySpy</strong>.</p>
 
-<p>For now, let’s comment out that test and drop one level down the stack to <code class="language-plaintext highlighter-rouge">TestTeensySpy</code> to add a couple stubs and tests.</p>
+<p>For now, let’s comment out that test and drop one level down the stack to <strong>TestTeensySpy</strong> to add a couple stubs and tests.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestTeensySpy.c</span>
 
@@ -2055,7 +2052,7 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
   <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>To get this passing, we’ll need to declare and initialize our stubbed elapsedMillis (named <code class="language-plaintext highlighter-rouge">timeCounter</code>);</p>
+<p>To get this passing, we’ll need to declare and initialize our stubbed <code class="language-plaintext highlighter-rouge">elapsedMillis</code> (named <code class="language-plaintext highlighter-rouge">timeCounter</code>);</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TeensySpy.c</span>
 
@@ -2075,13 +2072,13 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
   <span class="k">return</span> <span class="n">timeCounter</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>What is <code class="language-plaintext highlighter-rouge">elapsedMillis</code>?  Well, if we look in the teensy supplied source files, namely <code class="language-plaintext highlighter-rouge">teensy3/elapsedMillis.h</code>, we’ll see a class that is only defined if compiled using C++.  That’s an implementation detail we need to be aware of, but the other important item we need is the <code class="language-plaintext highlighter-rouge">unsigned long</code> type.  The real <code class="language-plaintext highlighter-rouge">elapsedMillis</code> provides a rich functionality but for our purposes right now, we just need to declare our own <code class="language-plaintext highlighter-rouge">elapsedMillis</code> type within our mock header</p>
+<p>What is <code class="language-plaintext highlighter-rouge">elapsedMillis</code>?  Well, if we look in the teensy supplied source files, namely <strong>teensy3/elapsedMillis.h</strong>, we’ll see a class that is only defined if compiled using C++.  That’s an implementation detail we need to be aware of, but the other important item we need is the <code class="language-plaintext highlighter-rouge">unsigned long</code> type.  The real <code class="language-plaintext highlighter-rouge">elapsedMillis</code> provides a rich functionality but for our purposes right now, we just need to declare our own <code class="language-plaintext highlighter-rouge">elapsedMillis</code> type within our mock header</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/Arduino.h</span>
 
 <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">elapsedMillis</span><span class="p">;</span></code></pre></figure>
 
-<p>After adding “Arduino.h” to <code class="language-plaintext highlighter-rouge">TeensySpy.h</code> (which will allow us to remove the call to <code class="language-plaintext highlighter-rouge">&lt;stdint.h&gt;</code>, by the way), this should pass.  Now let’s create the ability to advance &amp; reset elapsedMillis within the spy:</p>
+<p>After adding <code class="language-plaintext highlighter-rouge">#include "Arduino.h"</code> to <strong>TeensySpy.h</strong> (which will allow us to remove the call to <code class="language-plaintext highlighter-rouge">&lt;stdint.h&gt;</code>, by the way), this should pass.  Now let’s create the ability to advance &amp; reset <code class="language-plaintext highlighter-rouge">elapsedMillis</code> within the spy:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestTeensySpy.c</span>
 
@@ -2112,7 +2109,7 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
   <span class="n">timeCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>From here, we can turn our attention back to <code class="language-plaintext highlighter-rouge">TestTimeService</code> which is still failing, <code class="language-plaintext highlighter-rouge">TimeService_GetTime()</code> needs to call on elapsedMillis</p>
+<p>From here, we can turn our attention back to <strong>TestTimeService</strong> which is still failing, <code class="language-plaintext highlighter-rouge">TimeService_GetTime()</code> needs to call on <code class="language-plaintext highlighter-rouge">elapsedMillis</code></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/TimeService.cpp</span>
 
@@ -2129,7 +2126,7 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Which gives us a passing test (though we still have 2 failing in <code class="language-plaintext highlighter-rouge">TestLedScheduler</code>, we’ll get there soon.  How about if we advance the stubbed time?</p>
+<p>Which gives us a passing test (though we still have 2 failing in <strong>TestLedScheduler</strong>, we’ll get there soon.  How about if we advance the stubbed time?</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">//test/TestTimeService.c</span>
 
@@ -2145,7 +2142,7 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test</span>/TestTimeService.c:26:test_TimeService_GetTime_after_advancing_spy:FAIL: Expected 0x0055 Was 0x0000</code></pre></figure>
 
-<p><code class="language-plaintext highlighter-rouge">TimeService</code> is not seeing the <code class="language-plaintext highlighter-rouge">timeCounter</code> that is being produced by <code class="language-plaintext highlighter-rouge">TeensySpy</code>.  We’ll need to move the declaration into the <code class="language-plaintext highlighter-rouge">TeensySpy.h</code> header file in order for it to be visible to external caller modules.</p>
+<p><strong>TimeService</strong> is not seeing the <code class="language-plaintext highlighter-rouge">timeCounter</code> that is being produced by <strong>TeensySpy</strong>.  We’ll need to move the declaration into the <strong>TeensySpy.h</strong> header file in order for it to be visible to external caller modules.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TeensySpy.h</span>
 
@@ -2156,9 +2153,11 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
 </span>
 <span class="n">elapsedMillis</span> <span class="n">timeCounter</span><span class="p">;</span></code></pre></figure>
 
-<p>*GOTCHA: When I attempted this tutorial on ArchLinux, I suddenly got hung up on this step for a couple solid days on a multiple definition error.  ArchLinux uses GCC 11 while Linux Mint (the distro I originally wrote this on uses GCC 9.
-Turns our that declaring timeCounter in both <code class="language-plaintext highlighter-rouge">TimeService</code> and <code class="language-plaintext highlighter-rouge">TeensySpy</code> passes the default GCC linker options in Mint but not Arch.  I don’t know about MingW/Windows or other distros.  The error is cleared by adding the linker flag <code class="language-plaintext highlighter-rouge">z muldefs</code> to <code class="language-plaintext highlighter-rouge">target_testing.yml</code> like this:
- *.</p>
+<ul>
+  <li><em>GOTCHA: When I attempted this tutorial on ArchLinux, I suddenly got hung up on this step for a couple solid days on a multiple definition error.  ArchLinux uses GCC 11 while Linux Mint (the distro I originally wrote this on uses GCC 9.
+Turns our that declaring timeCounter in both <strong>TimeService</strong> and <strong>TeensySpy</strong> passes the default GCC linker options in Mint but not Arch.  I don’t know about MingW/Windows or other distros.</em>
+The error is cleared by adding the linker flag <code class="language-plaintext highlighter-rouge">z muldefs</code> to <strong>target_testing.yml</strong> like this:</li>
+</ul>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">linker</span><span class="pi">:</span>
   <span class="na">options</span><span class="pi">:</span>
@@ -2167,10 +2166,10 @@ Turns our that declaring timeCounter in both <code class="language-plaintext hig
     <span class="pi">-</span> <span class="s">z muldefs</span></code></pre></figure>
 
 <ul>
-  <li>Preventing multiple definitions appears to be more up to date with best practices.  So it seems as though I should indeed by using stubbed functions via a mocked <code class="language-plaintext highlighter-rouge">mocks/Arduino.c</code> (rather than using <code class="language-plaintext highlighter-rouge">TeensySpy</code> to change the time during testing.  I may pursue this route in a future revision after I’ve done some more research.*</li>
+  <li><em>NOTE: Preventing multiple definitions appears to be more up to date with best practices.  So it seems as though I should indeed by using stubbed functions via a mocked <strong>mocks/Arduino.c</strong> (rather than using <strong>TeensySpy</strong> to change the time during testing.  I may pursue this route in a future revision after I’ve done some more research.</em></li>
 </ul>
 
-<p>And with that, both <code class="language-plaintext highlighter-rouge">TimeService</code> tests are passing.  We can also uncomment the logic within <code class="language-plaintext highlighter-rouge">LedScheduler_WakeUp()</code> to get those tests passing again.</p>
+<p>And with that, both <strong>TimeService</strong> tests are passing.  We can also uncomment the logic within <code class="language-plaintext highlighter-rouge">LedScheduler_WakeUp()</code> to get those tests passing again.</p>
 
 <p>Do we dare uncomment the tested code? Run <code class="language-plaintext highlighter-rouge">rake clean &amp;&amp; rake deploy_teensy</code> first to make sure your blinky is still running and deploying. Then let’s go for it:</p>
 
@@ -2210,7 +2209,7 @@ Turns our that declaring timeCounter in both <code class="language-plaintext hig
    <span class="n">TEST_ASSERT_EQUAL_HEX16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TeensySpy_GetElapsedMillis</span><span class="p">());</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Which we can make pass by adding the following to <code class="language-plaintext highlighter-rouge">TimeService.cpp</code></p>
+<p>Which we can make pass by adding the following to <strong>TimeService.cpp</strong></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="kt">void</span> <span class="nf">TimeService_Reset</span><span class="p">()</span>
   <span class="p">{</span>
@@ -2219,7 +2218,7 @@ Turns our that declaring timeCounter in both <code class="language-plaintext hig
 
 <p>If we now replace the commented out <code class="language-plaintext highlighter-rouge">TimeService_Delay()</code> with our <code class="language-plaintext highlighter-rouge">TimeService_Reset()</code>, then we are back to blinky again!</p>
 
-<p>We will need to stub a <code class="language-plaintext highlighter-rouge">TimeService_Reset()</code> call into <code class="language-plaintext highlighter-rouge">FakeTimeService</code> in order to get our test suite fully passing.  It can be empty since we aren’t changing any functionality with this.</p>
+<p>We will need to stub a <code class="language-plaintext highlighter-rouge">TimeService_Reset()</code> call into <strong>FakeTimeService</strong> in order to get our test suite fully passing.  It can be empty since we aren’t changing any functionality with this.</p>
 
 <p><code class="language-plaintext highlighter-rouge">commit 2bbd6b0</code></p>
 

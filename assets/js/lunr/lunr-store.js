@@ -114,7 +114,7 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/solar-impulse-sun-thumb.jpeg"
       },{
         "title": "A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example",
-        "excerpt":"Intro and background Want to dig deeper into developing with Arm Cortex MCUs? Interested in seeing how embedded systems are tested or developing some TDD skills for Arduino projects? Have a crack at this tutorial. We at sunEtrike have big dreams for our software development. While I did take one...","categories": ["open-source","embedded","teensy"],
+        "excerpt":"Learn how to create modular code for embedded systems using a Test Driven Development approach Intro and background Want to dig deeper into developing with Arm Cortex MCUs? Interested in seeing how embedded systems are tested or developing some TDD skills for Arduino projects? Have a go at this tutorial!...","categories": ["open-source","embedded","teensy"],
         "tags": [],
         "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
         "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
