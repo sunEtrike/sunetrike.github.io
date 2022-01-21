@@ -118,4 +118,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
         "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
+      },{
+        "title": "Press Release - International Research Collaboration for energy harvesting vehicle suspension",
+        "excerpt":"sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric vehicles.   Please click here to access the Nov 2021 Energy Harvester project press release      Interested in hearing more from us?  Check out our newsletter   ","categories": ["energy-harvester","announcements"],
+        "tags": [],
+        "url": "https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant/",
+        "teaser": "https://sunetrike.com/assets/images/banners/harvester-pr.png"
       }]
