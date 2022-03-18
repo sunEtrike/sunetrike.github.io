@@ -113,9 +113,15 @@ var store = [{
         "url": "https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/",
         "teaser": "https://sunetrike.com/assets/images/solar-impulse-sun-thumb.jpeg"
       },{
-        "title": "A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example",
-        "excerpt":"Intro and background We are sunEtrike have big dreams for our software development. While I did take one Comp Sci course during college/uni, beyond that, I’ve had to learn everything else as I went. One of the things I hated most about coding was tracking down bugs. For us to...","categories": ["open-source","embedded","teensy"],
+        "title": "A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example",
+        "excerpt":"Learn how to create modular code for embedded systems using a Test Driven Development approach Intro and background Want to dig deeper into developing with Arm Cortex MCUs? Interested in seeing how embedded systems are tested or developing some TDD skills for Arduino projects? Have a go at this tutorial!...","categories": ["open-source","embedded","teensy"],
         "tags": [],
         "url": "https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/",
+        "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
+      },{
+        "title": "A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example",
+        "excerpt":"Intro and background If you followed the first tutorial , you may recall that it claimed to be useful for multi-targetting. In this article, Im going to walk through the motions of adding a second board to this project. Why go through all of this trouble when there are so...","categories": ["open-source","embedded","teensy"],
+        "tags": [],
+        "url": "https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/",
         "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
       }]

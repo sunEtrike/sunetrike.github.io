@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>sunE declares intention to achieve Net-Zero across its supply chain by 2025. | sunE</title>
-<meta name="description" content="We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here">
+<!-- begin _includes/seo.html --><title>A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example | sunE</title>
+<meta name="description" content="Intro and background">
 
 
   <meta name="author" content="Allan Gray">
@@ -22,19 +22,21 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="sunE">
-<meta property="og:title" content="sunE declares intention to achieve Net-Zero across its supply chain by 2025.">
-<meta property="og:url" content="https://sunetrike.com/announcements/declaration-to-achieve-net-zero/">
+<meta property="og:title" content="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example">
+<meta property="og:url" content="https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/">
 
 
-  <meta property="og:description" content="We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here">
-
-
-
+  <meta property="og:description" content="Intro and background">
 
 
 
+  <meta property="og:image" content="https://sunetrike.com/assets/images/teensy_rake/teensy.png">
 
-  <meta property="article:published_time" content="2021-08-24T01:08:07+08:00">
+
+
+
+
+  <meta property="article:published_time" content="2021-10-22T01:08:07+08:00">
 
 
 
@@ -45,7 +47,7 @@
   
 
 
-<link rel="canonical" href="https://sunetrike.com/announcements/declaration-to-achieve-net-zero/">
+<link rel="canonical" href="https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/">
 
 
 
@@ -174,6 +176,24 @@
 
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/assets/images/teensy_rake/teensy.png" alt="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" class="page__hero-image">
+  
+  
+</div>
+
+
 
 
 
@@ -281,15 +301,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="sunE declares intention to achieve Net-Zero across its supply chain by 2025.">
-    <meta itemprop="description" content="We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here">
-    <meta itemprop="datePublished" content="2021-08-24T01:08:07+08:00">
+    <meta itemprop="headline" content="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example">
+    <meta itemprop="description" content="Intro and background">
+    <meta itemprop="datePublished" content="2021-10-22T01:08:07+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">sunE declares intention to achieve Net-Zero across its supply chain by 2025.
+          <h1 id="page-title" class="page__title" itemprop="headline">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example
 </h1>
           
 
@@ -299,7 +319,84 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero <a href="/sunE-net-zero-declaration/">here</a></p>
+        <h2 id="intro-and-background">Intro and background</h2>
+
+<p>If you followed the first tutorial <a href=""></a>, you may recall that it claimed to be useful for multi-targetting.  In this article, Im going to walk through the motions of adding a second board to this project.</p>
+
+<p>Why go through all of this trouble when there are so many IDEs around and tools like CMSIS <a href=""></a> that already provide standardized interfaces that go way beyond what I could achieve?</p>
+
+<p>I guess its mainly for learning, but also because I often find the IDEs add weird complications and always find myself reverting back to the command line to reason through.  Maybe one of these days when I have more of a peer group to work with on embedded projects (and budget), Ill make my way into that world.</p>
+
+<h2 id="what-are-you-getting-out-of-completing-this-tutorialexercise--our-tdd-blinky-example-running-on-the-frdm-kl2z-still-using-only-a-text-editor-and-a-terminal">What are you getting out of completing this tutorial/exercise?  Our TDD blinky example running on the FRDM-KL2Z still using only a text editor, and a terminal.</h2>
+
+<p>This tutorial might be worthwhile for you
+if:</p>
+<ol>
+  <li>
+    <p>You are still getting your embedded legs under you and find that IDEs sometimes break and give files in an embedded development so confusing that your projects often fall through the different boards and options.</p>
+  </li>
+  <li>
+    <p>You .</p>
+  </li>
+</ol>
+
+<p>You can browse the <a href="https://github.com/graial/teensy_rake">github repo</a> to have a look.</p>
+
+<h2 id="why-the-frdm-kl25z">Why The FRDM-KL25Z?</h2>
+<p>Like the teensy, it uses an ARM Cortex-M which means that it employs the same archtecture and programming inteface.
+This is the development board used for the demos in the book <a href="https://bookshelf.vitalsource.com/reader/books/9781911531012/epubcfi/6/22[%3Bvnd.vst.idref%3Dopf10]!/4">Embedded System Fundamentals with ARM Cortex-M Microcontrollers</a>
+This means that all of the teeny libraries we downloaded in the previous article are providing higher level functions based on the same underlying libraries used in this article.
+So reading this book together with the teensy source code yields all sorts of insights into how Arm Cortex-M can be put to use in embedded systems.</p>
+
+<h2 id="rake-vs-cmake-for-embedded-development">Rake vs CMake for embedded development</h2>
+
+<p>Incorporating the FRDM board into my project required me to get more familiar with CMake.  The Cmake sample projects supplied by NXP autogenerate a lot of different files (including a couple makefiles).  This provides a convenient way to autocompile the many different code samples they provide.</p>
+
+<p>I still prefer to keep it minimal at this point.  There are so many ways to take a project and this makes a project cleanly portable (hopefully!)</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>Install MCUExpresso SDK for Gcc</p>
+
+<h3 id="getting-your-toolchain-in-place">Getting your toolchain in place</h3>
+
+<ol>
+  <li>
+    <p>Build a sample app</p>
+  </li>
+  <li>
+    <p>Setup OpenSDA</p>
+  </li>
+  <li>
+    <p>Copy a target. The demo app should work.</p>
+  </li>
+  <li>
+    <p>change a line and repeat.  The demo app should work with the change.</p>
+  </li>
+</ol>
+
+<h2 id="where-to-start">Where to start?</h2>
+
+<p>Right now, we call Arduino from 2 modules: TimeService and LedController.  TimeService only calls the C++ class elaspedMillis while LedController has 3 functions which setup and toggle the LEDs.</p>
+
+<p>We’ll start with LedController.  Our config files contain a defines entry that contains the name of the target.  As such, we can place a conditional defines for each high level library.  Like so:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">  <span class="cp">#ifdef TEENSY
+</span>    <span class="cp">#include "Arduino.h"
+</span>  <span class="cp">#endif
+</span>
+  <span class="cp">#ifdef FRDM_KL25Z
+</span>    <span class="cp">#include "FRDM-KL2Z.h"
+</span>  <span class="cp">#endif</span></code></pre></figure>
+
+<p>if you create an empty header file called <code class="language-plaintext highlighter-rouge">FRDM-KL2Z.h</code> and then enter
+<code class="language-plaintext highlighter-rouge">RAKE_TARGET=KL2Z rake build_main</code>
+you’ll hit errors about some missing constants, <code class="language-plaintext highlighter-rouge">ON</code>, <code class="language-plaintext highlighter-rouge">OFF</code> &amp; <code class="language-plaintext highlighter-rouge">OUTPUT</code> as well as some functions <code class="language-plaintext highlighter-rouge">pinMode</code> &amp; <code class="language-plaintext highlighter-rouge">digitalWriteFast</code>.</p>
+
+<p>The KL25Z doesnt provide the same high level wrapper functions that the teesny does so we’ll need to write some.</p>
+
+<p>If you look a bit more closely at the rakefile, youll see that it packages everything in the target forlder, either <code class="language-plaintext highlighter-rouge">teensy3</code> or <code class="language-plaintext highlighter-rouge">FRDM-KL2Z</code> in our case, into a static library that gets linked into the project on compilation.  This means that if we define the same function names as used by the teensy, then swapping between targets is as simple as linking a different static library.
+Something tells me that some programmers would not approve of this practice.  Let’s give it a shot though.</p>
 
 <div class="newsletter_wrapper">
   <h3>Interested in hearing more from us? <a href="/newsletter/"> Check out our newsletter</a></h3>
@@ -326,14 +423,22 @@
     
       
       
-      <a href="/categories/announcements" class="page__taxonomy-item" rel="tag">announcements</a>
+      <a href="/categories/embedded" class="page__taxonomy-item" rel="tag">embedded</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/open-source" class="page__taxonomy-item" rel="tag">open-source</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/teensy" class="page__taxonomy-item" rel="tag">teensy</a>
     
     </span>
   </p>
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-08-24T01:08:07+08:00">August 24, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-10-22T01:08:07+08:00">October 22, 2021</time></p>
 
 
       </footer>
@@ -341,23 +446,22 @@
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?text=sunE+declares+intention+to+achieve+Net-Zero+across+its+supply+chain+by+2025.%20https%3A%2F%2Fsunetrike.com%2Fannouncements%2Fdeclaration-to-achieve-net-zero%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=A+TDD+rake+based+build-system+for+multi-targeting+-+using+the+teensy+3.6+as+an+example%20https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fadding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsunetrike.com%2Fannouncements%2Fdeclaration-to-achieve-net-zero%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fadding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsunetrike.com%2Fannouncements%2Fdeclaration-to-achieve-net-zero%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fadding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/" class="pagination--pager" title="Past, Present and Future of Environmentalism - Presentation for Mapua’s Social Sciences and Education week
+      <a href="/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" class="pagination--pager" title="A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example
 ">Previous</a>
     
     
-      <a href="/solar-impulse/in-flight-i-attain-a-higher-consciousness/" class="pagination--pager" title="In flight, I attain a higher consciousness.  Fear disappears - Translation of Bertrand Piccard’s interview on La Croix
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -371,32 +475,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        
-      <div class="archive__item-teaser img-icon">
-        <img src="/assets/images/teensy_rake/teensy.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/" rel="permalink">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">Intro and background
-</p>
-  </article>
-</div>
-
         
           
 
@@ -445,6 +523,32 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">In April, Capt Piccard sat down with the Malo Tresca and the podcast Place des Religions for a discussion about exploration, consciousness and how the Solar ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/sunev-thumb.JPG" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/announcements/declaration-to-achieve-net-zero/" rel="permalink">sunE declares intention to achieve Net-Zero across its supply chain by 2025.
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here
+</p>
   </article>
 </div>
 
@@ -537,8 +641,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://sunetrike.com/announcements/declaration-to-achieve-net-zero/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/announcements/declaration-to-achieve-net-zero"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
