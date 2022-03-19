@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2022-03-18T18:36:54+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;p&gt;&lt;strong&gt;Learn how to create modular code for embedded systems using a Test Driven Development approach&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunetrike.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunetrike.com/" rel="alternate" type="text/html" /><updated>2022-03-19T12:38:26+08:00</updated><id>https://sunetrike.com/feed.xml</id><title type="html">sunE</title><subtitle>Wake up to the world that solar and Low Speed Electric Vehicles (LSEVs) can offer the Philippines</subtitle><author><name>Allan Gray</name></author><entry><title type="html">Press Release - International Research Collaboration for energy harvesting vehicle suspension</title><link href="https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant/" rel="alternate" type="text/html" title="Press Release - International Research Collaboration for energy harvesting vehicle suspension" /><published>2021-11-24T01:08:07+08:00</published><updated>2021-11-24T01:08:07+08:00</updated><id>https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant</id><content type="html" xml:base="https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant/">&lt;p&gt;sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric vehicles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/pdfs/2021-11-24_harvester-pr.pdf&quot;&gt;Please click here to view the Nov 2021 Energy Harvester project press release&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;newsletter_wrapper&quot;&gt;
+  &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="energy-harvester" /><category term="announcements" /><summary type="html">sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric vehicles.</summary></entry><entry><title type="html">A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/">&lt;p&gt;&lt;strong&gt;Learn how to create modular code for embedded systems using a Test Driven Development approach&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
 
@@ -1911,88 +1917,7 @@ The error is cleared by adding the linker flag &lt;code class=&quot;language-pla
 
 &lt;div class=&quot;newsletter_wrapper&quot;&gt;
   &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="open-source" /><category term="embedded" /><category term="teensy" /><summary type="html">Learn how to create modular code for embedded systems using a Test Driven Development approach</summary></entry><entry><title type="html">A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example</title><link href="https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/" rel="alternate" type="text/html" title="A TDD rake based build-system for multi-targeting - using the teensy 3.6 as an example" /><published>2021-10-22T01:08:07+08:00</published><updated>2021-10-22T01:08:07+08:00</updated><id>https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system</id><content type="html" xml:base="https://sunetrike.com/open-source/embedded/teensy/adding-a-new-board-FRDM-KL2Z-to-our-tdd-build-system/">&lt;h2 id=&quot;intro-and-background&quot;&gt;Intro and background&lt;/h2&gt;
-
-&lt;p&gt;If you followed the first tutorial &lt;a href=&quot;&quot;&gt;&lt;/a&gt;, you may recall that it claimed to be useful for multi-targetting.  In this article, Im going to walk through the motions of adding a second board to this project.&lt;/p&gt;
-
-&lt;p&gt;Why go through all of this trouble when there are so many IDEs around and tools like CMSIS &lt;a href=&quot;&quot;&gt;&lt;/a&gt; that already provide standardized interfaces that go way beyond what I could achieve?&lt;/p&gt;
-
-&lt;p&gt;I guess its mainly for learning, but also because I often find the IDEs add weird complications and always find myself reverting back to the command line to reason through.  Maybe one of these days when I have more of a peer group to work with on embedded projects (and budget), Ill make my way into that world.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-are-you-getting-out-of-completing-this-tutorialexercise--our-tdd-blinky-example-running-on-the-frdm-kl2z-still-using-only-a-text-editor-and-a-terminal&quot;&gt;What are you getting out of completing this tutorial/exercise?  Our TDD blinky example running on the FRDM-KL2Z still using only a text editor, and a terminal.&lt;/h2&gt;
-
-&lt;p&gt;This tutorial might be worthwhile for you
-if:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;You are still getting your embedded legs under you and find that IDEs sometimes break and give files in an embedded development so confusing that your projects often fall through the different boards and options.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;You .&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;You can browse the &lt;a href=&quot;https://github.com/graial/teensy_rake&quot;&gt;github repo&lt;/a&gt; to have a look.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-the-frdm-kl25z&quot;&gt;Why The FRDM-KL25Z?&lt;/h2&gt;
-&lt;p&gt;Like the teensy, it uses an ARM Cortex-M which means that it employs the same archtecture and programming inteface.
-This is the development board used for the demos in the book &lt;a href=&quot;https://bookshelf.vitalsource.com/reader/books/9781911531012/epubcfi/6/22[%3Bvnd.vst.idref%3Dopf10]!/4&quot;&gt;Embedded System Fundamentals with ARM Cortex-M Microcontrollers&lt;/a&gt;
-This means that all of the teeny libraries we downloaded in the previous article are providing higher level functions based on the same underlying libraries used in this article.
-So reading this book together with the teensy source code yields all sorts of insights into how Arm Cortex-M can be put to use in embedded systems.&lt;/p&gt;
-
-&lt;h2 id=&quot;rake-vs-cmake-for-embedded-development&quot;&gt;Rake vs CMake for embedded development&lt;/h2&gt;
-
-&lt;p&gt;Incorporating the FRDM board into my project required me to get more familiar with CMake.  The Cmake sample projects supplied by NXP autogenerate a lot of different files (including a couple makefiles).  This provides a convenient way to autocompile the many different code samples they provide.&lt;/p&gt;
-
-&lt;p&gt;I still prefer to keep it minimal at this point.  There are so many ways to take a project and this makes a project cleanly portable (hopefully!)&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
-
-&lt;p&gt;Install MCUExpresso SDK for Gcc&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-your-toolchain-in-place&quot;&gt;Getting your toolchain in place&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Build a sample app&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Setup OpenSDA&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Copy a target. The demo app should work.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;change a line and repeat.  The demo app should work with the change.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;where-to-start&quot;&gt;Where to start?&lt;/h2&gt;
-
-&lt;p&gt;Right now, we call Arduino from 2 modules: TimeService and LedController.  TimeService only calls the C++ class elaspedMillis while LedController has 3 functions which setup and toggle the LEDs.&lt;/p&gt;
-
-&lt;p&gt;We’ll start with LedController.  Our config files contain a defines entry that contains the name of the target.  As such, we can place a conditional defines for each high level library.  Like so:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;  &lt;span class=&quot;cp&quot;&gt;#ifdef TEENSY
-&lt;/span&gt;    &lt;span class=&quot;cp&quot;&gt;#include &quot;Arduino.h&quot;
-&lt;/span&gt;  &lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;
-  &lt;span class=&quot;cp&quot;&gt;#ifdef FRDM_KL25Z
-&lt;/span&gt;    &lt;span class=&quot;cp&quot;&gt;#include &quot;FRDM-KL2Z.h&quot;
-&lt;/span&gt;  &lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;if you create an empty header file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FRDM-KL2Z.h&lt;/code&gt; and then enter
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RAKE_TARGET=KL2Z rake build_main&lt;/code&gt;
-you’ll hit errors about some missing constants, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ON&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OFF&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OUTPUT&lt;/code&gt; as well as some functions &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pinMode&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitalWriteFast&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The KL25Z doesnt provide the same high level wrapper functions that the teesny does so we’ll need to write some.&lt;/p&gt;
-
-&lt;p&gt;If you look a bit more closely at the rakefile, youll see that it packages everything in the target forlder, either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;teensy3&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FRDM-KL2Z&lt;/code&gt; in our case, into a static library that gets linked into the project on compilation.  This means that if we define the same function names as used by the teensy, then swapping between targets is as simple as linking a different static library.
-Something tells me that some programmers would not approve of this practice.  Let’s give it a shot though.&lt;/p&gt;
-
-&lt;div class=&quot;newsletter_wrapper&quot;&gt;
-  &lt;h3&gt;Interested in hearing more from us? &lt;a href=&quot;/newsletter/&quot;&gt; Check out our newsletter&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="open-source" /><category term="embedded" /><category term="teensy" /><summary type="html">Intro and background</summary></entry><entry><title type="html">In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix</title><link href="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/" rel="alternate" type="text/html" title="In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix" /><published>2021-09-23T01:08:07+08:00</published><updated>2021-09-23T01:08:07+08:00</updated><id>https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness</id><content type="html" xml:base="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/">&lt;p&gt;In April, Capt Piccard sat down with the Malo Tresca and the podcast &lt;em&gt;Place des Religions&lt;/em&gt; for a discussion about exploration, consciousness and how the &lt;a href=&quot;https://solarimpulse.com/efficient-solutions&quot;&gt;Solar Impulse Network of 1000 Solutions&lt;/a&gt; can contribute to the great existential challenge of the 21st century.  I decided to do a translation into English.  I opted to do this for a few reasons:&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Allan Gray</name></author><category term="open-source" /><category term="embedded" /><category term="teensy" /><summary type="html">Learn how to create modular code for embedded systems using a Test Driven Development approach</summary></entry><entry><title type="html">In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix</title><link href="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/" rel="alternate" type="text/html" title="In flight, I attain a higher consciousness. Fear disappears - Translation of Bertrand Piccard’s interview on La Croix" /><published>2021-09-23T01:08:07+08:00</published><updated>2021-09-23T01:08:07+08:00</updated><id>https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness</id><content type="html" xml:base="https://sunetrike.com/solar-impulse/in-flight-i-attain-a-higher-consciousness/">&lt;p&gt;In April, Capt Piccard sat down with the Malo Tresca and the podcast &lt;em&gt;Place des Religions&lt;/em&gt; for a discussion about exploration, consciousness and how the &lt;a href=&quot;https://solarimpulse.com/efficient-solutions&quot;&gt;Solar Impulse Network of 1000 Solutions&lt;/a&gt; can contribute to the great existential challenge of the 21st century.  I decided to do a translation into English.  I opted to do this for a few reasons:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Just for fun and French practice&lt;/li&gt;
   &lt;li&gt;To reflect more on where Solar Impulse might be heading with its newest initiative and tagline &lt;a href=&quot;https://solarimpulse.com/beyond-1000-solutions&quot;&gt;Ecology as driving force for economy&lt;/a&gt;&lt;/li&gt;
