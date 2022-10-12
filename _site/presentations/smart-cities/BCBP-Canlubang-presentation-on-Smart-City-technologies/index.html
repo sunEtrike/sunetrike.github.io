@@ -1,0 +1,654 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+  <!-- Begin Jekyll GTM tag v1.0.3 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P3DFZCD');</script>
+<!-- End Jekyll GTM tag v1.0.3 -->
+
+
+<!-- begin _includes/seo.html --><title>Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco | sunE</title>
+<meta name="description" content="Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within Smart Transport Calabarzon.">
+
+
+  <meta name="author" content="Allan Gray">
+  
+  <meta property="article:author" content="Allan Gray">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="sunE">
+<meta property="og:title" content="Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco">
+<meta property="og:url" content="https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/">
+
+
+  <meta property="og:description" content="Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within Smart Transport Calabarzon.">
+
+
+
+  <meta property="og:image" content="https://sunetrike.com/assets/images/smart-infrastructure-challenge/BCBP-flyer.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-24T01:08:07+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Allan Gray",
+      "url": "https://sunetrike.com/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="H5ojrSb99Ydn9_YN1UZpf0mym8h6ljcb3U3dWu-YbLo" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="sunE Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    
+      <!-- Begin Jekyll GTM tag v1.0.3 (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3DFZCD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Jekyll GTM tag v1.0.3 (noscript) -->
+
+    
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/sunElogo.jpg" alt=""></a>
+        
+        <a class="site-title" href="/">
+          sunE
+          <span class="site-subtitle">Clean Energy that Moves People</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/system">System</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/team/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">Contact Us!</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/assets/images/smart-infrastructure-challenge/BCBP-flyer.jpg" alt="Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/team/DAG-headshot.jpg" alt="Allan Gray" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Allan Gray</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Allan is a geologist and electrical geophysicist who moved to the Philippines with a simple idea: this is the best country in the world for developing solar electric transportation systems. <a href="/team/al-gray">Read More</a></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Calamba, Laguna, Philippines</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco">
+    <meta itemprop="description" content="Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within Smart Transport Calabarzon.">
+    <meta itemprop="datePublished" content="2020-10-24T01:08:07+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within <em><a href="/assets/pdfs/Smart-Transport-Calabarzon-Poster-Smart-Regions-2018.pdf">Smart Transport Calabarzon</a></em>.</p>
+
+<p>Little did any of us know the world was about to stop.  In early 2020, all plans were put on hold, including Smart Transport Calabarzon, as the Covid-19 virus took became a global concern.</p>
+
+<p>Despite this, I was still buzzing from the new and emerging technologies that will one day change the way local governments administer their public services. My friend and fellow green technophile, Mic Carlos, asked my to show introduce some of the technologies that I found most exciting and relevant to the Canlubang chapter of the Brotherhood of Christian Business Professionals - <a href="https://www.facebook.com/BCBP-Canlubang-Share-It-109798656251069/">BCBP</a>.</p>
+
+<p>These are the slides I used with a brief description of each:</p>
+
+<p><a href="/assets/pdfs/Smart-Cities-Presentation-BCBP-Canlubang.pdf">Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco</a></p>
+
+<p><strong>1. Title and intro</strong></p>
+
+<p><strong>2. 2018 Smart Infrastructure Challenge -</strong> A US infrastructure-oriented innovation competition which we hope to one day replicate in the Philippines with a <em>‘Sustainable Islands’</em> theme</p>
+
+<p><strong>3. About Smart Transport Calabarzon -</strong> the multi-sector advocacy group which we formed according to the drafted IEEE best practices to form the only non-US team to complete the Smart Infrastructure Challenge</p>
+
+<p><strong>4. IEEE Smart Cities Conference -</strong> I became alerted to this event via the <em>IEEE Standard P2784</em>, of which I became a member in late 2020. One of the major activities of IEEE is in formulating international standards around computing, data and wireless transmission protocols.  Usually these standards are primary driven by pure mathematics and physics.  This upcoming standard on Smart City Planning is arguably the standard that ventures furthest into the social and political realm and I am very curious to see how the members from various countries approach the problem</p>
+
+<p><strong>5. Fog Computing -</strong> the next bold step forward from cloud computing, these ‘fog’ or ‘edge’ devices are able to perform the heavy Artifical Intelligence and Machine Learning (AI/ML) nearer to their physical locations reducing network congestion, data privacy concerns and lag times</p>
+
+<p><strong>6. Federated Computing -</strong> this was one of the themes that the IEEE participants were most excited about.  It gives new methods to allow important &amp; sensitive government and citizen data to be kept in custodianship within trusted institutions and shared with more fine-grained terms &amp; conditions than what currently exists outside of enterprise level cloud providers.</p>
+
+<p><strong>7. Smart Contracts for Government -</strong> This is largely enabled by upcoming blockchain technologies such as Ethereum.  It can be difficult to think about what it means when we can take ownership of our personal data and rely on our computers to handle our transactions with the government for us.  Humanity has historically known no other way.  Many exciting new projects have been proposed but only time will tell what new opportunities it will bring to local governments in the Philippines.  <a href="https://e-estonia.com/solutions/security-and-safety/ksi-blockchain/">Estonia</a> is one of the leaders in this space.</p>
+
+<p><strong>8. Online learning -</strong> I’m sure these researchers had no idea that the whole world would be forced onto an online classroom in a few short months.  Well some of these researchers were already trialling online chemistry classes where the student would control a robot in order to conduct a chemical reaction for their lab module.  With recent events, we are sure to see lots more where that came from!</p>
+
+<p><strong>9. Data Aggregation &amp; Decisions -</strong> With the exponentially growing volumes of data coming out of Internet of Things (IoT) sensors and AI/ML applications.  It becomes increasingly important to handle that data efficiently, safely and fast.  As we learn more about data, intelligence and even the process of learning itself, we are forced to think deeply about how we <a href="https://towardsdatascience.com/applications-of-reinforcement-learning-in-real-world-1a94955bcd12">Observe, Decide &amp; Act</a>.  This is one model that was proposed for how we think.  Maybe one day our creations will do it better than us!</p>
+
+<p><strong>10. Automated Traffic Monitoring -</strong> This was my primary interest going into the conference.  Traffic and transporation go hand in hand and I’ve never met a Filipino who didn’t want less traffic.  These kinds of counting projects are accessible to municipalities within Metro-Manila.  But there is also plenty of room for improvement across Southern Luzon.  It’s a common saying from engineers that you can’t improve what you don’t measure.</p>
+
+<p><strong>11. ‘Smartness’ &amp; ‘Resilience’ -</strong> From here, I proceeded to a more conceptual (even spiritual) conversation about the nature and behaviour of cities.  A common aspiration of ‘Smart City Engineers’ is to make cities more ‘resilient’.  It is ironic that they are commonly dealing with gadgets that may last less than 5 years.  The photos in this slide are of Morocco’s famous (<a href="https://duckduckgo.com/?t=lm&amp;q=atlas+mountain+rocks&amp;iax=images&amp;ia=images">to geologists at least</a>) Atlas Mountains.  People have been inhabiting this harsh, arid landscape for thousands of years.  Resilience to their climate is in their bones and I suggest the same is true of Filipinos in their own tropical environment.  No fancy, well-engineered gadget is going to change or replace that.</p>
+
+<p><strong>12. The ‘Physics’ of Cities -</strong> <a href="https://www.colorado.edu/socialreactors/sites/default/files/attached-files/bettencourt_2013_science.pdf">The paper</a> and figures in this slide relate cities to a <a href="https://web.physics.ucsb.edu/~mmanning/What_are_Power_Laws.html">power-law</a> phenomenon also observed in many natural systems such as the size of stars in the universe.  This allows us to consider them in terms of power or “social entropy”.  In such a model, the urban planner seeks to harness or facilitate this inherent power through more efficient social linkages in order to help his/her city thrive.</p>
+
+<p><strong>13. Cities as Fractals -</strong> Fractal geometries and mathematics took the academic and artistics worlds by storm when they were first discovered in the 60s and 70s.  The beauty lies in the simplicity of the rules from which they are created.  In his <a href="https://www.ted.com/talks/ron_eglash_the_fractals_at_the_heart_of_african_designs">fascinating Ted Talk</a>, Mathematician Ron Eglash reveals that these ‘discoveries’ of science are often just rediscovering what has been known since ancient times.  It serves to remind us that there are still areas where scientific inquiry is many steps behind religious and traditional wisdom.</p>
+
+<p><strong>14. Gould’s Spandrels -</strong> It may not look like it at first, but this slide is about design.  Stephen Jay Gould was a famous archaeologist who advanced our understanding of the nature of evolution in many areas.  Among the most famous is <a href="https://cbs.asu.edu/sites/default/files/PDFS/GouldLewontinSpandrels.pdf">his paper about spandrels</a>.  Spandrels are created when you build an arch.  You can’t build an arch without a spandrel.  Both of the examples presented here show an animal which evolved a spandrel, but later found a creative &amp; functional use for it (see the paper for details).  Many times, engineers and planners will focus on function and results.  This can often result in a lot of ‘unused space’.  As you can see in many famous cathedrals, often it is the spandrels that feature some of the most beautiful ornaments.  Cities are full of spandrels, it is up to us to unlock beauty within them.</p>
+
+<p><strong>15.  Solar Impulse Foundation -</strong> If you look around this webpage you will quickly discover that here at sunE, we are big fans of Bertrand Piccard and the <a href="www.solarimpulse.com">Solar Impulse Foundation</a>.  With the first solar-powered airplane to fly around the world, he has helped to create the beacon that we can orient ourselves towards as every year we see more news and evidence of Global Warming and the damage it will cause on our world, our homes, our lifestyles and our economies.</p>
+
+<p><strong>16. CO2 emissions by country -</strong> This slide outlines the different CO2 contributions made country to country.  While the Philippines is still a small contributor both per capita and on aggregate, they are rapidly approaching the ‘tipping point’ level.  If we can take this opportunity to transition towards low carbon transportation systems, it will position the country as a strong and committed participant in the global effort to avert the existential crisis of the 21st century.</p>
+
+<p><strong>17. The glass of water -</strong> This is a very difficult conversation within the geopolitical landscape. Discussions on how to avoid Global Warming are full of finger pointing.  The established science points to some very uncomfortable and inconvenient realities.  This glass of water is a reference to an <a href="https://www.netzerowatch.com/ipcc-official-climate-policy-is-redistributing-the-worlds-wealth/">analogy told by IPCC economist Ottmar Edenhofer</a>.  In that story, he speaks of the global community as a group of travellers lost in the desert.  They happen to find a glass of water and the small number of rich countries drink it up without a second thought.  Upon realizing what they have done, they suggest to save the rest.  The rest of the countries are furious and demand their fair share of the remaining water.  The unfortunate reality that both sides are missing is that the glass of water is not going to save them.  If they want to survive, they need to find the oasis.  That is the challenge that our global community needs to rise to.</p>
+
+<p><strong>18. Wrap-up -</strong> The theoretical link between fossil fuel combustion &amp; Global warming was first proposed in 1896 by Swedish Chemist Svante Arrhenius.  This was nearly 200 years since Watt’s steam engine kicked off the industrial revolution.  We are now faced with a danger that is as difficult to imagine and it is to accept.  The consequences are dire and the changes it demands from us are scary.  Technology and Society both have a role to play in the solution and I’m glad to be venturing towards in the ways that I know how.</p>
+
+<p>Thanks so much for your time and attention! I hope to one day work with some of this audience on moving Canlubang in the right direction while also improving the lives of its citizens.</p>
+
+<div class="newsletter_wrapper">
+  <h3>Interested in hearing more from us? <a href="/newsletter/"> Check out our newsletter</a></h3>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/presentations" class="page__taxonomy-item" rel="tag">presentations</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/smart-cities" class="page__taxonomy-item" rel="tag">smart-cities</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-24T01:08:07+08:00">October 24, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Findings+from+the+2019+IEEE+Smart+City+Conference+in+Casablanca%2C+Morocco%20https%3A%2F%2Fsunetrike.com%2Fpresentations%2Fsmart-cities%2FBCBP-Canlubang-presentation-on-Smart-City-technologies%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsunetrike.com%2Fpresentations%2Fsmart-cities%2FBCBP-Canlubang-presentation-on-Smart-City-technologies%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsunetrike.com%2Fpresentations%2Fsmart-cities%2FBCBP-Canlubang-presentation-on-Smart-City-technologies%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/presentations/carbon-neutral/cuny-global-institutions-presentation-he-role-of-technology-in-bringing-us-to-a-carbon-neutral-future/" class="pagination--pager" title="The role of technology in bringing us to a Carbon-neutral Future - Presentation for CUNY’s Administration of Global Institutions class
+">Previous</a>
+    
+    
+      <a href="/supercapacitors/supercapacitors-for-lsevs/" class="pagination--pager" title="Supercapacitors for LSEVs
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments (If you are using an extension like https://privacybadger.org, this may be disabled)</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/banners/harvester-pr.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/energy-harvester/announcements/sune-energy-harvester-research-grant/" rel="permalink">Press Release - International Research Collaboration for energy harvesting vehicle suspension
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/teensy_rake/teensy.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" rel="permalink">A TDD rake based build-system for multi-targeting Arm Cortex-M - using the teensy 3.6 as an example
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Learn how to create modular code for embedded systems using a Test Driven Development approach
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/solar-impulse-sun-thumb.jpeg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/solar-impulse/in-flight-i-attain-a-higher-consciousness/" rel="permalink">In flight, I attain a higher consciousness.  Fear disappears - Translation of Bertrand Piccard’s interview on La Croix
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">In April, Capt Piccard sat down with the Malo Tresca and the podcast Place des Religions for a discussion about exploration, consciousness and how the Solar ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        
+      <div class="archive__item-teaser img-icon">
+        <img src="/assets/images/sunev-thumb.JPG" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/announcements/declaration-to-achieve-net-zero/" rel="permalink">sunE declares intention to achieve Net-Zero across its supply chain by 2025.
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are pleased to announce a minor (but important) change in compass-heading for the sunE Venture.  Please see our declaration to achieve net-zero here
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-sif-logo">
+  <a class="sif-link" href='https://youtu.be/stOYMwxSWlE'>
+    <img class="sif-label" src="/assets/images/SIF_LABEL.png" alt="">
+  </a>
+</div>
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2022 sunE </div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-www-sunetrike-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
