@@ -11,12 +11,6 @@ var store = [{
         "url": "https://sunetrike.com/team/clayton-gray",
         "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
       },{
-        "title": "Kwadwo Ansah Antwi",
-        "excerpt":"Dr. Kwadwo Konadu Ansah-Antwi is currently CEO and co-Founder of Hessner Technologies Limited and Dyna Insights both of which are Hong based companies. He earned his Bachelor of Materials Science and Engineering at the University of Ghana, in 2009, and his PhD in Electrical and Computer Engineering from the National...","categories": [],
-        "tags": [],
-        "url": "https://sunetrike.com/team/kwadwo-ansah-antwi",
-        "teaser": "https://sunetrike.com/assets/images/sunev-thumb.JPG"
-      },{
         "title": "Lois Gray",
         "excerpt":"Ms. Gray (BSA, MBA) is a Certified Management Consultant with over three decades of experience providing business advisory services to firms and organizations across a range of sectors. She brings a broad outlook and a diverse skill set to her work. This eclectic background was acquired through her work in...","categories": [],
         "tags": [],
