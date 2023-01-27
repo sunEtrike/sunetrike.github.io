@@ -90,7 +90,7 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/water-cleanup/hero.jpeg"
       },{
         "title": "Past, Present and Future of Environmentalism - Presentation for Mapua's Social Sciences and Education week",
-        "excerpt":"As part the week in Social Sciences and Education at Mapua University, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines. Please click here to access: Past, Present and Future for Environmentalism I attempted to share what...","categories": ["presentations","environmentalism"],
+        "excerpt":"As part the week in Social Sciences and Education at Mapua University, I was grateful for the opportunity to share my thoughts about environmentalism with some of the bright, emerging minds of the Philippines. It appears as though your browser doesn't have a PDF plugin. It is available for Download...","categories": ["presentations","environmentalism"],
         "tags": [],
         "url": "https://sunetrike.com/presentations/environmentalism/mapua-humanities-presentation-environmentalism-past-present-future/",
         "teaser": "https://sunetrike.com/assets/images/mapua/mapual-background.jpg"
@@ -114,7 +114,7 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
       },{
         "title": "Press Release - International Research Collaboration for energy harvesting vehicle suspension",
-        "excerpt":"sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric vehicles.   Please click here to view the Nov 2021 Energy Harvester project press release      Interested in hearing more from us?  Check out our newsletter   ","categories": ["energy-harvester","announcements"],
+        "excerpt":"sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric vehicles. It appears as though your browser doesn't have a PDF plugin. It is available for Download here: Nov 2021 Energy Harvester project press release Interested in hearing more...","categories": ["energy-harvester","announcements"],
         "tags": [],
         "url": "https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant/",
         "teaser": "https://sunetrike.com/assets/images/banners/harvester-pr.png"
