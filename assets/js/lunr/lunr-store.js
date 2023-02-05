@@ -114,8 +114,14 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/teensy_rake/teensy.png"
       },{
         "title": "Press Release - International Research Collaboration for energy harvesting vehicle suspension",
-        "excerpt":"sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspencsion systems for low-speed electric vehicles. It appears as though your browser doesn't have a PDF plugin. It is available for Download here: Nov 2021 Energy Harvester project press release Interested in hearing more...","categories": ["energy-harvester","announcements"],
+        "excerpt":"sunE is pleased to announce the undertaking of a new international research collaboration around energy harvesting suspension systems for low-speed electric vehicles. It appears as though your browser doesn't have a PDF plugin. It is available for Download here: Nov 2021 Energy Harvester project press release Interested in hearing more...","categories": ["energy-harvester","announcements"],
         "tags": [],
         "url": "https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant/",
         "teaser": "https://sunetrike.com/assets/images/banners/harvester-pr.png"
+      },{
+        "title": "sunE appears on the smart city podcast!",
+        "excerpt":"Jim Frazer of the Smart City podcast was kind enough to sit down with Allan Gray from sunE to discuss a wide range of topics around the Philippines, renewable energy, public transportation, electric vehicles and some of the ongoing projects at sunE. Listen here Interested in hearing more from us?...","categories": ["presentations"],
+        "tags": [],
+        "url": "https://sunetrike.com/presentations/sune-on-the-smart-city-podcast/",
+        "teaser": "https://sunetrike.com/assets/images/banners/smart-city-podcast.png"
       }]
