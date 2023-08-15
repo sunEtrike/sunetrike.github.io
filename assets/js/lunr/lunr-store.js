@@ -60,7 +60,7 @@ var store = [{
         "teaser": "https://sunetrike.com/assets/images/banners/wright-brothers.jpeg"
       },{
         "title": "Findings from the 2019 IEEE Smart City Conference in Casablanca, Morocco",
-        "excerpt":"Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out within Smart...","categories": ["presentations","smart-cities"],
+        "excerpt":"Fresh off an exciting trip to Casablanca, Morocco for the IEEE’s 2019 Smart Cities Conference (Oct 2019), I was keen to apply my learnings and get rolling with plans for automated traffic data collection in small to mid-sized municipalities across Southern Luzon as per the plans laid out by Smart...","categories": ["presentations","smart-cities"],
         "tags": [],
         "url": "https://sunetrike.com/presentations/smart-cities/BCBP-Canlubang-presentation-on-Smart-City-technologies/",
         "teaser": "https://sunetrike.com/assets/images/smart-infrastructure-challenge/BCBP-flyer.jpg"
@@ -118,4 +118,10 @@ var store = [{
         "tags": [],
         "url": "https://sunetrike.com/energy-harvester/announcements/sune-energy-harvester-research-grant/",
         "teaser": "https://sunetrike.com/assets/images/banners/harvester-pr.png"
+      },{
+        "title": "sunE sits down with the Sustainability/Smart Cities Podcast!",
+        "excerpt":"Allan Gray was given the chance to chat with Jim Frazier on the Sustainbaility (FKA Smart Cities) podcast about sunE and our work in the Filipino public transportation sector. Check it out below! You can also check out the other episodes from the podcast here Interested in hearing more from...","categories": ["smart-cities","transportation"],
+        "tags": [],
+        "url": "https://sunetrike.com/smart-cities/transportation/sune-on-the-smart-cities-podcast/",
+        "teaser": "https://sunetrike.com/assets/images/arc-podcast-logo.jpg"
       }]
