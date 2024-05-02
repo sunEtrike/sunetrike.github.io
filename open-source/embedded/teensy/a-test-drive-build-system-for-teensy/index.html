@@ -79,6 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
 <!-- end _includes/seo.html -->
 
 
@@ -136,7 +137,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
     <nav class="skip-links">
-  <h2 class="screen-reader-text">Skip links</h2>
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -144,10 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
 </nav>
 
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
-
+    <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
     
 
 <div class="masthead">
@@ -155,7 +152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/sunElogo.jpg" alt=""></a>
+          <a class="site-logo" href="/"><img src="/assets/images/sunElogo.jpg" alt="sunE"></a>
         
         <a class="site-title" href="/">
           sunE
@@ -173,9 +170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
-          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
-            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
-          </svg>
+          <i class="fas fa-search"></i>
         </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -218,22 +213,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
     <div class="author__avatar">
-      
-        <img src="/assets/images/team/DAG-headshot.jpg" alt="Allan Gray" itemprop="image">
-      
+      <a href="https://sunetrike.com/">
+        <img src="/assets/images/team/DAG-headshot.jpg" alt="Allan Gray" itemprop="image" class="u-photo">
+      </a>
     </div>
   
 
   <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://sunetrike.com/" itemprop="url">Allan Gray</a>
+    </h3>
     
-      <h3 class="author__name" itemprop="name">Allan Gray</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
+      <div class="author__bio p-note" itemprop="description">
         <p>Allan is a geologist and electrical geophysicist who moved to the Philippines with a simple idea: this is the best country in the world for developing solar electric transportation systems. <a href="/team/al-gray">Read More</a></p>
 
       </div>
@@ -245,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Calamba, Laguna, Philippines</span>
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Calamba, Laguna, Philippines</span>
         </li>
       
 
@@ -301,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -592,8 +587,8 @@ gcc <span class="nt">-lm</span> <span class="nt">-m32</span> build/TestLedContro
 
 <p>Here’s the basic structure of a test in unity.  Try adding it to the empty file to see what you get…</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
-#include "LedController.h"
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">test_Led_Controller_does_a_thing_and_fails</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -639,8 +634,8 @@ rake aborted!</code></pre></figure>
   <li><strong>D Dependency Inversion Principle</strong> - Does the high level code (<strong>main.cpp</strong>) depend on the lower-level modules? Well, it depends on one interface: <strong>Arduino.h</strong>.  What does Arduino depend on? Open the file and have a look:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "WProgram.h"
-#include "pins_arduino.h"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">"WProgram.h"</span><span class="cp">
+#include</span> <span class="cpf">"pins_arduino.h"</span></code></pre></figure>
 
 <p><strong>pins_arduino.h</strong> is almost 300 lines of constant definitions while 
 <strong>WProgram</strong> depends on 24 different modules.</p>
@@ -657,7 +652,7 @@ rake aborted!</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/main.cpp</span>
 
-<span class="cp">#include &lt;Arduino.h&gt;
+<span class="cp">#include</span> <span class="cpf">&lt;Arduino.h&gt;</span><span class="cp">
 </span>
 <span class="k">extern</span> <span class="s">"C"</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -679,7 +674,7 @@ rake aborted!</code></pre></figure>
 <span class="cp">#ifndef D_LedController_H
 #define D_LedController_H
 </span>
-<span class="cp">#include &lt;stdint.h&gt;
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">pinNumber</span><span class="p">);</span>
 
@@ -701,7 +696,7 @@ build/TestLedController.exe
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedController.c</span>
 
-<span class="cp">#include &lt;stdint.h&gt;
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">test_LedController_is_off_upon_creation</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -720,7 +715,7 @@ TestLedController.c:(.text+0x57): undefined reference to `LedController_Create'<
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedController.c</span>
 
-<span class="cp">#include "LedController.h"
+<span class="cp">#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">LedController_Create</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">address</span><span class="p">)</span>
 <span class="p">{</span>
@@ -845,8 +840,8 @@ FAIL</code></pre></figure>
 
 <p>Here’s how <strong>TestLedController.c</strong> looks after refactoring</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "unity.h"
-#include "LedController.h"
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span>
 <span class="k">static</span> <span class="kt">uint16_t</span> <span class="n">virtualPin</span><span class="p">;</span>
 
@@ -1007,7 +1002,7 @@ FAIL</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/main.cpp</span>
 <span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
-<span class="cp">#include "LedController.h"
+<span class="cp">#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span>  <span class="p">.</span>
   <span class="n">rest</span>
   <span class="p">.</span>
@@ -1032,8 +1027,8 @@ FAIL</code></pre></figure>
 
 <p><strong>LedController.c</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include "LedController.h"
-#include "Arduino.h"
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
+#include</span> <span class="cpf">"Arduino.h"</span><span class="cp">
 </span>
 <span class="c1">//...</span>
 <span class="c1">//static variables</span>
@@ -1046,10 +1041,10 @@ FAIL</code></pre></figure>
 
 <p><strong>main.cpp:</strong></p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;Arduino.h&gt;
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;Arduino.h&gt;</span><span class="cp">
 </span>
 <span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
-<span class="cp">#include "LedController.h"
+<span class="cp">#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span><span class="p">}</span>
 
 <span class="k">extern</span> <span class="s">"C"</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -1098,8 +1093,8 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestTeensySpy.c:</span>
 
-<span class="cp">#include "unity.h"
-#include "TeensySpy.h"
+<span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"TeensySpy.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1125,7 +1120,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 <span class="cp">#ifndef D_TeensySpy_H
 #define D_TeensySpy_H
 </span>
-<span class="cp">#include &lt;stdint.h&gt;
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
 </span>
 <span class="k">enum</span>
 <span class="p">{</span>
@@ -1143,7 +1138,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TeesnySpy.c</span>
 
-<span class="cp">#include "TeensySpy.h"
+<span class="cp">#include</span> <span class="cpf">"TeensySpy.h"</span><span class="cp">
 </span>
 <span class="k">static</span> <span class="kt">int</span> <span class="n">lastId</span><span class="p">;</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="n">lastState</span><span class="p">;</span>
@@ -1167,7 +1162,7 @@ The way to handle this is called a ‘link-time spy’.  A spy is an alternative
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestTeensySpy.c</span>
 <span class="n">include</span> <span class="s">"unity.h"</span>
-<span class="cp">#include "TeensySpy.h"
+<span class="cp">#include</span> <span class="cpf">"TeensySpy.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">test_TeensySpy_set_pinMode_to_Output</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1305,7 +1300,7 @@ Well, our teensy wouldn’t allow us to toggle a pin on/off if it hadn’t alrea
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#ifndef D_Arduino_H
 #define D_Arduino_H
 </span>
-<span class="cp">#include &lt;stdint.h&gt;
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
 </span>
 <span class="k">enum</span>
 <span class="p">{</span>
@@ -1379,8 +1374,8 @@ Let’s get started.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">//test/TestLedScheduler.c</span>
 
-<span class="cp">#include "unity.h"
-#include "LedScheduler.h"
+<span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedScheduler.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">test_LedScheduler_ScheduledDelay_didnt_arrive_yet</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1410,7 +1405,7 @@ We will create an <strong>LedControllerSpy</strong> to watch for the calls of <s
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestLedScheduler.c</span>
 
-<span class="cp">#include "LedControllerSpy.h"
+<span class="cp">#include</span> <span class="cpf">"LedControllerSpy.h"</span><span class="cp">
 </span>
 <span class="k">static</span> <span class="kt">uint16_t</span> <span class="o">*</span> <span class="n">virtualPin</span><span class="p">;</span>
 
@@ -1425,8 +1420,8 @@ We will create an <strong>LedControllerSpy</strong> to watch for the calls of <s
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestLedControllerSpy.c</span>
 
-<span class="cp">#include "unity.h"
-#include "LedControllerSpy.h"
+<span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedControllerSpy.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">test_LedControllerSpy_on_create</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1442,8 +1437,8 @@ We will create an <strong>LedControllerSpy</strong> to watch for the calls of <s
 <span class="cp">#ifndef D_LedControllerSpy_H
 #define D_LedControllerSpy_H
 </span>
-<span class="cp">#include &lt;stdint.h&gt;
-#include "LedController.h"
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span>
 <span class="k">enum</span>
 <span class="p">{</span>
@@ -1461,7 +1456,7 @@ We will create an <strong>LedControllerSpy</strong> to watch for the calls of <s
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/LedControllerSpy.c</span>
 
-<span class="cp">#include "LedControllerSpy.h"
+<span class="cp">#include</span> <span class="cpf">"LedControllerSpy.h"</span><span class="cp">
 </span>
 <span class="k">static</span> <span class="kt">int</span> <span class="n">lastId</span><span class="p">;</span>
 <span class="k">static</span> <span class="kt">int</span> <span class="n">lastState</span><span class="p">;</span>
@@ -1522,8 +1517,8 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestFakeTimeService.c</span>
 
-<span class="cp">#include "unity.h"
-#include "FakeTimeService.h"
+<span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"FakeTimeService.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1552,7 +1547,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 <span class="cp">#ifndef D_FakeTimeService_H
 #define D_FakeTimeService_H
 </span>
-<span class="cp">#include "TimeService.h"
+<span class="cp">#include</span> <span class="cpf">"TimeService.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">FakeTimeService_SetMilliseconds</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
 
@@ -1587,7 +1582,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/FakeTimeService.c</span>
 
-<span class="cp">#include "FakeTimeService.h"
+<span class="cp">#include</span> <span class="cpf">"FakeTimeService.h"</span><span class="cp">
 </span>
 <span class="k">static</span> <span class="n">Time</span> <span class="n">fakeTime</span><span class="p">;</span>
 
@@ -1614,7 +1609,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// mocks/TestLedScheduler.c</span>
 
-<span class="cp">#include "FakeTimeService.h" //add this to the top
+<span class="cp">#include</span> <span class="cpf">"FakeTimeService.h"</span><span class="c1"> //add this to the top</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">test_LedScheduler_No_Schedule_No_Action_Taken</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1628,7 +1623,7 @@ FAIL: Expected 0xFFFF Was 0x0000</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedScheduler.c</span>
 
-<span class="cp">#include "LedScheduler.h"
+<span class="cp">#include</span> <span class="cpf">"LedScheduler.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">LedScheduler_WakeUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1679,11 +1674,11 @@ FAIL</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/LedScheduler.c</span>
 
-<span class="cp">#include &lt;stdint.h&gt;
+<span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
 </span>
-<span class="cp">#include "TimeService.h"
-#include "LedScheduler.h"
-#include "LedController.h"
+<span class="cp">#include</span> <span class="cpf">"TimeService.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedScheduler.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
 </span>
 <span class="k">typedef</span> <span class="k">struct</span>
 <span class="p">{</span>
@@ -1887,8 +1882,8 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">//src/TimeService.cpp</span>
 
-<span class="cp">#include "TimeService.h"
-#include "Arduino.h"
+<span class="cp">#include</span> <span class="cpf">"TimeService.h"</span><span class="cp">
+#include</span> <span class="cpf">"Arduino.h"</span><span class="cp">
 </span>
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">_cpp_delay</span><span class="p">(</span><span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1909,9 +1904,9 @@ I jumped the gun a bit.  But since I wrote a test before implementing the functi
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/main.cpp</span>
 
 <span class="k">extern</span> <span class="s">"C"</span> <span class="p">{</span>
-  <span class="cp">#include "LedController.h"
-</span>  <span class="cp">#include "LedScheduler.h"
-</span>  <span class="cp">#include "TimeService.h"
+  <span class="cp">#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
+</span>  <span class="cp">#include</span> <span class="cpf">"LedScheduler.h"</span><span class="cp">
+</span>  <span class="cp">#include</span> <span class="cpf">"TimeService.h"</span><span class="cp">
 </span>  
   <span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
   <span class="p">{</span> 
@@ -1936,8 +1931,8 @@ So now we are going to refactor it into a .c file.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// src/main.c  *RENAMED*</span>
 
-<span class="cp">#include "LedController.h"
-#include "LedScheduler.h"
+<span class="cp">#include</span> <span class="cpf">"LedController.h"</span><span class="cp">
+#include</span> <span class="cpf">"LedScheduler.h"</span><span class="cp">
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span> 
@@ -2016,9 +2011,9 @@ LedScheduler.c:(.text+0xb5): undefined reference to `TimeService_Delay'</span></
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// test/TestTimeService.c</span>
 
-<span class="cp">#include "unity.h"
-#include "TimeService.h"
-#include "TeensySpy.h"
+<span class="cp">#include</span> <span class="cpf">"unity.h"</span><span class="cp">
+#include</span> <span class="cpf">"TimeService.h"</span><span class="cp">
+#include</span> <span class="cpf">"TeensySpy.h"</span><span class="cp">
 </span>
 <span class="kt">void</span> <span class="nf">setUp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -2164,7 +2159,7 @@ It’s not obvious to me how to write a test for it and <code class="language-pl
 <span class="cp">#ifndef D_TeensySpy_H
 #define D_TeensySpy_H
 </span>
-<span class="cp">#include "Arduino.h"
+<span class="cp">#include</span> <span class="cpf">"Arduino.h"</span><span class="cp">
 </span>
 <span class="n">elapsedMillis</span> <span class="n">timeCounter</span><span class="p">;</span></code></pre></figure>
 
@@ -2261,43 +2256,37 @@ The error is cleared by adding the linker flag <code class="language-plaintext h
 
 
   
-  
-  
 
   <p class="page__taxonomy">
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      
-      
-      <a href="/categories/embedded" class="page__taxonomy-item" rel="tag">embedded</a><span class="sep">, </span>
+      <a href="/categories/embedded" class="page__taxonomy-item p-category" rel="tag">embedded</a><span class="sep">, </span>
     
-      
-      
-      <a href="/categories/open-source" class="page__taxonomy-item" rel="tag">open-source</a><span class="sep">, </span>
+      <a href="/categories/open-source" class="page__taxonomy-item p-category" rel="tag">open-source</a><span class="sep">, </span>
     
-      
-      
-      <a href="/categories/teensy" class="page__taxonomy-item" rel="tag">teensy</a>
+      <a href="/categories/teensy" class="page__taxonomy-item p-category" rel="tag">teensy</a>
     
     </span>
   </p>
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-10-22T01:08:07+08:00">October 22, 2021</time></p>
 
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-10-22T01:08:07+08:00">October 22, 2021</time></p>
 
       </footer>
 
       <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
   
 
   <a href="https://twitter.com/intent/tweet?text=A+TDD+rake+based+build-system+for+multi-targeting+Arm+Cortex-M+-+using+the+teensy+3.6+as+an+example%20https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fa-test-drive-build-system-for-teensy%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fa-test-drive-build-system-for-teensy%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsunetrike.com%2Fopen-source%2Fembedded%2Fteensy%2Fa-test-drive-build-system-for-teensy%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://sunetrike.com/open-source/embedded/teensy/a-test-drive-build-system-for-teensy/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -2319,7 +2308,7 @@ The error is cleared by adding the linker flag <code class="language-plaintext h
       <div class="page__comments">
   
   
-      <h4 class="page__comments-title">Comments (If you are using an extension like https://privacybadger.org, this may be disabled)</h4>
+      <h4 class="page__comments-title">Leave a comment</h4>
       <section id="disqus_thread"></section>
     
 </div>
@@ -2330,7 +2319,7 @@ The error is cleared by adding the linker flag <code class="language-plaintext h
   
   
     <div class="page__related">
-      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
         
           
@@ -2444,7 +2433,7 @@ The error is cleared by adding the linker flag <code class="language-plaintext h
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
@@ -2469,6 +2458,8 @@ The error is cleared by adding the linker flag <code class="language-plaintext h
 <div class="page__footer-follow">
   <ul class="social-icons">
     
+      <li><strong>Follow:</strong></li>
+    
 
     
 
@@ -2477,7 +2468,7 @@ The error is cleared by adding the linker flag <code class="language-plaintext h
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2023 sunE </div>
+<div class="page__footer-copyright">&copy; 2024 sunE </div>
       </footer>
     </div>
 
