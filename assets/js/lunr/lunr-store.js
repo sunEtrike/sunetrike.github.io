@@ -42,9 +42,9 @@ var store = [{
         "teaser": "/assets/images/smart-infrastructure-challenge/pwd.jpeg"
       },{
         "title": "Tales from Trying to Improve Transportation in the Philippines - Presentation for CUNY's Administration of Global Institutions class",
-        "excerpt":"As a follow-on to our participation in the 2018 Smart Infrastructure Challenge, I got the very cool opportunity to share some of my experiences with Professor Binda’s class on Administration of Global Institutions at the City University of New York (CUNY). They were reviewing the ASEAN zone and so I...","categories": ["presentations","tranportation"],
+        "excerpt":"As a follow-on to our participation in the 2018 Smart Infrastructure Challenge, I got the very cool opportunity to share some of my experiences with Professor Binda’s class on Administration of Global Institutions at the City University of New York (CUNY). They were reviewing the ASEAN zone and so I...","categories": ["presentations","transportation"],
         "tags": [],
-        "url": "/presentations/tranportation/cuny-global-institutions-presentation-tales-of-trying-to-improve-transportation-in-the-philippines/",
+        "url": "/presentations/transportation/cuny-global-institutions-presentation-tales-of-trying-to-improve-transportation-in-the-philippines/",
         "teaser": "/assets/images/banners/transport-tales-banner.png"
       },{
         "title": "sunE is now a Solar Impulse Efficient Solution",
@@ -124,4 +124,10 @@ var store = [{
         "tags": [],
         "url": "/smart-cities/transportation/sune-on-the-smart-cities-podcast/",
         "teaser": "/assets/images/arc-podcast-logo.jpg"
+      },{
+        "title": "sunE featured in One ASEAN Start-up White Paper on Innovation Ecosystem development!",
+        "excerpt":"ERIA reached out to us earlier this year with interest in our experience, as a start-up, operating across borders (Philippines and Hong Kong). We were glad to participate and would be glad to see more companies across the region take this step. We also look forward to seeing how they...","categories": ["smart-cities"],
+        "tags": [],
+        "url": "/smart-cities/sunE-in-ERIAs-ASEAN-startup-ecosystem-whitepaper/",
+        "teaser": "/assets/images/eria/eria-whitepaper-banner.png"
       }]
