@@ -11,18 +11,6 @@ var store = [{
         "url": "/team/clayton-gray",
         "teaser": "/assets/images/sunev-thumb.JPG"
       },{
-        "title": "Lois Gray",
-        "excerpt":"Ms. Gray (BSA, MBA) is a Certified Management Consultant with over three decades of experience providing business advisory services to firms and organizations across a range of sectors. She brings a broad outlook and a diverse skill set to her work. This eclectic background was acquired through her work in...","categories": [],
-        "tags": [],
-        "url": "/team/lois-gray",
-        "teaser": "/assets/images/sunev-thumb.JPG"
-      },{
-        "title": "Phil Gray",
-        "excerpt":"Co-founder &amp; General Manager of sunE in Batangas operation over the past 4 years in Santo Tomas Batangas. In that business Phil was responsible for the marketing human resources and cash management of the service. The shuttle operations ran 18 hours a day every day for 3 and half years...","categories": [],
-        "tags": [],
-        "url": "/team/phil-gray",
-        "teaser": "/assets/images/sunev-thumb.JPG"
-      },{
         "title": "Absorbent Roadway – Concept outline",
         "excerpt":"Thank you to the R&amp;D team of LafargeHolcim for making this draft concept paper available to us for our submission to the 2018 Smart Infrastructure Challenge The absorbent roadway seeks to absorb and disperse localized flooding caused by storm surges. Continuous accumulation of plastic is resulting in two adverse consequences:...","categories": ["smart-infrastructure-challenge"],
         "tags": [],
